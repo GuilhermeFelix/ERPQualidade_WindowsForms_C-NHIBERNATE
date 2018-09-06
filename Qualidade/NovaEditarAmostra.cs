@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Qualidade
 {
-    public partial class Form1 : Form
+    public partial class NovaEditarAmostra : Form
     {
-        public Form1()
+        public NovaEditarAmostra()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            MessageBox.Show("Hello World!");
         }
     }
 }
