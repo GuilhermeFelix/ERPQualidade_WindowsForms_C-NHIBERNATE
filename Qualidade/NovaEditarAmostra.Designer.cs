@@ -35,12 +35,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txt_Caracteristica1 = new System.Windows.Forms.TextBox();
+            this.txt_Caracteristica2 = new System.Windows.Forms.TextBox();
+            this.txt_Caracteristica3 = new System.Windows.Forms.TextBox();
+            this.txt_Caracteristica4 = new System.Windows.Forms.TextBox();
+            this.txt_Caracteristica5 = new System.Windows.Forms.TextBox();
+            this.btn_Registrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -106,49 +106,49 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Caracteristica 5:";
             // 
-            // textBox1
+            // txt_Caracteristica1
             // 
-            this.textBox1.Location = new System.Drawing.Point(103, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 7;
+            this.txt_Caracteristica1.Location = new System.Drawing.Point(103, 47);
+            this.txt_Caracteristica1.Name = "txt_Caracteristica1";
+            this.txt_Caracteristica1.Size = new System.Drawing.Size(100, 20);
+            this.txt_Caracteristica1.TabIndex = 7;
             // 
-            // textBox2
+            // txt_Caracteristica2
             // 
-            this.textBox2.Location = new System.Drawing.Point(103, 78);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 8;
+            this.txt_Caracteristica2.Location = new System.Drawing.Point(103, 78);
+            this.txt_Caracteristica2.Name = "txt_Caracteristica2";
+            this.txt_Caracteristica2.Size = new System.Drawing.Size(100, 20);
+            this.txt_Caracteristica2.TabIndex = 8;
             // 
-            // textBox3
+            // txt_Caracteristica3
             // 
-            this.textBox3.Location = new System.Drawing.Point(103, 109);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 9;
+            this.txt_Caracteristica3.Location = new System.Drawing.Point(103, 109);
+            this.txt_Caracteristica3.Name = "txt_Caracteristica3";
+            this.txt_Caracteristica3.Size = new System.Drawing.Size(100, 20);
+            this.txt_Caracteristica3.TabIndex = 9;
             // 
-            // textBox4
+            // txt_Caracteristica4
             // 
-            this.textBox4.Location = new System.Drawing.Point(103, 138);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 10;
+            this.txt_Caracteristica4.Location = new System.Drawing.Point(103, 138);
+            this.txt_Caracteristica4.Name = "txt_Caracteristica4";
+            this.txt_Caracteristica4.Size = new System.Drawing.Size(100, 20);
+            this.txt_Caracteristica4.TabIndex = 10;
             // 
-            // textBox5
+            // txt_Caracteristica5
             // 
-            this.textBox5.Location = new System.Drawing.Point(103, 166);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 11;
+            this.txt_Caracteristica5.Location = new System.Drawing.Point(103, 166);
+            this.txt_Caracteristica5.Name = "txt_Caracteristica5";
+            this.txt_Caracteristica5.Size = new System.Drawing.Size(100, 20);
+            this.txt_Caracteristica5.TabIndex = 11;
             // 
-            // button1
+            // btn_Registrar
             // 
-            this.button1.Location = new System.Drawing.Point(128, 195);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Registrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Registrar.Location = new System.Drawing.Point(128, 195);
+            this.btn_Registrar.Name = "btn_Registrar";
+            this.btn_Registrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_Registrar.TabIndex = 12;
+            this.btn_Registrar.Text = "Registrar";
+            this.btn_Registrar.UseVisualStyleBackColor = true;
             // 
             // NovaEditarAmostra
             // 
@@ -156,12 +156,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(215, 225);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btn_Registrar);
+            this.Controls.Add(this.txt_Caracteristica5);
+            this.Controls.Add(this.txt_Caracteristica4);
+            this.Controls.Add(this.txt_Caracteristica3);
+            this.Controls.Add(this.txt_Caracteristica2);
+            this.Controls.Add(this.txt_Caracteristica1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -185,11 +185,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txt_Caracteristica1;
+        private System.Windows.Forms.TextBox txt_Caracteristica2;
+        private System.Windows.Forms.TextBox txt_Caracteristica3;
+        private System.Windows.Forms.TextBox txt_Caracteristica4;
+        private System.Windows.Forms.TextBox txt_Caracteristica5;
+        private System.Windows.Forms.Button btn_Registrar;
     }
 }

@@ -29,46 +29,61 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModeloAmostragem));
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lst_Modelos = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmb_CaracteristicasChave = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtt_Inicio = new System.Windows.Forms.DateTimePicker();
+            this.dtt_Fim = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmb_MaquinaFabricacao = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txt_FerramentaCaracteristica5 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txt_FerramentaCaracteristica4 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txt_FerramentaCaracteristica3 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txt_FerramentaCaracteristica2 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txt_FerramentaCaracteristica1 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btn_Confirmar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txt_Lscr = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txt_Lscx = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_PraticadoLicx = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_Lse = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_Lie = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_EspecificacaoNominal = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_IdModelo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listBox1
+            // lst_Modelos
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
+            this.lst_Modelos.FormattingEnabled = true;
+            this.lst_Modelos.Items.AddRange(new object[] {
             "Novo Modelo"});
-            this.listBox1.Location = new System.Drawing.Point(14, 26);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(237, 264);
-            this.listBox1.TabIndex = 0;
+            this.lst_Modelos.Location = new System.Drawing.Point(14, 26);
+            this.lst_Modelos.Name = "lst_Modelos";
+            this.lst_Modelos.Size = new System.Drawing.Size(237, 264);
+            this.lst_Modelos.TabIndex = 0;
             // 
             // label1
             // 
@@ -88,20 +103,20 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Caracteristica Chave:";
             // 
-            // comboBox1
+            // cmb_CaracteristicasChave
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmb_CaracteristicasChave.BackColor = System.Drawing.SystemColors.Window;
+            this.cmb_CaracteristicasChave.FormattingEnabled = true;
+            this.cmb_CaracteristicasChave.Items.AddRange(new object[] {
             "Diâmetro",
             "Dimensão",
             "Raio",
             "Batimento"});
-            this.comboBox1.Location = new System.Drawing.Point(260, 79);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(236, 21);
-            this.comboBox1.TabIndex = 4;
-            this.comboBox1.Tag = "Usuário deve escolher qual é o tipo de caracteristica chave que predomina na peça" +
+            this.cmb_CaracteristicasChave.Location = new System.Drawing.Point(260, 79);
+            this.cmb_CaracteristicasChave.Name = "cmb_CaracteristicasChave";
+            this.cmb_CaracteristicasChave.Size = new System.Drawing.Size(236, 21);
+            this.cmb_CaracteristicasChave.TabIndex = 4;
+            this.cmb_CaracteristicasChave.Tag = "Usuário deve escolher qual é o tipo de caracteristica chave que predomina na peça" +
     " de estudo.";
             // 
             // label3
@@ -114,20 +129,20 @@
             this.label3.Text = "Inicio:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // dateTimePicker1
+            // dtt_Inicio
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(260, 25);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(236, 20);
-            this.dateTimePicker1.TabIndex = 6;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dtt_Inicio.Location = new System.Drawing.Point(260, 25);
+            this.dtt_Inicio.Name = "dtt_Inicio";
+            this.dtt_Inicio.Size = new System.Drawing.Size(236, 20);
+            this.dtt_Inicio.TabIndex = 6;
+            this.dtt_Inicio.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // dateTimePicker2
+            // dtt_Fim
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(510, 25);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(236, 20);
-            this.dateTimePicker2.TabIndex = 8;
+            this.dtt_Fim.Location = new System.Drawing.Point(510, 25);
+            this.dtt_Fim.Name = "dtt_Fim";
+            this.dtt_Fim.Size = new System.Drawing.Size(236, 20);
+            this.dtt_Fim.TabIndex = 8;
             // 
             // label4
             // 
@@ -147,75 +162,193 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Maquina para Fabricação:";
             // 
-            // comboBox2
+            // cmb_MaquinaFabricacao
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmb_MaquinaFabricacao.FormattingEnabled = true;
+            this.cmb_MaquinaFabricacao.Items.AddRange(new object[] {
             "Furadeira"});
-            this.comboBox2.Location = new System.Drawing.Point(510, 79);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(236, 21);
-            this.comboBox2.TabIndex = 10;
-            this.comboBox2.Tag = "Usuário deve escolher qual é o tipo de caracteristica chave que predomina na peça" +
+            this.cmb_MaquinaFabricacao.Location = new System.Drawing.Point(510, 79);
+            this.cmb_MaquinaFabricacao.Name = "cmb_MaquinaFabricacao";
+            this.cmb_MaquinaFabricacao.Size = new System.Drawing.Size(236, 21);
+            this.cmb_MaquinaFabricacao.TabIndex = 10;
+            this.cmb_MaquinaFabricacao.Tag = "Usuário deve escolher qual é o tipo de caracteristica chave que predomina na peça" +
     " de estudo.";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel1.Controls.Add(this.listBox1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.lst_Modelos);
+            this.panel1.Controls.Add(this.btn_Confirmar);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txt_IdModelo);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.dateTimePicker2);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.dtt_Fim);
+            this.panel1.Controls.Add(this.cmb_MaquinaFabricacao);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.dtt_Inicio);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cmb_CaracteristicasChave);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(131, 113);
+            this.panel1.Location = new System.Drawing.Point(131, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(756, 349);
+            this.panel1.Size = new System.Drawing.Size(756, 517);
             this.panel1.TabIndex = 11;
             // 
-            // button1
+            // panel3
             // 
-            this.button1.Location = new System.Drawing.Point(678, 323);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Confirmar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.txt_FerramentaCaracteristica5);
+            this.panel3.Controls.Add(this.label17);
+            this.panel3.Controls.Add(this.txt_FerramentaCaracteristica4);
+            this.panel3.Controls.Add(this.label16);
+            this.panel3.Controls.Add(this.txt_FerramentaCaracteristica3);
+            this.panel3.Controls.Add(this.label15);
+            this.panel3.Controls.Add(this.txt_FerramentaCaracteristica2);
+            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.txt_FerramentaCaracteristica1);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Location = new System.Drawing.Point(485, 278);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(225, 181);
+            this.panel3.TabIndex = 25;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel4.Controls.Add(this.label18);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(225, 28);
+            this.panel4.TabIndex = 22;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(50, 9);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(119, 13);
+            this.label18.TabIndex = 22;
+            this.label18.Text = "Ferramenta de Medição";
+            // 
+            // txt_FerramentaCaracteristica5
+            // 
+            this.txt_FerramentaCaracteristica5.Location = new System.Drawing.Point(107, 155);
+            this.txt_FerramentaCaracteristica5.Name = "txt_FerramentaCaracteristica5";
+            this.txt_FerramentaCaracteristica5.Size = new System.Drawing.Size(100, 20);
+            this.txt_FerramentaCaracteristica5.TabIndex = 21;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(16, 41);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(83, 13);
+            this.label17.TabIndex = 12;
+            this.label17.Text = "Caracteristica 1:";
+            // 
+            // txt_FerramentaCaracteristica4
+            // 
+            this.txt_FerramentaCaracteristica4.Location = new System.Drawing.Point(107, 127);
+            this.txt_FerramentaCaracteristica4.Name = "txt_FerramentaCaracteristica4";
+            this.txt_FerramentaCaracteristica4.Size = new System.Drawing.Size(100, 20);
+            this.txt_FerramentaCaracteristica4.TabIndex = 20;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(16, 72);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(83, 13);
+            this.label16.TabIndex = 13;
+            this.label16.Text = "Caracteristica 2:";
+            // 
+            // txt_FerramentaCaracteristica3
+            // 
+            this.txt_FerramentaCaracteristica3.Location = new System.Drawing.Point(107, 98);
+            this.txt_FerramentaCaracteristica3.Name = "txt_FerramentaCaracteristica3";
+            this.txt_FerramentaCaracteristica3.Size = new System.Drawing.Size(100, 20);
+            this.txt_FerramentaCaracteristica3.TabIndex = 19;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(16, 105);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(83, 13);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "Caracteristica 3:";
+            // 
+            // txt_FerramentaCaracteristica2
+            // 
+            this.txt_FerramentaCaracteristica2.Location = new System.Drawing.Point(107, 67);
+            this.txt_FerramentaCaracteristica2.Name = "txt_FerramentaCaracteristica2";
+            this.txt_FerramentaCaracteristica2.Size = new System.Drawing.Size(100, 20);
+            this.txt_FerramentaCaracteristica2.TabIndex = 18;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(16, 133);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(83, 13);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Caracteristica 4:";
+            // 
+            // txt_FerramentaCaracteristica1
+            // 
+            this.txt_FerramentaCaracteristica1.Location = new System.Drawing.Point(107, 36);
+            this.txt_FerramentaCaracteristica1.Name = "txt_FerramentaCaracteristica1";
+            this.txt_FerramentaCaracteristica1.Size = new System.Drawing.Size(100, 20);
+            this.txt_FerramentaCaracteristica1.TabIndex = 17;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(15, 161);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(83, 13);
+            this.label13.TabIndex = 16;
+            this.label13.Text = "Caracteristica 5:";
+            // 
+            // btn_Confirmar
+            // 
+            this.btn_Confirmar.Location = new System.Drawing.Point(678, 491);
+            this.btn_Confirmar.Name = "btn_Confirmar";
+            this.btn_Confirmar.Size = new System.Drawing.Size(75, 23);
+            this.btn_Confirmar.TabIndex = 12;
+            this.btn_Confirmar.Text = "Confirmar";
+            this.btn_Confirmar.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel2.Controls.Add(this.textBox7);
+            this.panel2.Controls.Add(this.txt_Lscr);
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.txt_Lscx);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.txt_PraticadoLicx);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.txt_Lse);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.txt_Lie);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txt_EspecificacaoNominal);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(276, 119);
+            this.panel2.Location = new System.Drawing.Point(292, 119);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(420, 153);
             this.panel2.TabIndex = 13;
             // 
-            // textBox7
+            // txt_Lscr
             // 
-            this.textBox7.Location = new System.Drawing.Point(228, 121);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(183, 20);
-            this.textBox7.TabIndex = 23;
+            this.txt_Lscr.Location = new System.Drawing.Point(228, 121);
+            this.txt_Lscr.Name = "txt_Lscr";
+            this.txt_Lscr.Size = new System.Drawing.Size(183, 20);
+            this.txt_Lscr.TabIndex = 23;
             // 
             // label12
             // 
@@ -226,12 +359,12 @@
             this.label12.TabIndex = 24;
             this.label12.Text = "Praticado LSCr:";
             // 
-            // textBox6
+            // txt_Lscx
             // 
-            this.textBox6.Location = new System.Drawing.Point(228, 74);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(183, 20);
-            this.textBox6.TabIndex = 21;
+            this.txt_Lscx.Location = new System.Drawing.Point(228, 74);
+            this.txt_Lscx.Name = "txt_Lscx";
+            this.txt_Lscx.Size = new System.Drawing.Size(183, 20);
+            this.txt_Lscx.TabIndex = 21;
             // 
             // label11
             // 
@@ -242,12 +375,12 @@
             this.label11.TabIndex = 22;
             this.label11.Text = "Praticado LSCx:";
             // 
-            // textBox5
+            // txt_PraticadoLicx
             // 
-            this.textBox5.Location = new System.Drawing.Point(228, 26);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(183, 20);
-            this.textBox5.TabIndex = 19;
+            this.txt_PraticadoLicx.Location = new System.Drawing.Point(228, 26);
+            this.txt_PraticadoLicx.Name = "txt_PraticadoLicx";
+            this.txt_PraticadoLicx.Size = new System.Drawing.Size(183, 20);
+            this.txt_PraticadoLicx.TabIndex = 19;
             // 
             // label10
             // 
@@ -258,12 +391,12 @@
             this.label10.TabIndex = 20;
             this.label10.Text = "Praticado LICx:";
             // 
-            // textBox4
+            // txt_Lse
             // 
-            this.textBox4.Location = new System.Drawing.Point(6, 121);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(183, 20);
-            this.textBox4.TabIndex = 17;
+            this.txt_Lse.Location = new System.Drawing.Point(6, 121);
+            this.txt_Lse.Name = "txt_Lse";
+            this.txt_Lse.Size = new System.Drawing.Size(183, 20);
+            this.txt_Lse.TabIndex = 17;
             // 
             // label9
             // 
@@ -274,12 +407,12 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "LSE:";
             // 
-            // textBox3
+            // txt_Lie
             // 
-            this.textBox3.Location = new System.Drawing.Point(6, 74);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(183, 20);
-            this.textBox3.TabIndex = 15;
+            this.txt_Lie.Location = new System.Drawing.Point(6, 74);
+            this.txt_Lie.Name = "txt_Lie";
+            this.txt_Lie.Size = new System.Drawing.Size(183, 20);
+            this.txt_Lie.TabIndex = 15;
             // 
             // label8
             // 
@@ -290,12 +423,12 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "LIE:";
             // 
-            // textBox2
+            // txt_EspecificacaoNominal
             // 
-            this.textBox2.Location = new System.Drawing.Point(6, 26);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 20);
-            this.textBox2.TabIndex = 14;
+            this.txt_EspecificacaoNominal.Location = new System.Drawing.Point(6, 26);
+            this.txt_EspecificacaoNominal.Name = "txt_EspecificacaoNominal";
+            this.txt_EspecificacaoNominal.Size = new System.Drawing.Size(183, 20);
+            this.txt_EspecificacaoNominal.TabIndex = 14;
             // 
             // label7
             // 
@@ -306,12 +439,12 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Especificação Nominal:";
             // 
-            // textBox1
+            // txt_IdModelo
             // 
-            this.textBox1.Location = new System.Drawing.Point(68, 300);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 20);
-            this.textBox1.TabIndex = 12;
+            this.txt_IdModelo.Location = new System.Drawing.Point(68, 300);
+            this.txt_IdModelo.Name = "txt_IdModelo";
+            this.txt_IdModelo.Size = new System.Drawing.Size(183, 20);
+            this.txt_IdModelo.TabIndex = 12;
             // 
             // label6
             // 
@@ -341,6 +474,10 @@
             this.Load += new System.EventHandler(this.ModeloAmostragem_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -349,32 +486,45 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lst_Modelos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb_CaracteristicasChave;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtt_Inicio;
+        private System.Windows.Forms.DateTimePicker dtt_Fim;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmb_MaquinaFabricacao;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_IdModelo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button btn_Confirmar;
+        private System.Windows.Forms.TextBox txt_Lscr;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txt_Lscx;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_PraticadoLicx;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_Lse;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_Lie;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_EspecificacaoNominal;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txt_FerramentaCaracteristica5;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txt_FerramentaCaracteristica4;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txt_FerramentaCaracteristica3;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txt_FerramentaCaracteristica2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txt_FerramentaCaracteristica1;
+        private System.Windows.Forms.Label label13;
     }
 }
