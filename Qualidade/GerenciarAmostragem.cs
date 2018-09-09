@@ -24,14 +24,12 @@ namespace Qualidade
 
         private void button2_Click(object sender, EventArgs e)
         {
-            NovaEditarAmostra novaamostra = new NovaEditarAmostra();
-            novaamostra.Show();
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            NovaEditarAmostra editarAmostra = new NovaEditarAmostra();
-            editarAmostra.Show();
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

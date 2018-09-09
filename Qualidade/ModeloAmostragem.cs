@@ -31,5 +31,20 @@ namespace Qualidade
         {
 
         }
+
+        private void txt_EspecificacaoNominal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Confirmar_Click(object sender, EventArgs e)
+        {
+            ModelodeAmostragemXML objeto1 = new ModelodeAmostragemXML(txt_IdModelo.Text, dtt_Inicio.Value, dtt_Fim.Value, 
+                                                                      cmb_CaracteristicasChave.Text, cmb_MaquinaFabricacao.Text,
+                                                                      txt_EspecificacaoNominal.Text, txt_Licx.Text, txt_Lie.Text, 
+                                                                      txt_Lscx.Text, txt_Lse.Text, txt_Lscr.Text, txt_FerramentaCaracteristica1.Text,
+                                                                      txt_FerramentaCaracteristica2.Text, txt_FerramentaCaracteristica3.Text, txt_FerramentaCaracteristica4.Text,
+                                                                      txt_FerramentaCaracteristica5.Text);
+        }
     }
 }

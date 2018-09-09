@@ -59,7 +59,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txt_Lscx = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txt_PraticadoLicx = new System.Windows.Forms.TextBox();
+            this.txt_Licx = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_Lse = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -322,6 +322,7 @@
             this.btn_Confirmar.TabIndex = 12;
             this.btn_Confirmar.Text = "Confirmar";
             this.btn_Confirmar.UseVisualStyleBackColor = true;
+            this.btn_Confirmar.Click += new System.EventHandler(this.btn_Confirmar_Click);
             // 
             // panel2
             // 
@@ -330,7 +331,7 @@
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.txt_Lscx);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.txt_PraticadoLicx);
+            this.panel2.Controls.Add(this.txt_Licx);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.txt_Lse);
             this.panel2.Controls.Add(this.label9);
@@ -375,12 +376,12 @@
             this.label11.TabIndex = 22;
             this.label11.Text = "Praticado LSCx:";
             // 
-            // txt_PraticadoLicx
+            // txt_Licx
             // 
-            this.txt_PraticadoLicx.Location = new System.Drawing.Point(228, 26);
-            this.txt_PraticadoLicx.Name = "txt_PraticadoLicx";
-            this.txt_PraticadoLicx.Size = new System.Drawing.Size(183, 20);
-            this.txt_PraticadoLicx.TabIndex = 19;
+            this.txt_Licx.Location = new System.Drawing.Point(228, 26);
+            this.txt_Licx.Name = "txt_Licx";
+            this.txt_Licx.Size = new System.Drawing.Size(183, 20);
+            this.txt_Licx.TabIndex = 19;
             // 
             // label10
             // 
@@ -429,6 +430,7 @@
             this.txt_EspecificacaoNominal.Name = "txt_EspecificacaoNominal";
             this.txt_EspecificacaoNominal.Size = new System.Drawing.Size(183, 20);
             this.txt_EspecificacaoNominal.TabIndex = 14;
+            this.txt_EspecificacaoNominal.TextChanged += new System.EventHandler(this.txt_EspecificacaoNominal_TextChanged);
             // 
             // label7
             // 
@@ -505,7 +507,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txt_Lscx;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txt_PraticadoLicx;
+        private System.Windows.Forms.TextBox txt_Licx;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_Lse;
         private System.Windows.Forms.Label label9;

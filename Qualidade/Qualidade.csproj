@@ -67,12 +67,7 @@
     <Compile Include="ModeloAmostragem.Designer.cs">
       <DependentUpon>ModeloAmostragem.cs</DependentUpon>
     </Compile>
-    <Compile Include="NovaEditarAmostra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NovaEditarAmostra.Designer.cs">
-      <DependentUpon>NovaEditarAmostra.cs</DependentUpon>
-    </Compile>
+    <Compile Include="ModelodeAmostragemXML.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GerenciarAmostragem.resx">
@@ -83,9 +78,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModeloAmostragem.resx">
       <DependentUpon>ModeloAmostragem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NovaEditarAmostra.resx">
-      <DependentUpon>NovaEditarAmostra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
