@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NHibernate_PostGreSQLDAL.Entities;
+using NHibernate_PostGreSQLDAL;
 
 namespace Qualidade
 {
@@ -32,6 +34,9 @@ namespace Qualidade
             this.Ferramentacaracteristica3 = _ferramentacaracteristica3;
             this.Ferramentacaracteristica4 = _ferramentacaracteristica4;
             this.Ferramentacaracteristica5 = _ferramentacaracteristica5;
+
+            PersistirDadosemDAO();
+
         }
 
         private string idmodelo;
@@ -70,13 +75,26 @@ namespace Qualidade
 
         private void PersistirDadosemDAO()
         {
-             
-          
+            Capabilidade_modeloamostras novomodelo = new Capabilidade_modeloamostras();
+            RepositoryCapabilidade_modeloamostras dao = new RepositoryCapabilidade_modeloamostras();
 
-
-
-
-
+            novomodelo.idmodelo = idmodelo;
+            novomodelo.inicio = inicio;
+            novomodelo.fim = fim;
+            novomodelo.caracteristicachave = caracteristicachave;
+            novomodelo.maquinafabricacao = maquinafabricacao;
+            novomodelo.especificacaonominal = especificacaonominal;
+            novomodelo.praticadolicx = praticadolicx;
+            novomodelo.lie = lie;
+            novomodelo.praticadolscx = praticadolscx;
+            novomodelo.lse = lse;
+            novomodelo.praticadolscr = praticadolscr;
+            novomodelo.ferramentacaracteristica1 = ferramentacaracteristica1;
+            novomodelo.ferramentacaracteristica2 = ferramentacaracteristica2;
+            novomodelo.ferramentacaracteristica3 = ferramentacaracteristica3;
+            novomodelo.ferramentacaracteristica4 = ferramentacaracteristica4;
+            novomodelo.ferramentacaracteristica5 = ferramentacaracteristica5;
+            dao.Inserir(novomodelo);
 
         }
 

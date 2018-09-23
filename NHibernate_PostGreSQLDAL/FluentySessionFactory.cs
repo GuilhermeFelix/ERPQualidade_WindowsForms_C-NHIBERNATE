@@ -11,7 +11,7 @@ namespace NHibernate_PostGreSQLDAL
 {
     class FluentySessionFactory
     {
-        private static string ConnectionString = "Server = localhost; port = 5432; User Id=postgres; Password =12345678; Database = erpqualidade";
+        private static readonly string ConnectionString = "Server=localhost; Port=5432; User Id=postgres; Password=12345678; Database=erpqualidade";
         private static ISessionFactory session;
 
         public static ISessionFactory CriarSession()
