@@ -19,7 +19,7 @@ namespace NHibernate_PostGreSQLDAL
             if (session != null)
                 return session;
 
-                IPersistenceConfigurer configDB = PostgreSQLConfiguration.Standard.ConnectionString(ConnectionString);
+                IPersistenceConfigurer configDB = PostgreSQLConfiguration.PostgreSQL82.ConnectionString(ConnectionString);
                 var configMap = Fluently.Configure().Database(configDB).Mappings(f => f.FluentMappings.AddFromAssemblyOf<Mapping.Capabilidade_modeloamostrasMap>());
                 session = configMap.BuildSessionFactory();    
                 return session;
@@ -27,7 +27,7 @@ namespace NHibernate_PostGreSQLDAL
 
         public static ISession AbrirSession()
         {
-            return session.OpenSession();
+            return CriarSession().OpenSession();
 
         }
 
