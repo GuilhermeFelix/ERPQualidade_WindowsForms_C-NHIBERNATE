@@ -67,7 +67,7 @@
     <Compile Include="ModeloAmostragem.Designer.cs">
       <DependentUpon>ModeloAmostragem.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModelodeAmostragemXML.cs" />
+    <Compile Include="ModelodeAmostragemBO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GerenciarAmostragem.resx">

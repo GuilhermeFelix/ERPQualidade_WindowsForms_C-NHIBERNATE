@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Qualidade
 {
-    class ModelodeAmostragemXML
+    class ModelodeAmostragemBO
     {
     
 
-        public ModelodeAmostragemXML(string _idmodelo, DateTime _inicio, DateTime _fim,
+        public ModelodeAmostragemBO(string _idmodelo, DateTime _inicio, DateTime _fim,
             string _caracticachave, string _maquinafabricacao, string _especificacaonominal,
             string _praticadolicx, string _lie, string _praticadolscx, string _lse, string _praticadolscr,
             string _ferramentacaracteristica1, string _ferramentacaracteristica2, string _ferramentacaracteristica3,
@@ -68,11 +68,10 @@ namespace Qualidade
         public string Ferramentacaracteristica4 { get => ferramentacaracteristica4; set => ferramentacaracteristica4 = value; }
         public string Ferramentacaracteristica5 { get => ferramentacaracteristica5; set => ferramentacaracteristica5 = value; }
 
-        //MetodoparaSalvarXML
-        private void SalvarXML()
+        private void PersistirDadosemDAO()
         {
-
-
+             
+          
 
 
 
