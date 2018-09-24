@@ -10,13 +10,13 @@ namespace Qualidade
 {
     class ModelodeAmostragemBO
     {
-    
+
 
         public ModelodeAmostragemBO(string _idmodelo, DateTime _inicio, DateTime _fim,
             string _caracticachave, string _maquinafabricacao, string _especificacaonominal,
             string _praticadolicx, string _lie, string _praticadolscx, string _lse, string _praticadolscr,
             string _ferramentacaracteristica1, string _ferramentacaracteristica2, string _ferramentacaracteristica3,
-            string _ferramentacaracteristica4, string _ferramentacaracteristica5)
+            string _ferramentacaracteristica4, string _ferramentacaracteristica5, bool _inserirnobd)
         {
             this.Idmodelo = _idmodelo;
             this.Inicio = _inicio;
@@ -35,7 +35,13 @@ namespace Qualidade
             this.Ferramentacaracteristica4 = _ferramentacaracteristica4;
             this.Ferramentacaracteristica5 = _ferramentacaracteristica5;
 
-            PersistirDadosemDAO();
+            //caso selecione Novo Modelo no ListBox deve inserir dados no BD.
+            if (_inserirnobd)
+            {
+              PersistirDadosemDAO();
+            }
+
+            
 
         }
 
@@ -55,6 +61,7 @@ namespace Qualidade
         private string ferramentacaracteristica3;
         private string ferramentacaracteristica4;
         private string ferramentacaracteristica5;
+       
 
         public string Idmodelo { get => idmodelo; set => idmodelo = value; }
         public DateTime Inicio { get => inicio; set => inicio = value; }

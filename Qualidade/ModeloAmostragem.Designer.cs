@@ -79,11 +79,13 @@
             // 
             this.lst_Modelos.FormattingEnabled = true;
             this.lst_Modelos.Items.AddRange(new object[] {
-            "Novo Modelo"});
+            "Novo Modelo",
+            "teste"});
             this.lst_Modelos.Location = new System.Drawing.Point(14, 26);
             this.lst_Modelos.Name = "lst_Modelos";
             this.lst_Modelos.Size = new System.Drawing.Size(237, 264);
             this.lst_Modelos.TabIndex = 0;
+            this.lst_Modelos.SelectedIndexChanged += new System.EventHandler(this.lst_Modelos_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -127,7 +129,6 @@
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Inicio:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // dtt_Inicio
             // 
@@ -135,7 +136,6 @@
             this.dtt_Inicio.Name = "dtt_Inicio";
             this.dtt_Inicio.Size = new System.Drawing.Size(236, 20);
             this.dtt_Inicio.TabIndex = 6;
-            this.dtt_Inicio.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // dtt_Fim
             // 
@@ -211,7 +211,7 @@
             this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.txt_FerramentaCaracteristica1);
             this.panel3.Controls.Add(this.label13);
-            this.panel3.Location = new System.Drawing.Point(485, 278);
+            this.panel3.Location = new System.Drawing.Point(486, 278);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(225, 181);
             this.panel3.TabIndex = 25;
@@ -220,9 +220,9 @@
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel4.Controls.Add(this.label18);
-            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Location = new System.Drawing.Point(1, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(225, 28);
+            this.panel4.Size = new System.Drawing.Size(224, 28);
             this.panel4.TabIndex = 22;
             // 
             // label18
@@ -430,7 +430,6 @@
             this.txt_EspecificacaoNominal.Name = "txt_EspecificacaoNominal";
             this.txt_EspecificacaoNominal.Size = new System.Drawing.Size(183, 20);
             this.txt_EspecificacaoNominal.TabIndex = 14;
-            this.txt_EspecificacaoNominal.TextChanged += new System.EventHandler(this.txt_EspecificacaoNominal_TextChanged);
             // 
             // label7
             // 
@@ -473,7 +472,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Referêncial Amostral do Universo Estatístico";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.ModeloAmostragem_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
