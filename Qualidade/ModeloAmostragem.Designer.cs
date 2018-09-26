@@ -79,8 +79,7 @@
             // 
             this.lst_Modelos.FormattingEnabled = true;
             this.lst_Modelos.Items.AddRange(new object[] {
-            "Novo Modelo",
-            "teste"});
+            "Novo Modelo"});
             this.lst_Modelos.Location = new System.Drawing.Point(14, 26);
             this.lst_Modelos.Name = "lst_Modelos";
             this.lst_Modelos.Size = new System.Drawing.Size(237, 264);
@@ -472,6 +471,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Referêncial Amostral do Universo Estatístico";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ModeloAmostragem_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
