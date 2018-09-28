@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GerenciarAmostragem));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -37,38 +35,38 @@
             this.cmb_IdModelo = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.dtg_Amostras = new System.Windows.Forms.DataGridView();
+            this.amostra1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amostra23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amostra25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_Amostras)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -119,185 +117,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dtg_Amostras);
             this.panel2.Location = new System.Drawing.Point(41, 141);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(898, 187);
             this.panel2.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11,
-            this.Column12,
-            this.Column13,
-            this.Column14,
-            this.Column15,
-            this.Column16,
-            this.Column17,
-            this.Column18,
-            this.Column19,
-            this.Column20,
-            this.Column21,
-            this.Column22,
-            this.Column23,
-            this.Column24,
-            this.Column25});
-            this.dataGridView1.Location = new System.Drawing.Point(13, 7);
-            this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.dataGridView1.Size = new System.Drawing.Size(873, 163);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Amostra 1";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Amostra 2";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Amostra 3";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Amostra 4";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Amostra 5";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Amostra 6";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Amostra 7";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Amostra 8";
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Amostra 9";
-            this.Column9.Name = "Column9";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Amostra 10";
-            this.Column10.Name = "Column10";
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Amostra 11";
-            this.Column11.Name = "Column11";
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Amostra 12";
-            this.Column12.Name = "Column12";
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Amostra 13";
-            this.Column13.Name = "Column13";
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "Amostra 14";
-            this.Column14.Name = "Column14";
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "Amostra 15";
-            this.Column15.Name = "Column15";
-            // 
-            // Column16
-            // 
-            this.Column16.HeaderText = "Amostra 16";
-            this.Column16.Name = "Column16";
-            // 
-            // Column17
-            // 
-            this.Column17.HeaderText = "Amostra 17";
-            this.Column17.Name = "Column17";
-            // 
-            // Column18
-            // 
-            this.Column18.HeaderText = "Amostra 18";
-            this.Column18.Name = "Column18";
-            // 
-            // Column19
-            // 
-            this.Column19.HeaderText = "Amostra 19";
-            this.Column19.Name = "Column19";
-            // 
-            // Column20
-            // 
-            this.Column20.HeaderText = "Amostra 20";
-            this.Column20.Name = "Column20";
-            // 
-            // Column21
-            // 
-            this.Column21.HeaderText = "Amostra 21";
-            this.Column21.Name = "Column21";
-            // 
-            // Column22
-            // 
-            this.Column22.HeaderText = "Amostra 22";
-            this.Column22.Name = "Column22";
-            // 
-            // Column23
-            // 
-            this.Column23.HeaderText = "Amostra 23";
-            this.Column23.Name = "Column23";
-            // 
-            // Column24
-            // 
-            this.Column24.HeaderText = "Amostra 24";
-            this.Column24.Name = "Column24";
-            // 
-            // Column25
-            // 
-            this.Column25.HeaderText = "Amostra 25";
-            this.Column25.Name = "Column25";
             // 
             // button1
             // 
@@ -328,6 +152,166 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // dtg_Amostras
+            // 
+            this.dtg_Amostras.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dtg_Amostras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_Amostras.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.amostra1,
+            this.amostra2,
+            this.amostra3,
+            this.amostra4,
+            this.amostra5,
+            this.amostra6,
+            this.amostra7,
+            this.amostra8,
+            this.amostra9,
+            this.amostra10,
+            this.amostra11,
+            this.amostra12,
+            this.amostra13,
+            this.amostra14,
+            this.amostra15,
+            this.amostra16,
+            this.amostra17,
+            this.amostra18,
+            this.amostra19,
+            this.amostra20,
+            this.amostra21,
+            this.amostra22,
+            this.Amostra23,
+            this.amostra24,
+            this.amostra25});
+            this.dtg_Amostras.Location = new System.Drawing.Point(13, 9);
+            this.dtg_Amostras.Name = "dtg_Amostras";
+            this.dtg_Amostras.Size = new System.Drawing.Size(873, 173);
+            this.dtg_Amostras.TabIndex = 24;
+            // 
+            // amostra1
+            // 
+            this.amostra1.HeaderText = "Amostra 1";
+            this.amostra1.Name = "amostra1";
+            // 
+            // amostra2
+            // 
+            this.amostra2.HeaderText = "Amostra 2";
+            this.amostra2.Name = "amostra2";
+            // 
+            // amostra3
+            // 
+            this.amostra3.HeaderText = "Amostra 3";
+            this.amostra3.Name = "amostra3";
+            // 
+            // amostra4
+            // 
+            this.amostra4.HeaderText = "Amostra 4";
+            this.amostra4.Name = "amostra4";
+            // 
+            // amostra5
+            // 
+            this.amostra5.HeaderText = "Amostra 5";
+            this.amostra5.Name = "amostra5";
+            // 
+            // amostra6
+            // 
+            this.amostra6.HeaderText = "Amostra 6";
+            this.amostra6.Name = "amostra6";
+            // 
+            // amostra7
+            // 
+            this.amostra7.HeaderText = "Amostra 7";
+            this.amostra7.Name = "amostra7";
+            // 
+            // amostra8
+            // 
+            this.amostra8.HeaderText = "Amostra 8";
+            this.amostra8.Name = "amostra8";
+            // 
+            // amostra9
+            // 
+            this.amostra9.HeaderText = "Amostra 9";
+            this.amostra9.Name = "amostra9";
+            // 
+            // amostra10
+            // 
+            this.amostra10.HeaderText = "Amostra 10";
+            this.amostra10.Name = "amostra10";
+            // 
+            // amostra11
+            // 
+            this.amostra11.HeaderText = "Amostra 11";
+            this.amostra11.Name = "amostra11";
+            // 
+            // amostra12
+            // 
+            this.amostra12.HeaderText = "Amostra 12";
+            this.amostra12.Name = "amostra12";
+            // 
+            // amostra13
+            // 
+            this.amostra13.HeaderText = "Amostra 13";
+            this.amostra13.Name = "amostra13";
+            // 
+            // amostra14
+            // 
+            this.amostra14.HeaderText = "Amostra 14";
+            this.amostra14.Name = "amostra14";
+            // 
+            // amostra15
+            // 
+            this.amostra15.HeaderText = "Amostra 15";
+            this.amostra15.Name = "amostra15";
+            // 
+            // amostra16
+            // 
+            this.amostra16.HeaderText = "Amostra 16";
+            this.amostra16.Name = "amostra16";
+            // 
+            // amostra17
+            // 
+            this.amostra17.HeaderText = "Amostra 17";
+            this.amostra17.Name = "amostra17";
+            // 
+            // amostra18
+            // 
+            this.amostra18.HeaderText = "Amostra 18";
+            this.amostra18.Name = "amostra18";
+            // 
+            // amostra19
+            // 
+            this.amostra19.HeaderText = "Amostra 19";
+            this.amostra19.Name = "amostra19";
+            // 
+            // amostra20
+            // 
+            this.amostra20.HeaderText = "Amostra 20";
+            this.amostra20.Name = "amostra20";
+            // 
+            // amostra21
+            // 
+            this.amostra21.HeaderText = "Amostra 21";
+            this.amostra21.Name = "amostra21";
+            // 
+            // amostra22
+            // 
+            this.amostra22.HeaderText = "Amostra 22";
+            this.amostra22.Name = "amostra22";
+            // 
+            // Amostra23
+            // 
+            this.Amostra23.HeaderText = "Amostra 23";
+            this.Amostra23.Name = "Amostra23";
+            // 
+            // amostra24
+            // 
+            this.amostra24.HeaderText = "Amostra 24";
+            this.amostra24.Name = "amostra24";
+            // 
+            // amostra25
+            // 
+            this.amostra25.HeaderText = "Amostra 25";
+            this.amostra25.Name = "amostra25";
+            // 
             // GerenciarAmostragem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -350,7 +334,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_Amostras)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -366,31 +350,31 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column25;
+        public System.Windows.Forms.DataGridView dtg_Amostras;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amostra23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amostra25;
     }
 }

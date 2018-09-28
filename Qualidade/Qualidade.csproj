@@ -67,6 +67,7 @@
     <Compile Include="GerenciarAmostragem.Designer.cs">
       <DependentUpon>GerenciarAmostragem.cs</DependentUpon>
     </Compile>
+    <Compile Include="GerenciarAmostragemBO.cs" />
     <Compile Include="Master.cs">
       <SubType>Form</SubType>
     </Compile>
