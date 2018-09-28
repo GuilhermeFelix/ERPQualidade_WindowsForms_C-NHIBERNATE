@@ -19,6 +19,15 @@ namespace Qualidade
 
         private void GerenciarAmostragem_Load(object sender, EventArgs e)
         {
+            ModelodeAmostragemBO carregarnomes = new ModelodeAmostragemBO();
+
+            foreach (var item in carregarnomes.CarregarNomesModelo())
+            {
+                cmb_IdModelo.Items.Add(item.idmodelo.ToString());
+                
+            }
+
+
 
         }
 

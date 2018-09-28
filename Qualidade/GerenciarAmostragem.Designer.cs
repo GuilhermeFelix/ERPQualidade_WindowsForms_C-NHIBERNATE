@@ -34,7 +34,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmb_IdModelo = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -76,7 +76,7 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cmb_IdModelo);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Location = new System.Drawing.Point(41, 34);
             this.panel1.Name = "panel1";
@@ -99,13 +99,13 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Data e Hora:";
             // 
-            // comboBox1
+            // cmb_IdModelo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(663, 14);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(223, 21);
-            this.comboBox1.TabIndex = 14;
+            this.cmb_IdModelo.FormattingEnabled = true;
+            this.cmb_IdModelo.Location = new System.Drawing.Point(663, 14);
+            this.cmb_IdModelo.Name = "cmb_IdModelo";
+            this.cmb_IdModelo.Size = new System.Drawing.Size(223, 21);
+            this.cmb_IdModelo.TabIndex = 14;
             // 
             // label6
             // 
@@ -173,8 +173,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(873, 163);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.RowCount = 5;
-            
             // 
             // Column1
             // 
@@ -360,7 +358,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb_IdModelo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

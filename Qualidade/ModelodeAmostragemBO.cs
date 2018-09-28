@@ -11,16 +11,47 @@ namespace Qualidade
     class ModelodeAmostragemBO
     {
 
-
         //construtor para carregar nomedasamostras do banco
         public ModelodeAmostragemBO()
         {
 
-        this.nomes = CarregarNomesModelo();
-       
+            this.nomes = CarregarNomesModelo();
+
         }
 
-        
+        //construtor para excluir dados que são selecionados no listbox no formulario
+        public ModelodeAmostragemBO(int _id, string _idmodelo, DateTime _inicio, DateTime _fim,
+            string _caracticachave, string _maquinafabricacao, string _especificacaonominal,
+            string _praticadolicx, string _lie, string _praticadolscx, string _lse, string _praticadolscr,
+            string _ferramentacaracteristica1, string _ferramentacaracteristica2, string _ferramentacaracteristica3,
+            string _ferramentacaracteristica4, string _ferramentacaracteristica5, bool _excluirnobd)
+        {
+            this.Id = _id;
+            this.Idmodelo = _idmodelo;
+            this.Inicio = _inicio;
+            this.Fim = _fim;
+            this.Caracteristicachave = _caracticachave;
+            this.Maquinafabricacao = _maquinafabricacao;
+            this.Especificacaonominal = _especificacaonominal;
+            this.Praticadolicx = _praticadolicx;
+            this.Lie = _lie;
+            this.Praticadolscx = _praticadolscx;
+            this.Lse = _lse;
+            this.Praticadolscr = _praticadolscr;
+            this.Ferramentacaracteristica1 = _ferramentacaracteristica1;
+            this.Ferramentacaracteristica2 = _ferramentacaracteristica2;
+            this.Ferramentacaracteristica3 = _ferramentacaracteristica3;
+            this.Ferramentacaracteristica4 = _ferramentacaracteristica4;
+            this.Ferramentacaracteristica5 = _ferramentacaracteristica5;
+
+            //caso selecione Modelo existente no ListBox deve  carregar os dados do BD nos campos.
+            if (_excluirnobd == true)
+            {
+                ExcluirDadosemDAO();
+            }
+
+        }
+
         //construtor para carregar dados que são selecionados no listbox no formulario
         public ModelodeAmostragemBO(int _id)
         {
@@ -41,6 +72,7 @@ namespace Qualidade
             string _ferramentacaracteristica1, string _ferramentacaracteristica2, string _ferramentacaracteristica3,
             string _ferramentacaracteristica4, string _ferramentacaracteristica5, bool _inserirnobd)
         {
+
             this.Idmodelo = _idmodelo;
             this.Inicio = _inicio;
             this.Fim = _fim;
@@ -64,7 +96,7 @@ namespace Qualidade
             {
                 PersistirDadosemDAO();
             }
-            
+
         }
 
 
@@ -96,7 +128,7 @@ namespace Qualidade
 
             //caso selecione Modelo Existente no ListBox deve atualizar dados no BD.
             AlterarDadosemDAO();
-            
+
 
 
         }
@@ -119,7 +151,6 @@ namespace Qualidade
         private string ferramentacaracteristica5;
         private int id;
         public IList<Capabilidade_modeloamostras> nomes;
-
 
         public string Idmodelo { get => idmodelo; set => idmodelo = value; }
         public DateTime Inicio { get => inicio; set => inicio = value; }
@@ -189,6 +220,33 @@ namespace Qualidade
 
         }
 
+        private void ExcluirDadosemDAO()
+        {
+            Capabilidade_modeloamostras excluirmodelo = new Capabilidade_modeloamostras();
+            RepositoryCapabilidade_modeloamostras dao = new RepositoryCapabilidade_modeloamostras();
+            excluirmodelo.id = id;
+            excluirmodelo.idmodelo = idmodelo;
+            excluirmodelo.inicio = inicio;
+            excluirmodelo.fim = fim;
+            excluirmodelo.caracteristicachave = caracteristicachave;
+            excluirmodelo.maquinafabricacao = maquinafabricacao;
+            excluirmodelo.especificacaonominal = especificacaonominal;
+            excluirmodelo.praticadolicx = praticadolicx;
+            excluirmodelo.lie = lie;
+            excluirmodelo.praticadolscx = praticadolscx;
+            excluirmodelo.lse = lse;
+            excluirmodelo.praticadolscr = praticadolscr;
+            excluirmodelo.ferramentacaracteristica1 = ferramentacaracteristica1;
+            excluirmodelo.ferramentacaracteristica2 = ferramentacaracteristica2;
+            excluirmodelo.ferramentacaracteristica3 = ferramentacaracteristica3;
+            excluirmodelo.ferramentacaracteristica4 = ferramentacaracteristica4;
+            excluirmodelo.ferramentacaracteristica5 = ferramentacaracteristica5;
+            dao.Excluir(excluirmodelo);
+
+        }
+
+
+
         private void CarregarDadosemDAO()
         {
 
@@ -219,15 +277,18 @@ namespace Qualidade
 
             RepositoryCapabilidade_modeloamostras dao = new RepositoryCapabilidade_modeloamostras();
             var nomedasamostras = dao.Consultar().OrderBy(x => x.id).ToList();
+
+
+
             return nomedasamostras;
-         
         }
 
-
-
-
-    }        
+    }
 }
+
+
+
+        
 
         
 
