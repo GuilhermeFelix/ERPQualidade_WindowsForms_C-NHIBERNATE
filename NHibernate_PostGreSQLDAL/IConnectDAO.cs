@@ -14,5 +14,7 @@ namespace NHibernate_PostGreSQLDAL
         T RetornarPorId(int id);
         IList<T> Consultar();
 
+        
+
     }
 }

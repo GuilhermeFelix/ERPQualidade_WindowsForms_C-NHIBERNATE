@@ -10,7 +10,7 @@ namespace Qualidade
 {
     class ModelodeAmostragemBO
     {
-
+                
         //construtor para carregar nomedasamostras do banco
         public ModelodeAmostragemBO()
         {
@@ -53,12 +53,12 @@ namespace Qualidade
         }
 
         //construtor para carregar dados que são selecionados no listbox no formulario
-        public ModelodeAmostragemBO(int _id)
+        public ModelodeAmostragemBO(string _idmodelo)
         {
-            this.Id = _id;
+            this.Idmodelo = _idmodelo;
 
             //caso selecione Modelo existente no ListBox deve  carregar os dados do BD nos campos.
-            if (Id > 0)
+            if (Idmodelo != "Novo Modelo")
             {
                 CarregarDadosemDAO();
             }
@@ -101,13 +101,12 @@ namespace Qualidade
 
 
         // Update de Dados
-        public ModelodeAmostragemBO(int _id, string _idmodelo, DateTime _inicio, DateTime _fim,
+        public ModelodeAmostragemBO(string _idmodelo, DateTime _inicio, DateTime _fim,
             string _caracticachave, string _maquinafabricacao, string _especificacaonominal,
             string _praticadolicx, string _lie, string _praticadolscx, string _lse, string _praticadolscr,
             string _ferramentacaracteristica1, string _ferramentacaracteristica2, string _ferramentacaracteristica3,
             string _ferramentacaracteristica4, string _ferramentacaracteristica5)
-        {
-            this.Id = _id;
+        {         
             this.Idmodelo = _idmodelo;
             this.Inicio = _inicio;
             this.Fim = _fim;
@@ -174,7 +173,7 @@ namespace Qualidade
         {
             Capabilidade_modeloamostras novomodelo = new Capabilidade_modeloamostras();
             RepositoryCapabilidade_modeloamostras dao = new RepositoryCapabilidade_modeloamostras();
-
+            
             novomodelo.idmodelo = idmodelo;
             novomodelo.inicio = inicio;
             novomodelo.fim = fim;
@@ -197,34 +196,57 @@ namespace Qualidade
 
         private void AlterarDadosemDAO()
         {
-            Capabilidade_modeloamostras alterarmodelo = new Capabilidade_modeloamostras();
+            
+            //pesquisar o id referente ao modelo selecionado
             RepositoryCapabilidade_modeloamostras dao = new RepositoryCapabilidade_modeloamostras();
-            alterarmodelo.id = id;
-            alterarmodelo.idmodelo = idmodelo;
-            alterarmodelo.inicio = inicio;
-            alterarmodelo.fim = fim;
-            alterarmodelo.caracteristicachave = caracteristicachave;
-            alterarmodelo.maquinafabricacao = maquinafabricacao;
-            alterarmodelo.especificacaonominal = especificacaonominal;
-            alterarmodelo.praticadolicx = praticadolicx;
-            alterarmodelo.lie = lie;
-            alterarmodelo.praticadolscx = praticadolscx;
-            alterarmodelo.lse = lse;
-            alterarmodelo.praticadolscr = praticadolscr;
-            alterarmodelo.ferramentacaracteristica1 = ferramentacaracteristica1;
-            alterarmodelo.ferramentacaracteristica2 = ferramentacaracteristica2;
-            alterarmodelo.ferramentacaracteristica3 = ferramentacaracteristica3;
-            alterarmodelo.ferramentacaracteristica4 = ferramentacaracteristica4;
-            alterarmodelo.ferramentacaracteristica5 = ferramentacaracteristica5;
+            Capabilidade_modeloamostras alterarmodelo = new Capabilidade_modeloamostras();
+
+            var nomedasamostras = dao.Consultar().OrderBy(x => x.id).ToList();
+            foreach (var item in nomedasamostras)
+            {
+                if (item.idmodelo == Idmodelo)
+                {
+                    alterarmodelo.id = item.id;
+                }
+            }
+
+            alterarmodelo.idmodelo = Idmodelo;
+            alterarmodelo.inicio = Inicio;
+            alterarmodelo.fim = Fim;
+            alterarmodelo.caracteristicachave = Caracteristicachave;
+            alterarmodelo.maquinafabricacao = Maquinafabricacao;
+            alterarmodelo.especificacaonominal = Especificacaonominal;
+            alterarmodelo.praticadolicx = Praticadolicx;
+            alterarmodelo.lie = Lie;
+            alterarmodelo.praticadolscx = Praticadolscx;
+            alterarmodelo.lse = Lse;
+            alterarmodelo.praticadolscr = Praticadolscr;
+            alterarmodelo.ferramentacaracteristica1 = Ferramentacaracteristica1;
+            alterarmodelo.ferramentacaracteristica2 = Ferramentacaracteristica2;
+            alterarmodelo.ferramentacaracteristica3 = Ferramentacaracteristica3;
+            alterarmodelo.ferramentacaracteristica4 = Ferramentacaracteristica4;
+            alterarmodelo.ferramentacaracteristica5 = Ferramentacaracteristica5;
             dao.Alterar(alterarmodelo);
 
         }
 
         private void ExcluirDadosemDAO()
         {
+
             Capabilidade_modeloamostras excluirmodelo = new Capabilidade_modeloamostras();
+
+            //pesquisar o id referente ao modelo selecionado
             RepositoryCapabilidade_modeloamostras dao = new RepositoryCapabilidade_modeloamostras();
-            excluirmodelo.id = id;
+
+            var nomedasamostras = dao.Consultar().OrderBy(x => x.id).ToList();
+            foreach (var item in nomedasamostras)
+            {
+                if (item.idmodelo == Idmodelo)
+                {
+                    excluirmodelo.id = item.id;
+                }
+            }
+
             excluirmodelo.idmodelo = idmodelo;
             excluirmodelo.inicio = inicio;
             excluirmodelo.fim = fim;
@@ -251,35 +273,35 @@ namespace Qualidade
         {
 
             RepositoryCapabilidade_modeloamostras dao = new RepositoryCapabilidade_modeloamostras();
-            Capabilidade_modeloamostras carregarmodelo = dao.RetornarPorId(Id);
-
-            Idmodelo = carregarmodelo.idmodelo;
-            Inicio = carregarmodelo.inicio;
-            Fim = carregarmodelo.fim;
-            Caracteristicachave = carregarmodelo.caracteristicachave;
-            Maquinafabricacao = carregarmodelo.maquinafabricacao;
-            Especificacaonominal = carregarmodelo.especificacaonominal;
-            Praticadolicx = carregarmodelo.praticadolicx;
-            Lie = carregarmodelo.lie;
-            Praticadolscx = carregarmodelo.praticadolscx;
-            Lse = carregarmodelo.lse;
-            Praticadolscr = carregarmodelo.praticadolscr;
-            Ferramentacaracteristica1 = carregarmodelo.ferramentacaracteristica1;
-            Ferramentacaracteristica2 = carregarmodelo.ferramentacaracteristica2;
-            Ferramentacaracteristica3 = carregarmodelo.ferramentacaracteristica3;
-            Ferramentacaracteristica4 = carregarmodelo.ferramentacaracteristica4;
-            Ferramentacaracteristica5 = carregarmodelo.ferramentacaracteristica5;
-
+            var nomedasamostras = dao.Consultar().OrderBy(x => x.id).ToList();
+            foreach (var carregarmodelo in nomedasamostras)
+            {
+                if (carregarmodelo.idmodelo == Idmodelo)
+                {
+                    Inicio = carregarmodelo.inicio;
+                    Fim = carregarmodelo.fim;
+                    Caracteristicachave = carregarmodelo.caracteristicachave;
+                    Maquinafabricacao = carregarmodelo.maquinafabricacao;
+                    Especificacaonominal = carregarmodelo.especificacaonominal;
+                    Praticadolicx = carregarmodelo.praticadolicx;
+                    Lie = carregarmodelo.lie;
+                    Praticadolscx = carregarmodelo.praticadolscx;
+                    Lse = carregarmodelo.lse;
+                    Praticadolscr = carregarmodelo.praticadolscr;
+                    Ferramentacaracteristica1 = carregarmodelo.ferramentacaracteristica1;
+                    Ferramentacaracteristica2 = carregarmodelo.ferramentacaracteristica2;
+                    Ferramentacaracteristica3 = carregarmodelo.ferramentacaracteristica3;
+                    Ferramentacaracteristica4 = carregarmodelo.ferramentacaracteristica4;
+                    Ferramentacaracteristica5 = carregarmodelo.ferramentacaracteristica5;
+                }
+            }
+                        
         }
 
         public IList<Capabilidade_modeloamostras> CarregarNomesModelo()
         {
-
             RepositoryCapabilidade_modeloamostras dao = new RepositoryCapabilidade_modeloamostras();
             var nomedasamostras = dao.Consultar().OrderBy(x => x.id).ToList();
-
-
-
             return nomedasamostras;
         }
 

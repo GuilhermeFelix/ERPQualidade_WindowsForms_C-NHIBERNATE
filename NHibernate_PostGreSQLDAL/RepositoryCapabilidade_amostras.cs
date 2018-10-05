@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NHibernate_PostGreSQLDAL
 {
-    public class RepositoryCapabilidade_modeloamostras : RepositoryConnectDAOCapabilidade_modeloamostras<Capabilidade_modeloamostras>
+    public class RepositoryCapabilidade_amostras : RepositoryConnectDAOCapabilidade_amostras<Capabilidade_amostras>
     {
 
     }

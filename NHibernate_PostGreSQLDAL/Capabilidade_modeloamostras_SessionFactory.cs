@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace NHibernate_PostGreSQLDAL
 {
-    class FluentySessionFactory
+    class Capabilidade_modeloamostras_SessionFactory
     {
         private static readonly string ConnectionString = "Server = localhost; Port = 5432; User Id = postgres; Password = 12345678; Database=erpqualidade";
        

@@ -117,13 +117,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\kisspng-rubbish-bins-waste-paper-baskets-computer-icons-trash-svg-png-icon-free-download-223172-onlin-5b8a014586eb07.2610459115357709495526.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\NHibernate_PostGreSQLDAL\NHibernate_PostGreSQLDAL.csproj">
       <Project>{76e232c7-843f-4a80-b445-f9c7a3b18495}</Project>
       <Name>NHibernate_PostGreSQLDAL</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kisspng-rubbish-bins-waste-paper-baskets-computer-icons-trash-svg-png-icon-free-download-223172-onlin-5b8a014586eb07.2610459115357709495526.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

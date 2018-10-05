@@ -8,8 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-
 namespace Qualidade
 {
     public partial class ModeloAmostragem : Form
@@ -22,30 +20,37 @@ namespace Qualidade
         private void btn_Confirmar_Click(object sender, EventArgs e)
         {
             //se Novo Modelo for selecionado em lst_Modelos então inserir valor no bd
-            if (lst_Modelos.SelectedIndex.Equals(0))
+            try
             {
+                if (lst_Modelos.SelectedItem.ToString() == "Novo Modelo")
+                {
 
-                ModelodeAmostragemBO novomodelodeamostra = new ModelodeAmostragemBO(txt_IdModelo.Text, dtt_Inicio.Value, dtt_Fim.Value,
-                                                                            cmb_CaracteristicasChave.Text, cmb_MaquinaFabricacao.Text,
-                                                                            txt_EspecificacaoNominal.Text, txt_Licx.Text, txt_Lie.Text,
-                                                                            txt_Lscx.Text, txt_Lse.Text, txt_Lscr.Text, txt_FerramentaCaracteristica1.Text,
-                                                                            txt_FerramentaCaracteristica2.Text, txt_FerramentaCaracteristica3.Text, txt_FerramentaCaracteristica4.Text,
-                                                                            txt_FerramentaCaracteristica5.Text, true);
+                    ModelodeAmostragemBO novomodelodeamostra = new ModelodeAmostragemBO(txt_IdModelo.Text, dtt_Inicio.Value, dtt_Fim.Value,
+                                                                                cmb_CaracteristicasChave.Text, cmb_MaquinaFabricacao.Text,
+                                                                                txt_EspecificacaoNominal.Text, txt_Licx.Text, txt_Lie.Text,
+                                                                                txt_Lscx.Text, txt_Lse.Text, txt_Lscr.Text, txt_FerramentaCaracteristica1.Text,
+                                                                                txt_FerramentaCaracteristica2.Text, txt_FerramentaCaracteristica3.Text, txt_FerramentaCaracteristica4.Text,
+                                                                                txt_FerramentaCaracteristica5.Text, true);
+                }
+
+                if (lst_Modelos.SelectedItem.ToString() != "Novo Modelo")
+                {
+                    //buscar nome da amostra no banco para retornar o id para poder salvar certo
+
+
+                    //update de dados ja existentes
+
+                    ModelodeAmostragemBO novomodelodeamostra = new ModelodeAmostragemBO(txt_IdModelo.Text, dtt_Inicio.Value, dtt_Fim.Value,
+                                                                                cmb_CaracteristicasChave.Text, cmb_MaquinaFabricacao.Text,
+                                                                                txt_EspecificacaoNominal.Text, txt_Licx.Text, txt_Lie.Text,
+                                                                                txt_Lscx.Text, txt_Lse.Text, txt_Lscr.Text, txt_FerramentaCaracteristica1.Text,
+                                                                                txt_FerramentaCaracteristica2.Text, txt_FerramentaCaracteristica3.Text, txt_FerramentaCaracteristica4.Text,
+                                                                                txt_FerramentaCaracteristica5.Text);
+                }
             }
-
-
-            if (!(Convert.ToInt32(lst_Modelos.SelectedIndex.ToString()) <= 0))
+            catch
             {
-                //buscar nome da amostra no banco para retornar o id para poder salvar certo
-
-
-                //update de dados ja existentes
-                ModelodeAmostragemBO novomodelodeamostra = new ModelodeAmostragemBO(Convert.ToInt16(lst_Modelos.SelectedIndex.ToString()), txt_IdModelo.Text, dtt_Inicio.Value, dtt_Fim.Value,
-                                                                            cmb_CaracteristicasChave.Text, cmb_MaquinaFabricacao.Text,
-                                                                            txt_EspecificacaoNominal.Text, txt_Licx.Text, txt_Lie.Text,
-                                                                            txt_Lscx.Text, txt_Lse.Text, txt_Lscr.Text, txt_FerramentaCaracteristica1.Text,
-                                                                            txt_FerramentaCaracteristica2.Text, txt_FerramentaCaracteristica3.Text, txt_FerramentaCaracteristica4.Text,
-                                                                            txt_FerramentaCaracteristica5.Text);
+                errorProvider_Confirmar.SetError(btn_Confirmar, "Selecione um Novo Modelo ou Modelo já Existente");
             }
             carregarlista();
         }
@@ -54,14 +59,12 @@ namespace Qualidade
         {
             /*se SelectedIndex não for igual a Novo Modelo então sabemos que deve carregar 
             nos campos o modelo selecionado. */
+            
 
-
-            if (!(Convert.ToInt32(lst_Modelos.SelectedIndex.ToString()) <= 0))
+            if (lst_Modelos.SelectedItem.ToString()!= "Novo Modelo")
             {
-                // criar busca para saber o numero do item correto no banco
-
-
-                ModelodeAmostragemBO carregarmodeloamostra = new ModelodeAmostragemBO(Convert.ToInt32(lst_Modelos.SelectedIndex.ToString()));
+                ModelodeAmostragemBO carregarmodeloamostra = new ModelodeAmostragemBO(lst_Modelos.SelectedItem.ToString());
+                
                 txt_IdModelo.Text = carregarmodeloamostra.Idmodelo;
                 dtt_Inicio.Value = carregarmodeloamostra.Inicio;
                 dtt_Fim.Value = carregarmodeloamostra.Fim;
@@ -84,7 +87,7 @@ namespace Qualidade
             /*se o item selecionado for igual a NOVO MODELO então temos um novo modelo
             e devemos retirar os valores dos campos*/
 
-            if ((Convert.ToInt32(lst_Modelos.SelectedIndex.ToString()) <= 0))
+            if (lst_Modelos.SelectedItem.ToString() == "Novo Modelo")
             {
                 txt_IdModelo.Clear();
                 cmb_CaracteristicasChave.Text = "";
@@ -117,7 +120,6 @@ namespace Qualidade
 
             foreach (var item in carregarnomes.CarregarNomesModelo())
             {
-
                 if (i == 0)
                 {
                     lst_Modelos.Items.Clear();
@@ -125,16 +127,22 @@ namespace Qualidade
                 }
 
                 lst_Modelos.SelectedIndex.Equals(item.id);
-                lst_Modelos.Items.Add(item.id + " " + item.idmodelo);
+                lst_Modelos.Items.Add(item.idmodelo);
 
                 i++;
             }        
         }
 
         //botao para excluir modelo
-        private void Btn_excluirmodelo_Click(object sender, EventArgs e)
+       
+        private void ModeloAmostragem_Load(object sender, EventArgs e)
         {
-            if (!(Convert.ToInt32(lst_Modelos.SelectedIndex.ToString()) < 0))
+            carregarlista();
+        }
+
+        private void lnk_ExcluirModelo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (lst_Modelos.SelectedItem.ToString() != "Novo Modelo")
             {
                 ModelodeAmostragemBO excluirmodelodeamostra = new ModelodeAmostragemBO(0, txt_IdModelo.Text, dtt_Inicio.Value, dtt_Fim.Value,
                                                                              cmb_CaracteristicasChave.Text, cmb_MaquinaFabricacao.Text,
@@ -143,13 +151,22 @@ namespace Qualidade
                                                                              txt_FerramentaCaracteristica2.Text, txt_FerramentaCaracteristica3.Text, txt_FerramentaCaracteristica4.Text,
                                                                              txt_FerramentaCaracteristica5.Text, true);
             }
+            
+            txt_IdModelo.Clear();
+            cmb_CaracteristicasChave.Text = "";
+            cmb_MaquinaFabricacao.Text = "";
+            txt_EspecificacaoNominal.Text = "";
+            txt_Licx.Text = "";
+            txt_Lie.Text = "";
+            txt_Lscx.Text = "";
+            txt_Lse.Text = "";
+            txt_Lscr.Text = "";
+            txt_FerramentaCaracteristica1.Text = "";
+            txt_FerramentaCaracteristica2.Text = "";
+            txt_FerramentaCaracteristica3.Text = "";
+            txt_FerramentaCaracteristica4.Text = "";
+            txt_FerramentaCaracteristica5.Text = "";
 
-            carregarlista();
-            lst_Modelos.SelectedItem.Equals(0);
-        }
-
-        private void ModeloAmostragem_Load(object sender, EventArgs e)
-        {
             carregarlista();
         }
     }

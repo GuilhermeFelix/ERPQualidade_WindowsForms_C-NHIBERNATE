@@ -35,9 +35,6 @@
             this.cmb_IdModelo = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.dtg_Amostras = new System.Windows.Forms.DataGridView();
             this.amostra1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amostra2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,6 +61,9 @@
             this.Amostra23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amostra24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amostra25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_NovaAmostra = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Amostras)).BeginInit();
@@ -122,35 +122,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(898, 187);
             this.panel2.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(432, 330);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 33);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Remover Amostra";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(54, 329);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(188, 33);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Nova Amostra";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(243, 329);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(188, 33);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "Editar Amostra";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dtg_Amostras
             // 
@@ -312,6 +283,35 @@
             this.amostra25.HeaderText = "Amostra 25";
             this.amostra25.Name = "amostra25";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(432, 330);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(188, 33);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Remover Amostra";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btn_NovaAmostra
+            // 
+            this.btn_NovaAmostra.Location = new System.Drawing.Point(54, 329);
+            this.btn_NovaAmostra.Name = "btn_NovaAmostra";
+            this.btn_NovaAmostra.Size = new System.Drawing.Size(188, 33);
+            this.btn_NovaAmostra.TabIndex = 22;
+            this.btn_NovaAmostra.Text = "Nova Amostra";
+            this.btn_NovaAmostra.UseVisualStyleBackColor = true;
+            this.btn_NovaAmostra.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(243, 329);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(188, 33);
+            this.button3.TabIndex = 23;
+            this.button3.Text = "Editar Amostra";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // GerenciarAmostragem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,7 +322,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(999, 666);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_NovaAmostra);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -348,7 +348,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_NovaAmostra;
         private System.Windows.Forms.Button button3;
         public System.Windows.Forms.DataGridView dtg_Amostras;
         private System.Windows.Forms.DataGridViewTextBoxColumn amostra1;

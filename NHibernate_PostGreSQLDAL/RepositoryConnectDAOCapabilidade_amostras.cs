@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace NHibernate_PostGreSQLDAL
 {
-    public class RepositoryConnectDAO<T> : IConnectDAO<T> where T : class
+    public class RepositoryConnectDAOCapabilidade_amostras<T> : IConnectDAO<T> where T : class
     {
         public void Alterar(T entidade)
         {
 
-            using (ISession session = FluentySessionFactory.AbrirSession())
+            using (ISession session = Capabilidade_amostras_SessionFactory.AbrirSession())
             {
                 using (ITransaction transacao = session.BeginTransaction())
                 {
@@ -36,7 +36,7 @@ namespace NHibernate_PostGreSQLDAL
 
         public IList<T> Consultar()
         {
-            using (ISession session = FluentySessionFactory.AbrirSession())
+            using (ISession session = Capabilidade_modeloamostras_SessionFactory.AbrirSession())
             {
                 return (from e in session.Query<T>() select e).ToList();
             }
@@ -44,7 +44,7 @@ namespace NHibernate_PostGreSQLDAL
 
         public void Excluir(T entidade)
         {
-            using (ISession session = FluentySessionFactory.AbrirSession())
+            using (ISession session = Capabilidade_modeloamostras_SessionFactory.AbrirSession())
             {
                 using (ITransaction transacao = session.BeginTransaction())
                 {
@@ -67,7 +67,7 @@ namespace NHibernate_PostGreSQLDAL
 
         public void Inserir(T entidade)
         {
-            using (ISession session = FluentySessionFactory.AbrirSession())
+            using (ISession session = Capabilidade_modeloamostras_SessionFactory.AbrirSession())
             {
                 using (ITransaction transacao = session.BeginTransaction())
                 {
@@ -90,9 +90,17 @@ namespace NHibernate_PostGreSQLDAL
 
         public T RetornarPorId(int id)
         {
-            using (ISession session = FluentySessionFactory.AbrirSession())
+            using (ISession session = Capabilidade_modeloamostras_SessionFactory.AbrirSession())
             {
                 return session.Get<T>(id);
+            }
+        }
+
+        public T RetornarPorIdModelo(T entidade)
+        {
+            using (ISession session = Capabilidade_modeloamostras_SessionFactory.AbrirSession())
+            {
+                return session.Get<T>(entidade);
             }
         }
     }

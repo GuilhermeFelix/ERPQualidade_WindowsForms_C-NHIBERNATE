@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModeloAmostragem));
             this.lst_Modelos = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cmb_MaquinaFabricacao = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lnk_ExcluirModelo = new System.Windows.Forms.LinkLabel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
@@ -69,10 +71,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txt_IdModelo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.errorProvider_Confirmar = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_Confirmar)).BeginInit();
             this.SuspendLayout();
             // 
             // lst_Modelos
@@ -177,6 +181,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.lnk_ExcluirModelo);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.lst_Modelos);
             this.panel1.Controls.Add(this.btn_Confirmar);
@@ -194,8 +199,20 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(131, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(756, 517);
+            this.panel1.Size = new System.Drawing.Size(722, 517);
             this.panel1.TabIndex = 11;
+            // 
+            // lnk_ExcluirModelo
+            // 
+            this.lnk_ExcluirModelo.AutoSize = true;
+            this.lnk_ExcluirModelo.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lnk_ExcluirModelo.Location = new System.Drawing.Point(116, 290);
+            this.lnk_ExcluirModelo.Name = "lnk_ExcluirModelo";
+            this.lnk_ExcluirModelo.Size = new System.Drawing.Size(138, 13);
+            this.lnk_ExcluirModelo.TabIndex = 26;
+            this.lnk_ExcluirModelo.TabStop = true;
+            this.lnk_ExcluirModelo.Text = "Excluir Modelo Selecionado";
+            this.lnk_ExcluirModelo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_ExcluirModelo_LinkClicked);
             // 
             // panel3
             // 
@@ -316,7 +333,7 @@
             // 
             // btn_Confirmar
             // 
-            this.btn_Confirmar.Location = new System.Drawing.Point(678, 491);
+            this.btn_Confirmar.Location = new System.Drawing.Point(644, 491);
             this.btn_Confirmar.Name = "btn_Confirmar";
             this.btn_Confirmar.Size = new System.Drawing.Size(75, 23);
             this.btn_Confirmar.TabIndex = 12;
@@ -442,7 +459,7 @@
             // 
             // txt_IdModelo
             // 
-            this.txt_IdModelo.Location = new System.Drawing.Point(68, 322);
+            this.txt_IdModelo.Location = new System.Drawing.Point(68, 337);
             this.txt_IdModelo.Name = "txt_IdModelo";
             this.txt_IdModelo.Size = new System.Drawing.Size(183, 20);
             this.txt_IdModelo.TabIndex = 12;
@@ -450,11 +467,16 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 325);
+            this.label6.Location = new System.Drawing.Point(14, 340);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Id Modelo:";
+            // 
+            // errorProvider_Confirmar
+            // 
+            this.errorProvider_Confirmar.ContainerControl = this;
+            this.errorProvider_Confirmar.RightToLeft = true;
             // 
             // ModeloAmostragem
             // 
@@ -481,6 +503,7 @@
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_Confirmar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -527,5 +550,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txt_FerramentaCaracteristica1;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.LinkLabel lnk_ExcluirModelo;
+        private System.Windows.Forms.ErrorProvider errorProvider_Confirmar;
     }
 }
