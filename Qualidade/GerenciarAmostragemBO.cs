@@ -11,6 +11,14 @@ namespace Qualidade
 {
     class GerenciarAmostragemBO
     {
+       //excluir amostra
+       public GerenciarAmostragemBO(string _idmodelo, string _idamostra, Boolean excluiramostra)
+        {
+            this.Idmodelo = _idmodelo;
+            this.Idamostra = _idamostra;
+            ExcluirDadosemDAO();
+        }
+
         //carregar seleção de amostras em um modelo especifico
         public GerenciarAmostragemBO(string _idmodelo, string _idamostra)
         {
@@ -28,9 +36,10 @@ namespace Qualidade
             
         }
 
+
         //inserir amostras
         public GerenciarAmostragemBO(string _idmodelo, string _idamostra, string _ferramentamedicao1, string _caracteristica1,
-                                     string _ferramentamedicao2, string _caracteristica2, string _ferramentamedicao3, 
+                                     string _ferramentamedicao2, string _caracteristica2, string _ferramentamedicao3,
                                      string _caracteristica3, string _ferramentamedicao4, string _caracteristica4,
                                      string _ferramentamedicao5, string _caracteristica5)
         {
@@ -47,10 +56,20 @@ namespace Qualidade
             this.Ferramentademedicao5 = _ferramentamedicao5;
             this.Caracteristica5 = _caracteristica5;
 
-            InserirDadosemDAO();
-        }
+            PesquisarexistenciaamostraemDAO();
 
-        
+
+
+            if (amostraexistenteemDAO == true)
+            {
+                AlterarDadosemDAO();
+            }
+            else
+            {
+                InserirDadosemDAO();
+            }
+        }
+                
 
         private int id;
         private string idmodelo;
@@ -66,6 +85,7 @@ namespace Qualidade
         private string ferramentademedicao5;
         private string caracteristica5;
         public IList<Capabilidade_amostras> todasamostras = new List<Capabilidade_amostras>();
+        public Boolean amostraexistenteemDAO;
         
         public int Id { get => id; set => id = value; }
         public string Idmodelo { get => idmodelo; set => idmodelo = value; }
@@ -119,6 +139,27 @@ namespace Qualidade
                       
         }
 
+        //pesquisar se existe a amostra no modelo selecionado antes de alterar ou salvar.
+        private void PesquisarexistenciaamostraemDAO()
+        {
+            RepositoryCapabilidade_amostras dao = new RepositoryCapabilidade_amostras();
+            foreach (var item in dao.Consultar().OrderBy(x => x.id).ToList())//filtramodelo
+            {
+                if (item.idmodelo == Idmodelo)
+                {
+                    todasamostras.Add(item);
+                }
+            }
+
+            foreach (var item in todasamostras) //filtraamostranomodelo
+            {
+                if (item.idamostra == Idamostra)
+                {
+                    amostraexistenteemDAO = true;
+                }
+            }
+        }
+
         //carregar amostra especifica em um modelo selecionado
         private void CarregarDadosamostraespecificaemDAO()
         {
@@ -145,6 +186,71 @@ namespace Qualidade
                     
                 }
           }
+        }
+
+        private void AlterarDadosemDAO()
+        {
+
+            //pesquisar o id referente a amostra selecionada
+
+            Capabilidade_amostras alteraramostra = new Capabilidade_amostras();
+            RepositoryCapabilidade_amostras dao = new RepositoryCapabilidade_amostras();
+
+            foreach (var item in dao.Consultar().OrderBy(x => x.id).ToList())//filtramodelo
+            {
+                if (item.idmodelo == Idmodelo)
+                {
+                    todasamostras.Add(item);
+                }
+            }
+
+            foreach (var item in todasamostras) //filtraamostranomodelo
+            {
+                if (item.idamostra == Idamostra)
+                {
+                    alteraramostra.id = item.id;
+                }
+            }
+            alteraramostra.idmodelo = Idmodelo;
+            alteraramostra.idamostra = Idamostra;
+            alteraramostra.ferramentademedicao1 = Ferramentademedicao1;
+            alteraramostra.caracteristica1 = Caracteristica1;
+            alteraramostra.ferramentademedicao2 = Ferramentademedicao2;
+            alteraramostra.caracteristica2 = Caracteristica2;
+            alteraramostra.ferramentademedicao3 = Ferramentademedicao3;
+            alteraramostra.caracteristica3 = Caracteristica3;
+            alteraramostra.ferramentademedicao4 = Ferramentademedicao4;
+            alteraramostra.caracteristica4 = Caracteristica4;
+            alteraramostra.ferramentademedicao5 = Ferramentademedicao5;
+            alteraramostra.caracteristica5 = Caracteristica5;
+            dao.Alterar(alteraramostra);
+        }
+
+        private void ExcluirDadosemDAO()
+        {
+
+            Capabilidade_amostras excluiramostra = new Capabilidade_amostras();
+            //pesquisar o id referente ao modelo selecionado
+            RepositoryCapabilidade_amostras dao = new RepositoryCapabilidade_amostras();
+
+            foreach (var item in dao.Consultar().OrderBy(x => x.id).ToList())//filtramodelo
+            {
+                if (item.idmodelo == Idmodelo)
+                {
+                    todasamostras.Add(item);
+                }
+            }
+
+            foreach (var item in todasamostras) //filtraamostranomodelo
+            {
+                if (item.idamostra == Idamostra)
+                {
+                    excluiramostra.id = item.id;
+                }
+            }
+
+            dao.Excluir(excluiramostra);
+
         }
     }
 }

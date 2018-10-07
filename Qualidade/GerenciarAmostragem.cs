@@ -29,6 +29,15 @@ namespace Qualidade
             }
                      
         }
+
+        private void carregargrid()
+        {
+
+            GerenciarAmostragemBO carregarnogridview = new GerenciarAmostragemBO(cmb_IdModelo.SelectedItem.ToString());
+            dtg_Amostras.DataSource = carregarnogridview.todasamostras;
+            dtg_Amostras.Columns.Remove("id");
+        }
+
         private void cmb_IdModelo_SelectedIndexChanged(object sender, EventArgs e)
         {
             ModelodeAmostragemBO carregarmodeloamostra = new ModelodeAmostragemBO(cmb_IdModelo.SelectedItem.ToString());
@@ -49,21 +58,33 @@ namespace Qualidade
             lbl_Ferramenta4.Text = carregarmodeloamostra.Ferramentacaracteristica4.ToString();
             lbl_Ferramenta5.Text = carregarmodeloamostra.Ferramentacaracteristica5.ToString();
 
-            GerenciarAmostragemBO carregarnogridview = new GerenciarAmostragemBO(cmb_IdModelo.SelectedItem.ToString());
-            dtg_Amostras.DataSource = carregarnogridview.todasamostras;
+            carregargrid();
 
         }
         
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
-            GerenciarAmostragemBO salvar = new GerenciarAmostragemBO(cmb_IdModelo.SelectedItem.ToString(),
+
+
+            //pesquisar se existe dado no banco se existir é alterar, se não é salvar
+
+
+
+
+
+            GerenciarAmostragemBO salvaramostra = new GerenciarAmostragemBO(cmb_IdModelo.SelectedItem.ToString(),
                                                                      cmb_IdAmostra.SelectedItem.ToString(), lbl_Ferramenta1.Text.ToString(),
                                                                      txt_Caracteristica1.Text.ToString(), lbl_Ferramenta2.Text.ToString(),
                                                                      txt_Caracteristica2.Text.ToString(), lbl_Ferramenta3.Text.ToString(),
                                                                      txt_Caracteristica3.Text.ToString(), lbl_Ferramenta4.Text.ToString(),
                                                                      txt_Caracteristica4.Text.ToString(),lbl_Ferramenta5.Text.ToString(),
                                                                      txt_Caracteristica5.Text.ToString());
+
+
+            carregargrid();
+
         }
+
 
         private void cmb_IdAmostra_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -84,6 +105,13 @@ namespace Qualidade
                 txt_Caracteristica4.Clear();
                 txt_Caracteristica5.Clear();
             }
+        }
+
+        private void lnk_ExcluirModelo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            GerenciarAmostragemBO excluiramostra = new GerenciarAmostragemBO(cmb_IdModelo.SelectedItem.ToString(), cmb_IdAmostra.SelectedItem.ToString(),true);
+            carregargrid();
+
         }
     }
 }

@@ -80,6 +80,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lnk_ExcluirModelo = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Amostras)).BeginInit();
@@ -154,6 +155,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel3.Controls.Add(this.lnk_ExcluirModelo);
             this.panel3.Controls.Add(this.btn_Salvar);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
@@ -600,6 +602,18 @@
             this.panel4.Size = new System.Drawing.Size(268, 254);
             this.panel4.TabIndex = 27;
             // 
+            // lnk_ExcluirModelo
+            // 
+            this.lnk_ExcluirModelo.AutoSize = true;
+            this.lnk_ExcluirModelo.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lnk_ExcluirModelo.Location = new System.Drawing.Point(5, 234);
+            this.lnk_ExcluirModelo.Name = "lnk_ExcluirModelo";
+            this.lnk_ExcluirModelo.Size = new System.Drawing.Size(138, 13);
+            this.lnk_ExcluirModelo.TabIndex = 31;
+            this.lnk_ExcluirModelo.TabStop = true;
+            this.lnk_ExcluirModelo.Text = "Excluir Modelo Selecionado";
+            this.lnk_ExcluirModelo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_ExcluirModelo_LinkClicked);
+            // 
             // GerenciarAmostragem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -686,5 +700,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button btn_Salvar;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.LinkLabel lnk_ExcluirModelo;
     }
 }

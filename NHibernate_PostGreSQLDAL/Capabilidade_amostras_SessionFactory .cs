@@ -11,11 +11,11 @@ namespace NHibernate_PostGreSQLDAL
 {
     class Capabilidade_amostras_SessionFactory
     {
-        private static readonly string ConnectionString = "Server = localhost; Port = 5432; User Id = postgres; Password = 12345678; Database=erpqualidade";
+        //private static readonly string ConnectionString = "Server = localhost; Port = 5432; User Id = postgres; Password = 12345678; Database=erpqualidade";
        
-        /* Usar para armazenamento no Servidor do UolHost a linha abaixo
+        // Usar para armazenamento no Servidor do UolHost a linha abaixo
         private static readonly string ConnectionString = "Server = erpqualidade.postgres.uhserver.com; Port = 5432; User Id = etecbentao2018; Password = Etecbentao2018@; Database=erpqualidade";
-        */
+        
         private static ISessionFactory session;
 
         public static ISessionFactory CriarSession()
