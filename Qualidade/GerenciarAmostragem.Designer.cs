@@ -28,47 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GerenciarAmostragem));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmb_IdModelo = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.dtg_Amostras = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_Salvar = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_Caracteristica5 = new System.Windows.Forms.TextBox();
+            this.txt_Caracteristica4 = new System.Windows.Forms.TextBox();
+            this.txt_Caracteristica3 = new System.Windows.Forms.TextBox();
+            this.txt_Caracteristica2 = new System.Windows.Forms.TextBox();
+            this.txt_Caracteristica1 = new System.Windows.Forms.TextBox();
+            this.lbl_FerramentadeMedicao = new System.Windows.Forms.Label();
+            this.lbl_Ferramenta5 = new System.Windows.Forms.Label();
+            this.lbl_Ferramenta4 = new System.Windows.Forms.Label();
+            this.lbl_Ferramenta3 = new System.Windows.Forms.Label();
+            this.lbl_Ferramenta2 = new System.Windows.Forms.Label();
+            this.lbl_Ferramenta1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmb_IdAmostra = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lbl_IdModelo = new System.Windows.Forms.Label();
+            this.lbl_Inicio = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.lbl_Fim = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.lbl_CaracteristicaChave = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.lbl_MaquinadeFabricacao = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.lbl_Lse = new System.Windows.Forms.Label();
+            this.lbl_Lie = new System.Windows.Forms.Label();
+            this.lbl_PraticadoLscr = new System.Windows.Forms.Label();
+            this.lbl_PraticadoLscx = new System.Windows.Forms.Label();
+            this.lbl_PraticadoLicx = new System.Windows.Forms.Label();
+            this.lbl_EspecificacaoNominal = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lnk_ExcluirModelo = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_Amostras)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,7 +93,7 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cmb_IdModelo);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Location = new System.Drawing.Point(41, 34);
             this.panel1.Name = "panel1";
@@ -99,13 +116,14 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Data e Hora:";
             // 
-            // comboBox1
+            // cmb_IdModelo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(663, 14);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(223, 21);
-            this.comboBox1.TabIndex = 14;
+            this.cmb_IdModelo.FormattingEnabled = true;
+            this.cmb_IdModelo.Location = new System.Drawing.Point(663, 14);
+            this.cmb_IdModelo.Name = "cmb_IdModelo";
+            this.cmb_IdModelo.Size = new System.Drawing.Size(223, 21);
+            this.cmb_IdModelo.TabIndex = 14;
+            this.cmb_IdModelo.SelectedIndexChanged += new System.EventHandler(this.cmb_IdModelo_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -119,216 +137,482 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dtg_Amostras);
             this.panel2.Location = new System.Drawing.Point(41, 141);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(898, 187);
+            this.panel2.Size = new System.Drawing.Size(898, 196);
             this.panel2.TabIndex = 1;
             // 
-            // dataGridView1
+            // dtg_Amostras
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11,
-            this.Column12,
-            this.Column13,
-            this.Column14,
-            this.Column15,
-            this.Column16,
-            this.Column17,
-            this.Column18,
-            this.Column19,
-            this.Column20,
-            this.Column21,
-            this.Column22,
-            this.Column23,
-            this.Column24,
-            this.Column25});
-            this.dataGridView1.Location = new System.Drawing.Point(13, 7);
-            this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.dataGridView1.Size = new System.Drawing.Size(873, 163);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.RowCount = 5;
-            
+            this.dtg_Amostras.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dtg_Amostras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_Amostras.Location = new System.Drawing.Point(13, 9);
+            this.dtg_Amostras.Name = "dtg_Amostras";
+            this.dtg_Amostras.Size = new System.Drawing.Size(873, 181);
+            this.dtg_Amostras.TabIndex = 24;
             // 
-            // Column1
+            // panel3
             // 
-            this.Column1.HeaderText = "Amostra 1";
-            this.Column1.Name = "Column1";
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel3.Controls.Add(this.lnk_ExcluirModelo);
+            this.panel3.Controls.Add(this.btn_Salvar);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.txt_Caracteristica5);
+            this.panel3.Controls.Add(this.txt_Caracteristica4);
+            this.panel3.Controls.Add(this.txt_Caracteristica3);
+            this.panel3.Controls.Add(this.txt_Caracteristica2);
+            this.panel3.Controls.Add(this.txt_Caracteristica1);
+            this.panel3.Controls.Add(this.lbl_FerramentadeMedicao);
+            this.panel3.Controls.Add(this.lbl_Ferramenta5);
+            this.panel3.Controls.Add(this.lbl_Ferramenta4);
+            this.panel3.Controls.Add(this.lbl_Ferramenta3);
+            this.panel3.Controls.Add(this.lbl_Ferramenta2);
+            this.panel3.Controls.Add(this.lbl_Ferramenta1);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.cmb_IdAmostra);
+            this.panel3.Location = new System.Drawing.Point(591, 337);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(336, 254);
+            this.panel3.TabIndex = 24;
             // 
-            // Column2
+            // btn_Salvar
             // 
-            this.Column2.HeaderText = "Amostra 2";
-            this.Column2.Name = "Column2";
+            this.btn_Salvar.Location = new System.Drawing.Point(240, 213);
+            this.btn_Salvar.Name = "btn_Salvar";
+            this.btn_Salvar.Size = new System.Drawing.Size(93, 38);
+            this.btn_Salvar.TabIndex = 30;
+            this.btn_Salvar.Text = "Salvar";
+            this.btn_Salvar.UseVisualStyleBackColor = true;
+            this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
             // 
-            // Column3
+            // label8
             // 
-            this.Column3.HeaderText = "Amostra 3";
-            this.Column3.Name = "Column3";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(84, 54);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(46, 16);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "Dado";
             // 
-            // Column4
+            // label7
             // 
-            this.Column4.HeaderText = "Amostra 4";
-            this.Column4.Name = "Column4";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(4, 183);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(83, 13);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Caracteristica 5:";
             // 
-            // Column5
+            // label5
             // 
-            this.Column5.HeaderText = "Amostra 5";
-            this.Column5.Name = "Column5";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(4, 157);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 13);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Caracteristica 4:";
             // 
-            // Column6
+            // label4
             // 
-            this.Column6.HeaderText = "Amostra 6";
-            this.Column6.Name = "Column6";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(4, 131);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(83, 13);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Caracteristica 3:";
             // 
-            // Column7
+            // label3
             // 
-            this.Column7.HeaderText = "Amostra 7";
-            this.Column7.Name = "Column7";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 104);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 13);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Caracteristica 2:";
             // 
-            // Column8
+            // txt_Caracteristica5
             // 
-            this.Column8.HeaderText = "Amostra 8";
-            this.Column8.Name = "Column8";
+            this.txt_Caracteristica5.Location = new System.Drawing.Point(87, 178);
+            this.txt_Caracteristica5.Name = "txt_Caracteristica5";
+            this.txt_Caracteristica5.Size = new System.Drawing.Size(100, 20);
+            this.txt_Caracteristica5.TabIndex = 12;
             // 
-            // Column9
+            // txt_Caracteristica4
             // 
-            this.Column9.HeaderText = "Amostra 9";
-            this.Column9.Name = "Column9";
+            this.txt_Caracteristica4.Location = new System.Drawing.Point(87, 152);
+            this.txt_Caracteristica4.Name = "txt_Caracteristica4";
+            this.txt_Caracteristica4.Size = new System.Drawing.Size(100, 20);
+            this.txt_Caracteristica4.TabIndex = 11;
             // 
-            // Column10
+            // txt_Caracteristica3
             // 
-            this.Column10.HeaderText = "Amostra 10";
-            this.Column10.Name = "Column10";
+            this.txt_Caracteristica3.Location = new System.Drawing.Point(87, 126);
+            this.txt_Caracteristica3.Name = "txt_Caracteristica3";
+            this.txt_Caracteristica3.Size = new System.Drawing.Size(100, 20);
+            this.txt_Caracteristica3.TabIndex = 10;
             // 
-            // Column11
+            // txt_Caracteristica2
             // 
-            this.Column11.HeaderText = "Amostra 11";
-            this.Column11.Name = "Column11";
+            this.txt_Caracteristica2.Location = new System.Drawing.Point(87, 100);
+            this.txt_Caracteristica2.Name = "txt_Caracteristica2";
+            this.txt_Caracteristica2.Size = new System.Drawing.Size(100, 20);
+            this.txt_Caracteristica2.TabIndex = 9;
             // 
-            // Column12
+            // txt_Caracteristica1
             // 
-            this.Column12.HeaderText = "Amostra 12";
-            this.Column12.Name = "Column12";
+            this.txt_Caracteristica1.Location = new System.Drawing.Point(87, 74);
+            this.txt_Caracteristica1.Name = "txt_Caracteristica1";
+            this.txt_Caracteristica1.Size = new System.Drawing.Size(100, 20);
+            this.txt_Caracteristica1.TabIndex = 8;
             // 
-            // Column13
+            // lbl_FerramentadeMedicao
             // 
-            this.Column13.HeaderText = "Amostra 13";
-            this.Column13.Name = "Column13";
+            this.lbl_FerramentadeMedicao.AutoSize = true;
+            this.lbl_FerramentadeMedicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_FerramentadeMedicao.Location = new System.Drawing.Point(196, 54);
+            this.lbl_FerramentadeMedicao.Name = "lbl_FerramentadeMedicao";
+            this.lbl_FerramentadeMedicao.Size = new System.Drawing.Size(68, 16);
+            this.lbl_FerramentadeMedicao.TabIndex = 7;
+            this.lbl_FerramentadeMedicao.Text = "Medição";
             // 
-            // Column14
+            // lbl_Ferramenta5
             // 
-            this.Column14.HeaderText = "Amostra 14";
-            this.Column14.Name = "Column14";
+            this.lbl_Ferramenta5.AutoSize = true;
+            this.lbl_Ferramenta5.Location = new System.Drawing.Point(197, 184);
+            this.lbl_Ferramenta5.Name = "lbl_Ferramenta5";
+            this.lbl_Ferramenta5.Size = new System.Drawing.Size(0, 13);
+            this.lbl_Ferramenta5.TabIndex = 6;
             // 
-            // Column15
+            // lbl_Ferramenta4
             // 
-            this.Column15.HeaderText = "Amostra 15";
-            this.Column15.Name = "Column15";
+            this.lbl_Ferramenta4.AutoSize = true;
+            this.lbl_Ferramenta4.Location = new System.Drawing.Point(197, 156);
+            this.lbl_Ferramenta4.Name = "lbl_Ferramenta4";
+            this.lbl_Ferramenta4.Size = new System.Drawing.Size(0, 13);
+            this.lbl_Ferramenta4.TabIndex = 5;
             // 
-            // Column16
+            // lbl_Ferramenta3
             // 
-            this.Column16.HeaderText = "Amostra 16";
-            this.Column16.Name = "Column16";
+            this.lbl_Ferramenta3.AutoSize = true;
+            this.lbl_Ferramenta3.Location = new System.Drawing.Point(196, 131);
+            this.lbl_Ferramenta3.Name = "lbl_Ferramenta3";
+            this.lbl_Ferramenta3.Size = new System.Drawing.Size(0, 13);
+            this.lbl_Ferramenta3.TabIndex = 4;
             // 
-            // Column17
+            // lbl_Ferramenta2
             // 
-            this.Column17.HeaderText = "Amostra 17";
-            this.Column17.Name = "Column17";
+            this.lbl_Ferramenta2.AutoSize = true;
+            this.lbl_Ferramenta2.Location = new System.Drawing.Point(197, 105);
+            this.lbl_Ferramenta2.Name = "lbl_Ferramenta2";
+            this.lbl_Ferramenta2.Size = new System.Drawing.Size(0, 13);
+            this.lbl_Ferramenta2.TabIndex = 3;
             // 
-            // Column18
+            // lbl_Ferramenta1
             // 
-            this.Column18.HeaderText = "Amostra 18";
-            this.Column18.Name = "Column18";
+            this.lbl_Ferramenta1.AutoSize = true;
+            this.lbl_Ferramenta1.Location = new System.Drawing.Point(197, 78);
+            this.lbl_Ferramenta1.Name = "lbl_Ferramenta1";
+            this.lbl_Ferramenta1.Size = new System.Drawing.Size(0, 13);
+            this.lbl_Ferramenta1.TabIndex = 2;
             // 
-            // Column19
+            // label2
             // 
-            this.Column19.HeaderText = "Amostra 19";
-            this.Column19.Name = "Column19";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(158, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(127, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Identificação da Amostra:";
             // 
-            // Column20
+            // cmb_IdAmostra
             // 
-            this.Column20.HeaderText = "Amostra 20";
-            this.Column20.Name = "Column20";
+            this.cmb_IdAmostra.FormattingEnabled = true;
+            this.cmb_IdAmostra.Items.AddRange(new object[] {
+            "-",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25"});
+            this.cmb_IdAmostra.Location = new System.Drawing.Point(287, 6);
+            this.cmb_IdAmostra.Name = "cmb_IdAmostra";
+            this.cmb_IdAmostra.Size = new System.Drawing.Size(42, 21);
+            this.cmb_IdAmostra.TabIndex = 0;
+            this.cmb_IdAmostra.SelectedIndexChanged += new System.EventHandler(this.cmb_IdAmostra_SelectedIndexChanged);
             // 
-            // Column21
+            // label9
             // 
-            this.Column21.HeaderText = "Amostra 21";
-            this.Column21.Name = "Column21";
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label9.Location = new System.Drawing.Point(594, 412);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(83, 13);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Caracteristica 1:";
             // 
-            // Column22
+            // panel5
             // 
-            this.Column22.HeaderText = "Amostra 22";
-            this.Column22.Name = "Column22";
+            this.panel5.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel5.Controls.Add(this.lbl_IdModelo);
+            this.panel5.Controls.Add(this.lbl_Inicio);
+            this.panel5.Controls.Add(this.label39);
+            this.panel5.Controls.Add(this.lbl_Fim);
+            this.panel5.Controls.Add(this.label37);
+            this.panel5.Controls.Add(this.lbl_CaracteristicaChave);
+            this.panel5.Controls.Add(this.label35);
+            this.panel5.Controls.Add(this.lbl_MaquinadeFabricacao);
+            this.panel5.Controls.Add(this.label33);
+            this.panel5.Controls.Add(this.lbl_Lse);
+            this.panel5.Controls.Add(this.lbl_Lie);
+            this.panel5.Controls.Add(this.lbl_PraticadoLscr);
+            this.panel5.Controls.Add(this.lbl_PraticadoLscx);
+            this.panel5.Controls.Add(this.lbl_PraticadoLicx);
+            this.panel5.Controls.Add(this.lbl_EspecificacaoNominal);
+            this.panel5.Controls.Add(this.label20);
+            this.panel5.Controls.Add(this.label19);
+            this.panel5.Controls.Add(this.label18);
+            this.panel5.Controls.Add(this.label17);
+            this.panel5.Controls.Add(this.label16);
+            this.panel5.Controls.Add(this.label15);
+            this.panel5.Location = new System.Drawing.Point(54, 337);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(257, 254);
+            this.panel5.TabIndex = 26;
             // 
-            // Column23
+            // lbl_IdModelo
             // 
-            this.Column23.HeaderText = "Amostra 23";
-            this.Column23.Name = "Column23";
+            this.lbl_IdModelo.AutoSize = true;
+            this.lbl_IdModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_IdModelo.Location = new System.Drawing.Point(158, 18);
+            this.lbl_IdModelo.Name = "lbl_IdModelo";
+            this.lbl_IdModelo.Size = new System.Drawing.Size(0, 16);
+            this.lbl_IdModelo.TabIndex = 55;
             // 
-            // Column24
+            // lbl_Inicio
             // 
-            this.Column24.HeaderText = "Amostra 24";
-            this.Column24.Name = "Column24";
+            this.lbl_Inicio.AutoSize = true;
+            this.lbl_Inicio.Location = new System.Drawing.Point(68, 46);
+            this.lbl_Inicio.Name = "lbl_Inicio";
+            this.lbl_Inicio.Size = new System.Drawing.Size(0, 13);
+            this.lbl_Inicio.TabIndex = 54;
             // 
-            // Column25
+            // label39
             // 
-            this.Column25.HeaderText = "Amostra 25";
-            this.Column25.Name = "Column25";
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(21, 43);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(42, 16);
+            this.label39.TabIndex = 53;
+            this.label39.Text = "Inicio:";
             // 
-            // button1
+            // lbl_Fim
             // 
-            this.button1.Location = new System.Drawing.Point(432, 330);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 33);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Remover Amostra";
-            this.button1.UseVisualStyleBackColor = true;
+            this.lbl_Fim.AutoSize = true;
+            this.lbl_Fim.Location = new System.Drawing.Point(69, 70);
+            this.lbl_Fim.Name = "lbl_Fim";
+            this.lbl_Fim.Size = new System.Drawing.Size(0, 13);
+            this.lbl_Fim.TabIndex = 52;
             // 
-            // button2
+            // label37
             // 
-            this.button2.Location = new System.Drawing.Point(54, 329);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(188, 33);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Nova Amostra";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(32, 67);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(33, 16);
+            this.label37.TabIndex = 51;
+            this.label37.Text = "Fim:";
             // 
-            // button3
+            // lbl_CaracteristicaChave
             // 
-            this.button3.Location = new System.Drawing.Point(243, 329);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(188, 33);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "Editar Amostra";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.lbl_CaracteristicaChave.AutoSize = true;
+            this.lbl_CaracteristicaChave.Location = new System.Drawing.Point(158, 93);
+            this.lbl_CaracteristicaChave.Name = "lbl_CaracteristicaChave";
+            this.lbl_CaracteristicaChave.Size = new System.Drawing.Size(0, 13);
+            this.lbl_CaracteristicaChave.TabIndex = 50;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(21, 90);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(135, 16);
+            this.label35.TabIndex = 49;
+            this.label35.Text = "Caracteristica Chave:";
+            // 
+            // lbl_MaquinadeFabricacao
+            // 
+            this.lbl_MaquinadeFabricacao.AutoSize = true;
+            this.lbl_MaquinadeFabricacao.Location = new System.Drawing.Point(158, 113);
+            this.lbl_MaquinadeFabricacao.Name = "lbl_MaquinadeFabricacao";
+            this.lbl_MaquinadeFabricacao.Size = new System.Drawing.Size(0, 13);
+            this.lbl_MaquinadeFabricacao.TabIndex = 48;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(4, 110);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(154, 16);
+            this.label33.TabIndex = 47;
+            this.label33.Text = "Maquina de Fabricação:";
+            // 
+            // lbl_Lse
+            // 
+            this.lbl_Lse.AutoSize = true;
+            this.lbl_Lse.Location = new System.Drawing.Point(159, 233);
+            this.lbl_Lse.Name = "lbl_Lse";
+            this.lbl_Lse.Size = new System.Drawing.Size(0, 13);
+            this.lbl_Lse.TabIndex = 46;
+            // 
+            // lbl_Lie
+            // 
+            this.lbl_Lie.AutoSize = true;
+            this.lbl_Lie.Location = new System.Drawing.Point(159, 213);
+            this.lbl_Lie.Name = "lbl_Lie";
+            this.lbl_Lie.Size = new System.Drawing.Size(0, 13);
+            this.lbl_Lie.TabIndex = 45;
+            // 
+            // lbl_PraticadoLscr
+            // 
+            this.lbl_PraticadoLscr.AutoSize = true;
+            this.lbl_PraticadoLscr.Location = new System.Drawing.Point(159, 194);
+            this.lbl_PraticadoLscr.Name = "lbl_PraticadoLscr";
+            this.lbl_PraticadoLscr.Size = new System.Drawing.Size(0, 13);
+            this.lbl_PraticadoLscr.TabIndex = 44;
+            // 
+            // lbl_PraticadoLscx
+            // 
+            this.lbl_PraticadoLscx.AutoSize = true;
+            this.lbl_PraticadoLscx.Location = new System.Drawing.Point(159, 175);
+            this.lbl_PraticadoLscx.Name = "lbl_PraticadoLscx";
+            this.lbl_PraticadoLscx.Size = new System.Drawing.Size(0, 13);
+            this.lbl_PraticadoLscx.TabIndex = 43;
+            // 
+            // lbl_PraticadoLicx
+            // 
+            this.lbl_PraticadoLicx.AutoSize = true;
+            this.lbl_PraticadoLicx.Location = new System.Drawing.Point(158, 154);
+            this.lbl_PraticadoLicx.Name = "lbl_PraticadoLicx";
+            this.lbl_PraticadoLicx.Size = new System.Drawing.Size(0, 13);
+            this.lbl_PraticadoLicx.TabIndex = 42;
+            // 
+            // lbl_EspecificacaoNominal
+            // 
+            this.lbl_EspecificacaoNominal.AutoSize = true;
+            this.lbl_EspecificacaoNominal.Location = new System.Drawing.Point(158, 134);
+            this.lbl_EspecificacaoNominal.Name = "lbl_EspecificacaoNominal";
+            this.lbl_EspecificacaoNominal.Size = new System.Drawing.Size(0, 13);
+            this.lbl_EspecificacaoNominal.TabIndex = 38;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(125, 231);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(36, 16);
+            this.label20.TabIndex = 41;
+            this.label20.Text = "LSE:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(131, 211);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(30, 16);
+            this.label19.TabIndex = 40;
+            this.label19.Text = "LIE:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(60, 192);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(101, 16);
+            this.label18.TabIndex = 39;
+            this.label18.Text = "Praticado LSCr:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(58, 172);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(103, 16);
+            this.label17.TabIndex = 38;
+            this.label17.Text = "Praticado LSCx:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(63, 151);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(97, 16);
+            this.label16.TabIndex = 37;
+            this.label16.Text = "Praticado LICx:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(9, 131);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(150, 16);
+            this.label15.TabIndex = 36;
+            this.label15.Text = "Especificação Nominal:";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel4.Location = new System.Drawing.Point(317, 337);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(268, 254);
+            this.panel4.TabIndex = 27;
+            // 
+            // lnk_ExcluirModelo
+            // 
+            this.lnk_ExcluirModelo.AutoSize = true;
+            this.lnk_ExcluirModelo.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lnk_ExcluirModelo.Location = new System.Drawing.Point(5, 234);
+            this.lnk_ExcluirModelo.Name = "lnk_ExcluirModelo";
+            this.lnk_ExcluirModelo.Size = new System.Drawing.Size(138, 13);
+            this.lnk_ExcluirModelo.TabIndex = 31;
+            this.lnk_ExcluirModelo.TabStop = true;
+            this.lnk_ExcluirModelo.Text = "Excluir Modelo Selecionado";
+            this.lnk_ExcluirModelo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_ExcluirModelo_LinkClicked);
             // 
             // GerenciarAmostragem
             // 
@@ -339,11 +623,12 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(999, 666);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.panel3);
             this.MaximumSize = new System.Drawing.Size(1015, 705);
             this.Name = "GerenciarAmostragem";
             this.Text = "GerenciarAmostragem";
@@ -352,47 +637,69 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_Amostras)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb_IdModelo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column25;
+        public System.Windows.Forms.DataGridView dtg_Amostras;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_Caracteristica5;
+        private System.Windows.Forms.TextBox txt_Caracteristica4;
+        private System.Windows.Forms.TextBox txt_Caracteristica3;
+        private System.Windows.Forms.TextBox txt_Caracteristica2;
+        private System.Windows.Forms.TextBox txt_Caracteristica1;
+        private System.Windows.Forms.Label lbl_FerramentadeMedicao;
+        private System.Windows.Forms.Label lbl_Ferramenta5;
+        private System.Windows.Forms.Label lbl_Ferramenta4;
+        private System.Windows.Forms.Label lbl_Ferramenta3;
+        private System.Windows.Forms.Label lbl_Ferramenta2;
+        private System.Windows.Forms.Label lbl_Ferramenta1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmb_IdAmostra;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lbl_IdModelo;
+        private System.Windows.Forms.Label lbl_Inicio;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label lbl_Fim;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label lbl_CaracteristicaChave;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label lbl_MaquinadeFabricacao;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label lbl_Lse;
+        private System.Windows.Forms.Label lbl_Lie;
+        private System.Windows.Forms.Label lbl_PraticadoLscr;
+        private System.Windows.Forms.Label lbl_PraticadoLscx;
+        private System.Windows.Forms.Label lbl_PraticadoLicx;
+        private System.Windows.Forms.Label lbl_EspecificacaoNominal;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button btn_Salvar;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.LinkLabel lnk_ExcluirModelo;
     }
 }
