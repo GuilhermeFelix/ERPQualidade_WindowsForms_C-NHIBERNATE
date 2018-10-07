@@ -199,7 +199,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(131, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(722, 517);
+            this.panel1.Size = new System.Drawing.Size(757, 517);
             this.panel1.TabIndex = 11;
             // 
             // lnk_ExcluirModelo
@@ -333,7 +333,7 @@
             // 
             // btn_Confirmar
             // 
-            this.btn_Confirmar.Location = new System.Drawing.Point(644, 491);
+            this.btn_Confirmar.Location = new System.Drawing.Point(679, 491);
             this.btn_Confirmar.Name = "btn_Confirmar";
             this.btn_Confirmar.Size = new System.Drawing.Size(75, 23);
             this.btn_Confirmar.TabIndex = 12;

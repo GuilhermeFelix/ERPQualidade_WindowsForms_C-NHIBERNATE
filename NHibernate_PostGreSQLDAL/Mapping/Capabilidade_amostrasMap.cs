@@ -15,13 +15,16 @@ namespace NHibernate_PostGreSQLDAL.Mapping
             Id(f => f.id);
             Map(f => f.idmodelo);
             Map(f => f.idamostra);
-            Map(f => f.ferramentademedicao);
-            Map(f => f.amostra1);
-            Map(f => f.amostra2);
-            Map(f => f.amostra3);
-            Map(f => f.amostra4);
-            Map(f => f.amostra5);
-            
+            Map(f => f.ferramentademedicao1);
+            Map(f => f.caracteristica1);
+            Map(f => f.ferramentademedicao2);
+            Map(f => f.caracteristica2);
+            Map(f => f.ferramentademedicao3);
+            Map(f => f.caracteristica3);
+            Map(f => f.ferramentademedicao4);
+            Map(f => f.caracteristica4);
+            Map(f => f.ferramentademedicao5);
+            Map(f => f.caracteristica5);
             Table("capabilidade_amostras");
         }
     }

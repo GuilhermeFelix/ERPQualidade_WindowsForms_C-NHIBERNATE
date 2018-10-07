@@ -11,12 +11,16 @@ namespace NHibernate_PostGreSQLDAL.Entities
         public virtual int id {get;set;}
         public virtual string idmodelo { get; set; }
         public virtual string idamostra { get; set; }
-        public virtual string ferramentademedicao { get; set; }
-        public virtual string amostra1 { get; set; }
-        public virtual string amostra2 { get; set; }
-        public virtual string amostra3 { get; set; }
-        public virtual string amostra4 { get; set; }
-        public virtual string amostra5 { get; set; }
+        public virtual string ferramentademedicao1 { get; set; }
+        public virtual string caracteristica1 { get; set; }
+        public virtual string ferramentademedicao2 { get; set; }
+        public virtual string caracteristica2 { get; set; }
+        public virtual string ferramentademedicao3 { get; set; }
+        public virtual string caracteristica3 { get; set; }
+        public virtual string ferramentademedicao4 { get; set; }
+        public virtual string caracteristica4 { get; set; }
+        public virtual string ferramentademedicao5 { get; set; }
+        public virtual string caracteristica5 { get; set; }
        
     }
 }

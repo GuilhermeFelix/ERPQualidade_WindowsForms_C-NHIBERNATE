@@ -87,7 +87,6 @@ namespace NHibernate_PostGreSQLDAL
                 }
             }
         }
-
         public T RetornarPorId(int id)
         {
             using (ISession session = Capabilidade_modeloamostras_SessionFactory.AbrirSession())
