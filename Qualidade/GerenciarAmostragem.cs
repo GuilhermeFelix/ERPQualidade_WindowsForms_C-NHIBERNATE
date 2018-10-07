@@ -64,5 +64,26 @@ namespace Qualidade
                                                                      txt_Caracteristica4.Text.ToString(),lbl_Ferramenta5.Text.ToString(),
                                                                      txt_Caracteristica5.Text.ToString());
         }
+
+        private void cmb_IdAmostra_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            GerenciarAmostragemBO carregarnogridview = new GerenciarAmostragemBO(cmb_IdModelo.SelectedItem.ToString(), cmb_IdAmostra.SelectedItem.ToString());
+            
+            txt_Caracteristica1.Text = carregarnogridview.Caracteristica1;
+            txt_Caracteristica2.Text = carregarnogridview.Caracteristica2;
+            txt_Caracteristica3.Text = carregarnogridview.Caracteristica3;
+            txt_Caracteristica4.Text = carregarnogridview.Caracteristica4;
+            txt_Caracteristica5.Text = carregarnogridview.Caracteristica5;
+        
+            if (carregarnogridview == null || cmb_IdAmostra.SelectedItem.ToString()=="-")
+            {
+                txt_Caracteristica1.Clear();
+                txt_Caracteristica2.Clear();
+                txt_Caracteristica3.Clear();
+                txt_Caracteristica4.Clear();
+                txt_Caracteristica5.Clear();
+            }
+        }
     }
 }

@@ -11,15 +11,23 @@ namespace Qualidade
 {
     class GerenciarAmostragemBO
     {
+        //carregar seleção de amostras em um modelo especifico
+        public GerenciarAmostragemBO(string _idmodelo, string _idamostra)
+        {
+            this.Idmodelo = _idmodelo;
+            this.Idamostra = _idamostra;
+            CarregarDadosamostraespecificaemDAO();
+        }
         //carregar amostras no grid conforme idmodelo selecionado
         public GerenciarAmostragemBO(string _idmodelo)
         {
-            this.Idmodelo = _idmodelo;
-
+            this.Idmodelo = _idmodelo;         
 
             CarregarDadosemDAO();
+
+            
         }
-        
+
         //inserir amostras
         public GerenciarAmostragemBO(string _idmodelo, string _idamostra, string _ferramentamedicao1, string _caracteristica1,
                                      string _ferramentamedicao2, string _caracteristica2, string _ferramentamedicao3, 
@@ -58,8 +66,7 @@ namespace Qualidade
         private string ferramentademedicao5;
         private string caracteristica5;
         public IList<Capabilidade_amostras> todasamostras = new List<Capabilidade_amostras>();
-
-
+        
         public int Id { get => id; set => id = value; }
         public string Idmodelo { get => idmodelo; set => idmodelo = value; }
         public string Idamostra { get => idamostra; set => idamostra = value; }
@@ -96,22 +103,48 @@ namespace Qualidade
             dao.Inserir(novomodelo);
             
         }
-
-        public IList<Capabilidade_amostras> CarregarDadosemDAO()
+        //carregar todas amostras de um modelo
+        private IList<Capabilidade_amostras> CarregarDadosemDAO()
         {
             
             RepositoryCapabilidade_amostras dao = new RepositoryCapabilidade_amostras();
             foreach (var item in dao.Consultar().OrderBy(x => x.id).ToList())
             {
                 if (item.idmodelo == Idmodelo)
-                {
-                    
+                {   
                     todasamostras.Add(item);
                 }           
             }
             return todasamostras;
-                   
-    
+                      
+        }
+
+        //carregar amostra especifica em um modelo selecionado
+        private void CarregarDadosamostraespecificaemDAO()
+        {
+          RepositoryCapabilidade_amostras dao = new RepositoryCapabilidade_amostras();
+          foreach (var item in dao.Consultar().OrderBy(x => x.id).ToList())//filtramodelo
+          {
+            if (item.idmodelo == Idmodelo)
+            {
+              todasamostras.Add(item);
+            }
+          }
+
+          foreach (var item in todasamostras) //filtraamostranomodelo
+            {
+              if (item.idamostra == Idamostra)
+              {
+                    Idmodelo = item.idmodelo;
+                    Idamostra = item.idamostra;
+                    Caracteristica1 = item.caracteristica1;
+                    Caracteristica2 = item.caracteristica2;
+                    Caracteristica3 = item.caracteristica3;
+                    Caracteristica4 = item.caracteristica4;
+                    Caracteristica5 = item.caracteristica5;
+                    
+                }
+          }
         }
     }
 }

@@ -332,6 +332,7 @@
             // 
             this.cmb_IdAmostra.FormattingEnabled = true;
             this.cmb_IdAmostra.Items.AddRange(new object[] {
+            "-",
             "1",
             "2",
             "3",
@@ -361,6 +362,7 @@
             this.cmb_IdAmostra.Name = "cmb_IdAmostra";
             this.cmb_IdAmostra.Size = new System.Drawing.Size(42, 21);
             this.cmb_IdAmostra.TabIndex = 0;
+            this.cmb_IdAmostra.SelectedIndexChanged += new System.EventHandler(this.cmb_IdAmostra_SelectedIndexChanged);
             // 
             // label9
             // 
