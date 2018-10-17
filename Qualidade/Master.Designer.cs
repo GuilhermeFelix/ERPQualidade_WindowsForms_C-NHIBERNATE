@@ -35,6 +35,7 @@
             this.capabilidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modelosDeAmostragemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adicionarAmostragemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gerarEstudoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +69,8 @@
             // 
             this.capabilidadeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.modelosDeAmostragemToolStripMenuItem,
-            this.adicionarAmostragemToolStripMenuItem});
+            this.adicionarAmostragemToolStripMenuItem,
+            this.gerarEstudoToolStripMenuItem});
             this.capabilidadeToolStripMenuItem.Name = "capabilidadeToolStripMenuItem";
             this.capabilidadeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.capabilidadeToolStripMenuItem.Text = "Capabilidade";
@@ -86,6 +88,13 @@
             this.adicionarAmostragemToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.adicionarAmostragemToolStripMenuItem.Text = "Gerenciar Amostragem";
             this.adicionarAmostragemToolStripMenuItem.Click += new System.EventHandler(this.adicionarAmostragemToolStripMenuItem_Click);
+            // 
+            // gerarEstudoToolStripMenuItem
+            // 
+            this.gerarEstudoToolStripMenuItem.Name = "gerarEstudoToolStripMenuItem";
+            this.gerarEstudoToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.gerarEstudoToolStripMenuItem.Text = "Gerar Estudo";
+            this.gerarEstudoToolStripMenuItem.Click += new System.EventHandler(this.gerarEstudoToolStripMenuItem_Click);
             // 
             // Master
             // 
@@ -119,6 +128,7 @@
         private System.Windows.Forms.ToolStripMenuItem capabilidadeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modelosDeAmostragemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adicionarAmostragemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gerarEstudoToolStripMenuItem;
     }
 }
 

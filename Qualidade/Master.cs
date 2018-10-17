@@ -34,5 +34,11 @@ namespace Qualidade
             GerenciarAmostragem gerenciarAmostragem = new GerenciarAmostragem();
             gerenciarAmostragem.Show();
         }
+
+        private void gerarEstudoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GerarEstudo gerarEstudo = new GerarEstudo();
+            gerarEstudo.Show();
+        }
     }
 }

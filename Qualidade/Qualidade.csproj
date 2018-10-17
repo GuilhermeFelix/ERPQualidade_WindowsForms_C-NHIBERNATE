@@ -61,6 +61,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GerarEstudo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerarEstudo.Designer.cs">
+      <DependentUpon>GerarEstudo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GerarEstudoBO.cs" />
     <Compile Include="GerenciarAmostragem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,8 +88,17 @@
       <DependentUpon>ModeloAmostragem.cs</DependentUpon>
     </Compile>
     <Compile Include="ModelodeAmostragemBO.cs" />
+    <Compile Include="NovoEstudo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovoEstudo.Designer.cs">
+      <DependentUpon>NovoEstudo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GerarEstudo.resx">
+      <DependentUpon>GerarEstudo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GerenciarAmostragem.resx">
       <DependentUpon>GerenciarAmostragem.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModeloAmostragem.resx">
       <DependentUpon>ModeloAmostragem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovoEstudo.resx">
+      <DependentUpon>NovoEstudo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

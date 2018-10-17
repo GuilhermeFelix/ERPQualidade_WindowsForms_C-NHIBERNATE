@@ -76,16 +76,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Capabilidade_amostras_SessionFactory .cs" />
+    <Compile Include="Capabilidade_ramplitudedecadaamostra_SessionFactory.cs" />
+    <Compile Include="Capabilidade_xmediadecadaamostra_SessionFactory.cs" />
     <Compile Include="Entities\Capabilidade_amostras.cs" />
+    <Compile Include="Entities\Capabilidade_ramplitudedecadaamostra.cs" />
+    <Compile Include="Entities\Capabilidade_xmediadecadaamostra.cs" />
     <Compile Include="Entities\Capabilidade_modeloamostras.cs" />
     <Compile Include="Capabilidade_modeloamostras_SessionFactory.cs" />
     <Compile Include="IConnectDAO.cs" />
     <Compile Include="Mapping\Capabilidade_amostrasMap.cs" />
+    <Compile Include="Mapping\Capabilidade_ramplitudedecadaamostraMap.cs" />
+    <Compile Include="Mapping\Capabilidade_xmediadecadaamostraMap.cs" />
     <Compile Include="Mapping\Capabilidade_modeloamostrasMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryCapabilidade_amostras.cs" />
+    <Compile Include="RepositoryCapabilidade_ramplitudedecadaamostra.cs" />
+    <Compile Include="RepositoryCapabilidade_xmediadecadaamostra.cs" />
     <Compile Include="RepositoryCapabilidade_modeloamostras.cs" />
     <Compile Include="RepositoryConnectDAOCapabilidade_amostras.cs" />
+    <Compile Include="RepositoryConnectDAOCapabilidade_ramplitudedecadaamostra.cs" />
+    <Compile Include="RepositoryConnectDAOCapabilidade_xmediadecadaamostra.cs" />
     <Compile Include="RepositoryConnectDAOCapabilidade_modeloamostras.cs" />
   </ItemGroup>
   <ItemGroup />
