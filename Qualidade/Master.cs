@@ -40,5 +40,21 @@ namespace Qualidade
             GerarEstudo gerarEstudo = new GerarEstudo();
             gerarEstudo.Show();
         }
+
+        private void capabilidadeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ConfiguracaoDiretorioEstudoCapabilidade configdircapabilidade = new ConfiguracaoDiretorioEstudoCapabilidade();
+            configdircapabilidade.Show();
+        }
+
+        private void diretóriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

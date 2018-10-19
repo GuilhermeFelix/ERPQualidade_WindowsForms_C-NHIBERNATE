@@ -73,7 +73,7 @@ namespace Qualidade
         {
             foreach (var item in todasamostrasdomodelo)
             {
-                x[(Convert.ToInt16(item.idamostra)) - 1] = (Convert.ToInt32(item.caracteristica1) + Convert.ToInt32(item.caracteristica2) + Convert.ToInt32(item.caracteristica3) + Convert.ToInt32(item.caracteristica4) + Convert.ToInt32(item.caracteristica5)) / 5; //mudar 5 para 25
+                x[(Convert.ToInt16(item.idamostra)) - 1] = (Convert.ToDouble(item.caracteristica1) + Convert.ToDouble(item.caracteristica2) + Convert.ToDouble(item.caracteristica3) + Convert.ToDouble(item.caracteristica4) + Convert.ToDouble(item.caracteristica5)) / 5; //mudar 5 para 25
             }
         }
         #endregion

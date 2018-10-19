@@ -61,6 +61,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfiguracaoDiretorioEstudoCapabilidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfiguracaoDiretorioEstudoCapabilidade.Designer.cs">
+      <DependentUpon>ConfiguracaoDiretorioEstudoCapabilidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfiguracaoDiretorioEstudoCapabilidadeBO.cs" />
     <Compile Include="GerarEstudo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +103,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ConfiguracaoDiretorioEstudoCapabilidade.resx">
+      <DependentUpon>ConfiguracaoDiretorioEstudoCapabilidade.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GerarEstudo.resx">
       <DependentUpon>GerarEstudo.cs</DependentUpon>
     </EmbeddedResource>
