@@ -117,7 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="DadosRelatorioCapabilidade1BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>SUBTRANSAÇÕES do Gestionador de Tabelas para emissão de Relatórios de Estudos.
+
+RC1 -  Relatório de Capabilidade de Especificação referencial do modelo amostral, para ver os modelos de amostras que já estão cadastrados como referência.
+
+RC2 - Relatório de Capabilidade - Amostras por Modelo, esta subtransação acesso o relatório que exibe as amostras cadastradas em determinado modelo.
+
+RC3 - Relatório de Capabilidade  -  Indicadores de  Performance,  permite  que indicadores  já gerados anteriormente podem  ser carregados  por  esta subtransação, sendo possível buscar os índices para Desvio Padrão,  Variação,  Media x ( Media Geral ),  x Mínimo,  x Máximo,  PP, PPU, PPL e PPK.
+
+RC4 - Relatório de Capabilidade - Indicadores de Performance, já gerados anteriormente podem ser carregados por esta subtransação sendo possível buscar os índices para Tolerância,média xb, Média Mínima, Media Máxima, Media R (Amplitude Geral) e Amplitude Máxima.
+
+RC5 - Relatório de Capabilidade - Indicadores de Desvios, já gerados anteriormente podem ser carregados por esta subtransação, sendo possível buscar os índices para Media do Desvio Padrão, Amplitude do Desvio Padrão, RB/d2 do Desvio da Amostragem, A2/Rb do Desvio da Amostragem e Variação 6-Sigma do Desvio da Amostragem.
+
+RC6 - Relatório de Capabilidade - Indicadores de Capacidade, já gerados anteriormente podem ser carregadas por esta subtransação, sendo possível buscar os Índices para Capacidade, CPU, CPL e CPK.
+
+RC7 - Relatório de Capabilidade - Indicadores de Limites, já gerados anteriormente podem sem carregados por esta subtransação, sendo possível buscar os índices para LSCx, média x, LICx, LSCr e Amplitude.</value>
+  </data>
 </root>

@@ -96,12 +96,13 @@
       <DependentUpon>ConfiguracaoDiretorioEstudoCapabilidade.cs</DependentUpon>
     </Compile>
     <Compile Include="ConfiguracaoDiretorioEstudoCapabilidadeBO.cs" />
-    <Compile Include="erpqualidadeDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>erpqualidadeDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="GerarEstudoBO.cs" />
+    <Compile Include="GerarRelatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerarRelatorios.Designer.cs">
+      <DependentUpon>GerarRelatorios.cs</DependentUpon>
+    </Compile>
     <Compile Include="GerenciarAmostragem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +131,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportViewr\DadosRelatorioCapabilidade1.cs" />
+    <Compile Include="ReportViewr\GetDadosRelatoriosCompras1.cs" />
     <Compile Include="ReportViewr\RelatorioCapabilidade1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +141,9 @@
     </Compile>
     <EmbeddedResource Include="ConfiguracaoDiretorioEstudoCapabilidade.resx">
       <DependentUpon>ConfiguracaoDiretorioEstudoCapabilidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerarRelatorios.resx">
+      <DependentUpon>GerarRelatorios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GerenciarAmostragem.resx">
       <DependentUpon>GerenciarAmostragem.cs</DependentUpon>
@@ -171,18 +177,8 @@
     <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade5.rdlc" />
     <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade6.rdlc" />
     <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade7.rdlc" />
-    <None Include="erpqualidadeDataSet.xsc">
-      <DependentUpon>erpqualidadeDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="erpqualidadeDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>erpqualidadeDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="erpqualidadeDataSet.xss">
-      <DependentUpon>erpqualidadeDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.DadosRelatorioCapabilidade1.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -202,8 +198,9 @@
       <Name>NHibernate_PostGreSQLDAL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\backgroundsystem.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

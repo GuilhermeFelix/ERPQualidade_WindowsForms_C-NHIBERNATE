@@ -12,13 +12,19 @@ namespace Qualidade.ReportViewr
 {
     public partial class RelatorioCapabilidade1 : Form
     {
-        public RelatorioCapabilidade1()
+        public RelatorioCapabilidade1(string _idmodelo)
         {
+            this.idmodelo = _idmodelo;
             InitializeComponent();
         }
-
+        public string idmodelo;
         private void RelatorioCapabilidade1_Load(object sender, EventArgs e)
         {
+            GetDadosRelatoriosCompras1 getdados = new GetDadosRelatoriosCompras1(idmodelo);
+
+            var datasource = new Microsoft.Reporting.WinForms.ReportDataSource("DataSetRelatoriodeCapabilidade1", getdados.DadosRelatorioCapabilidade1lista);
+            this.reportViewer1.LocalReport.DataSources.Clear();
+            this.reportViewer1.LocalReport.DataSources.Add(datasource);
 
             this.reportViewer1.RefreshReport();
         }

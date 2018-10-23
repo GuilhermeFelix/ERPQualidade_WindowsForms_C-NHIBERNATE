@@ -60,8 +60,8 @@ namespace Qualidade
 
         private void relatorio1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RelatorioCapabilidade1 carregarrelatorio = new RelatorioCapabilidade1();
-            carregarrelatorio.Show();
+            GerarRelatorios gerarRelatorios = new GerarRelatorios();
+            gerarRelatorios.Show();
         }
     }
 }

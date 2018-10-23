@@ -31,17 +31,15 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.erpqualidadeDataSet = new Qualidade.erpqualidadeDataSet();
-            this.erpqualidadeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.erpqualidadeDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.erpqualidadeDataSetBindingSource)).BeginInit();
+            this.DadosRelatorioCapabilidade1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.DadosRelatorioCapabilidade1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet_Capabilidade";
-            reportDataSource1.Value = this.erpqualidadeDataSetBindingSource;
+            reportDataSource1.Name = "DataSetRelatoriodeCapabilidade1";
+            reportDataSource1.Value = this.DadosRelatorioCapabilidade1BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Qualidade.ReportViewr.RelatorioCapabilidade1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
@@ -50,15 +48,9 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // erpqualidadeDataSet
+            // DadosRelatorioCapabilidade1BindingSource
             // 
-            this.erpqualidadeDataSet.DataSetName = "erpqualidadeDataSet";
-            this.erpqualidadeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // erpqualidadeDataSetBindingSource
-            // 
-            this.erpqualidadeDataSetBindingSource.DataSource = this.erpqualidadeDataSet;
-            this.erpqualidadeDataSetBindingSource.Position = 0;
+            this.DadosRelatorioCapabilidade1BindingSource.DataSource = typeof(Qualidade.ReportViewr.DadosRelatorioCapabilidade1);
             // 
             // RelatorioCapabilidade1
             // 
@@ -69,8 +61,7 @@
             this.Name = "RelatorioCapabilidade1";
             this.Text = "RelatorioCapabilidade1";
             this.Load += new System.EventHandler(this.RelatorioCapabilidade1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.erpqualidadeDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.erpqualidadeDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DadosRelatorioCapabilidade1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -78,7 +69,6 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource erpqualidadeDataSetBindingSource;
-        private erpqualidadeDataSet erpqualidadeDataSet;
+        private System.Windows.Forms.BindingSource DadosRelatorioCapabilidade1BindingSource;
     }
 }

@@ -165,7 +165,7 @@
             // 
             this.relatorio1ToolStripMenuItem.Name = "relatorio1ToolStripMenuItem";
             this.relatorio1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.relatorio1ToolStripMenuItem.Text = "Relatorio 1";
+            this.relatorio1ToolStripMenuItem.Text = "Novo Relatório";
             this.relatorio1ToolStripMenuItem.Click += new System.EventHandler(this.relatorio1ToolStripMenuItem_Click);
             // 
             // Master
