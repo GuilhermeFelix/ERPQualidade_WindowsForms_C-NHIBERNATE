@@ -161,7 +161,7 @@ namespace Qualidade
         }
 
         //carregar amostra especifica em um modelo selecionado
-        private void CarregarDadosamostraespecificaemDAO()
+        public void CarregarDadosamostraespecificaemDAO()
         {
           RepositoryCapabilidade_amostras dao = new RepositoryCapabilidade_amostras();
           foreach (var item in dao.Consultar().OrderBy(x => x.id).ToList())//filtramodelo

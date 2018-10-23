@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Qualidade.ReportViewr;
 
 namespace Qualidade
 {
@@ -37,8 +38,8 @@ namespace Qualidade
 
         private void gerarEstudoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GerarEstudo gerarEstudo = new GerarEstudo();
-            gerarEstudo.Show();
+            NovoEstudo gerarnovoestudo = new NovoEstudo();
+            gerarnovoestudo.Show();
         }
 
         private void capabilidadeToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -55,6 +56,12 @@ namespace Qualidade
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void relatorio1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RelatorioCapabilidade1 carregarrelatorio = new RelatorioCapabilidade1();
+            carregarrelatorio.Show();
         }
     }
 }
