@@ -8,9 +8,9 @@ using NHibernate_PostGreSQLDAL;
 
 namespace Qualidade.ReportViewr
 {
-    class GetDadosRelatoriosCompras1
+    class GetDadosRelatorios1
     {
-        public GetDadosRelatoriosCompras1(string _idmodelo)
+        public GetDadosRelatorios1(string _idmodelo)
         {
             this.Idmodelo = _idmodelo;
             BuscarDados();

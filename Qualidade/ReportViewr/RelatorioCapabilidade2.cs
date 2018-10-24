@@ -10,22 +10,21 @@ using System.Windows.Forms;
 
 namespace Qualidade.ReportViewr
 {
-    public partial class RelatorioCapabilidade1 : Form
+    public partial class RelatorioCapabilidade2 : Form
     {
-        public RelatorioCapabilidade1(string _idmodelo)
+        public RelatorioCapabilidade2(string _idmodelo)
         {
             this.idmodelo = _idmodelo;
             InitializeComponent();
         }
         public string idmodelo;
-        private void RelatorioCapabilidade1_Load(object sender, EventArgs e)
+        private void RelatorioCapabilidade2_Load(object sender, EventArgs e)
         {
-            GetDadosRelatorios1 getdados = new GetDadosRelatorios1(idmodelo);
-
-            var datasource = new Microsoft.Reporting.WinForms.ReportDataSource("DataSetRelatoriodeCapabilidade1", getdados.DadosRelatorioCapabilidade1lista);
-            this.reportViewer1.LocalReport.DataSources.Clear();
+            GetDadosRelatorios2 getdados = new GetDadosRelatorios2(idmodelo);
+            
+            var datasource = new Microsoft.Reporting.WinForms.ReportDataSource("DataSetRelatorioCapabilidade2", getdados.listadeamostras);
+            this.reportViewer1.LocalReport.DataSources.Clear();                
             this.reportViewer1.LocalReport.DataSources.Add(datasource);
-
             this.reportViewer1.RefreshReport();
         }
     }

@@ -33,11 +33,16 @@ namespace Qualidade
         {
             switch (txt_Subtransacao.Text)
             {
+                //Relatorio de Especificação Referencial do Modelo
                 case "RC1":
 
-                    RelatorioCapabilidade1 abrirrelatorio = new RelatorioCapabilidade1(cmb_Modelos.SelectedItem.ToString());
-                    abrirrelatorio.Show();
-
+                    RelatorioCapabilidade1 abrirrelatorio1 = new RelatorioCapabilidade1(cmb_Modelos.SelectedItem.ToString());
+                    abrirrelatorio1.Show();
+                break;
+               //Relatorio de Amostras por Modelo
+                case "RC2":
+                    RelatorioCapabilidade2 abrirrelatorio2 = new RelatorioCapabilidade2(cmb_Modelos.SelectedItem.ToString());
+                    abrirrelatorio2.Show();
                 break;
                
             }
