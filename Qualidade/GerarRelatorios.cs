@@ -51,7 +51,12 @@ namespace Qualidade
                     RelatorioCapabilidade3 abrirrelatorio3 = new RelatorioCapabilidade3(cmb_Modelos.SelectedItem.ToString());
                     abrirrelatorio3.Show();
                 break;
-               
+
+                //Relatorio de Capabilidade - Indicadores de Performance 2
+                case "RC4":
+                    RelatorioCapabilidade4 abrirrelatorio4 = new RelatorioCapabilidade4(cmb_Modelos.SelectedItem.ToString());
+                    abrirrelatorio4.Show();
+                break;
             }
 
 

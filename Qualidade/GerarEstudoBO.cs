@@ -405,6 +405,7 @@ namespace Qualidade
             
             novosindicadoresdeperformance.idmodelo = Idmodelo;
             novosindicadoresdeperformance.mediax = mediax.ToString("#,0.00");
+            novosindicadoresdeperformance.mediamaxima = mediamaxima.ToString("#,0.00");
             novosindicadoresdeperformance.mediaminima = mediaminima.ToString("#,0.00");
             novosindicadoresdeperformance.mediaxb = mediaxb.ToString("#,0.00");
             novosindicadoresdeperformance.mediar = mediar.ToString("#,0.00");
