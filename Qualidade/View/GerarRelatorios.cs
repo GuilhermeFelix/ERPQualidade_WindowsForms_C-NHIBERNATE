@@ -57,6 +57,12 @@ namespace Qualidade
                     RelatorioCapabilidade4 abrirrelatorio4 = new RelatorioCapabilidade4(cmb_Modelos.SelectedItem.ToString());
                     abrirrelatorio4.Show();
                 break;
+
+                //Relatorio de Capabilidade - Indicadores de Desvios
+                case "RC5":
+                    RelatorioCapabilidade5 abrirrelatorio5 = new RelatorioCapabilidade5(cmb_Modelos.SelectedItem.ToString());
+                    abrirrelatorio5.Show();
+                break;
             }
 
 

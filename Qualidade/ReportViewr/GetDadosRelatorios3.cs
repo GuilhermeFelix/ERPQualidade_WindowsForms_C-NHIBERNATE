@@ -26,13 +26,12 @@ namespace Qualidade.ReportViewr
         {
             //Buscar indicadores do respectivo modelo
             RepositoryCapabilidade_performance dao = new RepositoryCapabilidade_performance();
-            DadosRelatorioCapabilidade3e4 dadosRelatorio = new DadosRelatorioCapabilidade3e4();
 
             foreach (var item in dao.Consultar().OrderBy(x => x.id).ToList())
             {
                 if (Idmodelo == item.idmodelo)
                 {
-                    //DadosRelatorioCapabilidade3e4 dadosRelatorio = new DadosRelatorioCapabilidade3e4();
+                    DadosRelatorioCapabilidade3e4 dadosRelatorio = new DadosRelatorioCapabilidade3e4();
                     dadosRelatorio.Modelo = item.idmodelo;
                     dadosRelatorio.DesvioPadrao = item.desviopadrao;
                     dadosRelatorio.Variacao6Sigma = item.variacaosixsigma;
