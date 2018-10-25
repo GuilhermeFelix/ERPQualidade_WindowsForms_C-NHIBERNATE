@@ -63,11 +63,20 @@ namespace Qualidade
                     RelatorioCapabilidade5 abrirrelatorio5 = new RelatorioCapabilidade5(cmb_Modelos.SelectedItem.ToString());
                     abrirrelatorio5.Show();
                 break;
+
+                //Relatorio de Capabilidade - Indicadores de Capacidade
+                case "RC6":
+                    RelatorioCapabilidade6 abrirrelatorio6 = new RelatorioCapabilidade6(cmb_Modelos.SelectedItem.ToString());
+                    abrirrelatorio6.Show();
+                break;
+
+                //Relatorio de Capabilidade - Indicadores de Limites
+                case "RC7":
+                    RelatorioCapabilidade7 abrirrelatorio7 = new RelatorioCapabilidade7(cmb_Modelos.SelectedItem.ToString());
+                    abrirrelatorio7.Show();
+                break;
+
             }
-
-
-
-
         }
     }
 }

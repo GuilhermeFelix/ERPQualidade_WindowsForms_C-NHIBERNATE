@@ -89,13 +89,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ReportViewr\DadosRelatorioCapabilidade6e7.cs" />
     <Compile Include="ReportViewr\DadosRelatorioCapabilidade5.cs" />
+    <Compile Include="ReportViewr\GetDadosRelatorios7.cs" />
+    <Compile Include="ReportViewr\GetDadosRelatorios6.cs" />
     <Compile Include="ReportViewr\GetDadosRelatorios5.cs" />
     <Compile Include="ReportViewr\RelatorioCapabilidade5.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ReportViewr\RelatorioCapabilidade5.Designer.cs">
       <DependentUpon>RelatorioCapabilidade5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewr\RelatorioCapabilidade6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewr\RelatorioCapabilidade6.Designer.cs">
+      <DependentUpon>RelatorioCapabilidade6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewr\RelatorioCapabilidade7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewr\RelatorioCapabilidade7.Designer.cs">
+      <DependentUpon>RelatorioCapabilidade7.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ConfiguracaoDiretorioEstudoCapabilidade.cs">
       <SubType>Form</SubType>
@@ -174,6 +189,14 @@
     <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade5.resx">
       <DependentUpon>RelatorioCapabilidade5.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade6.rdlc" />
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade6.resx">
+      <DependentUpon>RelatorioCapabilidade6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade7.rdlc" />
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade7.resx">
+      <DependentUpon>RelatorioCapabilidade7.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ConfiguracaoDiretorioEstudoCapabilidade.resx">
       <DependentUpon>ConfiguracaoDiretorioEstudoCapabilidade.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +246,7 @@
     <None Include="Properties\DataSources\Qualidade.ReportViewr.DadosRelatorioCapabilidade2.datasource" />
     <None Include="Properties\DataSources\Qualidade.ReportViewr.DadosRelatorioCapabilidade3e4.datasource" />
     <None Include="Properties\DataSources\Qualidade.ReportViewr.DadosRelatorioCapabilidade5.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.DadosRelatorioCapabilidade6e7.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
