@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Qualidade.ReportViewr;
 
 namespace Qualidade
 {
@@ -33,6 +34,34 @@ namespace Qualidade
         {
             GerenciarAmostragem gerenciarAmostragem = new GerenciarAmostragem();
             gerenciarAmostragem.Show();
+        }
+
+        private void gerarEstudoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NovoEstudo gerarnovoestudo = new NovoEstudo();
+            gerarnovoestudo.Show();
+        }
+
+        private void capabilidadeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ConfiguracaoDiretorioEstudoCapabilidade configdircapabilidade = new ConfiguracaoDiretorioEstudoCapabilidade();
+            configdircapabilidade.Show();
+        }
+
+        private void diretóriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void relatorio1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GerarRelatorios gerarRelatorios = new GerarRelatorios();
+            gerarRelatorios.Show();
         }
     }
 }

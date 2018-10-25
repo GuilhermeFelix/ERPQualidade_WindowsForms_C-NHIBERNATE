@@ -36,6 +36,33 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Devart.Data, Version=5.0.2021.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
+      <HintPath>..\packages\dotConnect.Express.for.PostgreSQL.7.11.1229\lib\Devart.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Devart.Data.PostgreSql, Version=7.11.1229.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
+      <HintPath>..\packages\dotConnect.Express.for.PostgreSQL.7.11.1229\lib\Devart.Data.PostgreSql.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="Npgsql, Version=4.0.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <HintPath>..\packages\Npgsql.4.0.3\lib\net451\Npgsql.dll</HintPath>
     </Reference>
@@ -50,6 +77,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,6 +89,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfiguracaoDiretorioEstudoCapabilidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfiguracaoDiretorioEstudoCapabilidade.Designer.cs">
+      <DependentUpon>ConfiguracaoDiretorioEstudoCapabilidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfiguracaoDiretorioEstudoCapabilidadeBO.cs" />
+    <Compile Include="GerarEstudoBO.cs" />
+    <Compile Include="GerarRelatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerarRelatorios.Designer.cs">
+      <DependentUpon>GerarRelatorios.cs</DependentUpon>
+    </Compile>
     <Compile Include="GerenciarAmostragem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,8 +123,51 @@
       <DependentUpon>ModeloAmostragem.cs</DependentUpon>
     </Compile>
     <Compile Include="ModelodeAmostragemBO.cs" />
+    <Compile Include="NovoEstudo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovoEstudo.Designer.cs">
+      <DependentUpon>NovoEstudo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportViewr\DadosRelatorioCapabilidade3e4.cs" />
+    <Compile Include="ReportViewr\DadosRelatorioCapabilidade2.cs" />
+    <Compile Include="ReportViewr\DadosRelatorioCapabilidade1.cs" />
+    <Compile Include="ReportViewr\GetDadosRelatorios4.cs" />
+    <Compile Include="ReportViewr\GetDadosRelatorios3.cs" />
+    <Compile Include="ReportViewr\GetDadosRelatorios2.cs" />
+    <Compile Include="ReportViewr\GetDadosRelatorios1.cs" />
+    <Compile Include="ReportViewr\RelatorioCapabilidade1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewr\RelatorioCapabilidade1.Designer.cs">
+      <DependentUpon>RelatorioCapabilidade1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewr\RelatorioCapabilidade2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewr\RelatorioCapabilidade2.Designer.cs">
+      <DependentUpon>RelatorioCapabilidade2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewr\RelatorioCapabilidade3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewr\RelatorioCapabilidade3.Designer.cs">
+      <DependentUpon>RelatorioCapabilidade3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewr\RelatorioCapabilidade4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewr\RelatorioCapabilidade4.Designer.cs">
+      <DependentUpon>RelatorioCapabilidade4.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ConfiguracaoDiretorioEstudoCapabilidade.resx">
+      <DependentUpon>ConfiguracaoDiretorioEstudoCapabilidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerarRelatorios.resx">
+      <DependentUpon>GerarRelatorios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GerenciarAmostragem.resx">
       <DependentUpon>GerenciarAmostragem.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModeloAmostragem.resx">
       <DependentUpon>ModeloAmostragem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovoEstudo.resx">
+      <DependentUpon>NovoEstudo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -102,7 +190,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade1.rdlc" />
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade1.resx">
+      <DependentUpon>RelatorioCapabilidade1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade2.rdlc" />
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade2.resx">
+      <DependentUpon>RelatorioCapabilidade2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade3.rdlc" />
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade3.resx">
+      <DependentUpon>RelatorioCapabilidade3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade4.rdlc" />
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade4.resx">
+      <DependentUpon>RelatorioCapabilidade4.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.DadosRelatorioCapabilidade1.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.DadosRelatorioCapabilidade2.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.DadosRelatorioCapabilidade3e4.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -117,13 +224,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\kisspng-rubbish-bins-waste-paper-baskets-computer-icons-trash-svg-png-icon-free-download-223172-onlin-5b8a014586eb07.2610459115357709495526.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\NHibernate_PostGreSQLDAL\NHibernate_PostGreSQLDAL.csproj">
       <Project>{76e232c7-843f-4a80-b445-f9c7a3b18495}</Project>
       <Name>NHibernate_PostGreSQLDAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundsystem.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
