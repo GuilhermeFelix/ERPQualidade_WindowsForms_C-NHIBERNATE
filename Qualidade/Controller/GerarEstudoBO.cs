@@ -20,7 +20,7 @@ namespace Qualidade
         private Double[] x = new Double[25]; //media
         private Double[] r = new Double[25]; //amplitude
         private Double[] caracteristicas = new Double[5];
-        private Double[] todasascaracteristicas = new Double[25]; //mudar para [125]
+        private Double[] todasascaracteristicas = new Double[125]; //mudar para [125]
         private Double maximo = 0, minimo = 0, variancia = 0, desviopadrao = 0, mediax = 0, minimox = 0,
                        maximox = 0, tolerancia = 0, variacaosixsigma = 0, pp = 0, ppu = 0, mediaminima = 0,
                        mediamaxima = 0, ppl = 0, ppk = 0, mediaxb = 0, mediar = 0, amplitudemaxima = 0, varianciax = 0,
@@ -50,7 +50,7 @@ namespace Qualidade
                 }
             }
 
-            if (todasamostrasdomodelo.Count != 5) //mudar 5 para 25 depois
+            if (todasamostrasdomodelo.Count != 25) //mudar 5 para 25 depois
             {
                 verificarsepode_rodarestudo = false;
             }
@@ -73,7 +73,7 @@ namespace Qualidade
         {
             foreach (var item in todasamostrasdomodelo)
             {
-                x[(Convert.ToInt16(item.idamostra)) - 1] = (Convert.ToDouble(item.caracteristica1) + Convert.ToDouble(item.caracteristica2) + Convert.ToDouble(item.caracteristica3) + Convert.ToDouble(item.caracteristica4) + Convert.ToDouble(item.caracteristica5)) / 5; //mudar 5 para 25
+                x[(Convert.ToInt16(item.idamostra)) - 1] = (Convert.ToDouble(item.caracteristica1) + Convert.ToDouble(item.caracteristica2) + Convert.ToDouble(item.caracteristica3) + Convert.ToDouble(item.caracteristica4) + Convert.ToDouble(item.caracteristica5)) / 5; 
             }
         }
         #endregion
@@ -157,7 +157,7 @@ namespace Qualidade
                                              Math.Pow((Convert.ToDouble(item.caracteristica5) - mediax), 2);
                 }
             }
-            variancia = variancia / 24; //trocar por 124
+            variancia = variancia / 124; 
 
             //DesvioPadrao
             desviopadrao = Math.Sqrt(variancia);
@@ -198,7 +198,7 @@ namespace Qualidade
             {
                 if (item.idmodelo == Idmodelo)
                 {
-                    ppl = (mediax - (Convert.ToDouble(item.lie)) / (3 * desviopadrao));
+                    ppl = (mediax - Convert.ToDouble(item.lie)) / (3 * desviopadrao);
                 }
             }
 
@@ -243,7 +243,7 @@ namespace Qualidade
                 varianciax = varianciax + Math.Pow(x[i] - x.Average(), 2);
             }
 
-            varianciax = varianciax / 24; //trocar por 124
+            varianciax = varianciax / x.Length; 
 
             //DesvioPadraox
             desviopadraox = Math.Sqrt(varianciax);
@@ -253,16 +253,16 @@ namespace Qualidade
             {
                 varianciar = varianciar + Math.Pow(r[i] - r.Average(), 2);
             }
-            varianciar = varianciar / 24; //trocar por 124
+            varianciar = varianciar / x.Length; 
 
             //DesvioPadraor
             desviopadraor = Math.Sqrt(varianciar);
 
             //Desvio Amostragem RB/d2
-            desvioamostragemrbd2 = (maximox / 2.326);
+            desvioamostragemrbd2 = (mediar / 2.326);
 
             //Desvio Amostragem A2 / rb
-            desvioamostragema2rb = (0.577 * maximox);
+            desvioamostragema2rb = (0.577 * mediar);
 
             //Desvio Amostragem Variação
             desvioamostragemvariacao = desvioamostragemrbd2 * 6;
@@ -297,7 +297,7 @@ namespace Qualidade
             {
                 if (item.idmodelo == Idmodelo)
                 {
-                    cpu = (Convert.ToDouble(item.lse) + limitemediax) / (3 * desvioamostragemrbd2);
+                    cpu = (Convert.ToDouble(item.lse) - mediax) / (3 * desvioamostragemrbd2);
                 }
             }
 

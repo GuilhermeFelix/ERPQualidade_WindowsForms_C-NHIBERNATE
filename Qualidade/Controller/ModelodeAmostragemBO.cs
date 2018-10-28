@@ -174,7 +174,7 @@ namespace Qualidade
             Capabilidade_modeloamostras novomodelo = new Capabilidade_modeloamostras();
             RepositoryCapabilidade_modeloamostras dao = new RepositoryCapabilidade_modeloamostras();
             
-            novomodelo.idmodelo = idmodelo;
+            novomodelo.idmodelo = idmodelo; 
             novomodelo.inicio = inicio;
             novomodelo.fim = fim;
             novomodelo.caracteristicachave = caracteristicachave;

@@ -40,7 +40,10 @@ namespace Qualidade
             {
                 MessageBox.Show("Modelo não possui 25 amostras preenchidas, impossivel gerar estudo!", "Erro ao gerar estudo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-                      
+            else
+            {
+                MessageBox.Show("Estudo gerado com SUCESSO!");
+            }        
 
         }
     }

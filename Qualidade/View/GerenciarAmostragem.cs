@@ -110,7 +110,9 @@ namespace Qualidade
         private void lnk_ExcluirModelo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             GerenciarAmostragemBO excluiramostra = new GerenciarAmostragemBO(cmb_IdModelo.SelectedItem.ToString(), cmb_IdAmostra.SelectedItem.ToString(),true);
+            MessageBox.Show("MODIFICAÇÂO CONCLUIDA", "Item Excluido");
             carregargrid();
+
 
         }
     }
