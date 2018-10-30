@@ -111,6 +111,26 @@ namespace Qualidade
 
         //metodo para Carregar Lista com os nomes dos modelos
         private int i;
+
+        private void carregarcaracteristicachave()
+        {
+            i = 0;
+            ConfiguracaoCaracteristicaChaveCapabilidadeBO carregarcaracteristica = new ConfiguracaoCaracteristicaChaveCapabilidadeBO();
+            foreach (var item in carregarcaracteristica.CarregarNomesCaracteristicas())
+            {
+                if (i == 0)
+                {
+                    cmb_CaracteristicasChave.Items.Clear();
+                }
+
+                cmb_CaracteristicasChave.Items.Add(item.caracteristica);
+
+                i++;
+            }
+
+
+
+        }
         private void carregarlista()
         {
 
@@ -138,6 +158,8 @@ namespace Qualidade
         private void ModeloAmostragem_Load(object sender, EventArgs e)
         {
             carregarlista();
+            carregarcaracteristicachave();
+            
         }
 
         private void lnk_ExcluirModelo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -25,9 +25,7 @@ namespace Qualidade
             {
                 cmb_CarregarModelo.Items.Add(item.idmodelo.ToString());
             }
-
-            ConfiguracaoDiretorioEstudoCapabilidadeBO carregarcaminho = new ConfiguracaoDiretorioEstudoCapabilidadeBO();
-           
+       
             
         }
 

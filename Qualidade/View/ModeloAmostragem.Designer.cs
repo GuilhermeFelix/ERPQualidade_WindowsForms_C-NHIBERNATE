@@ -113,11 +113,6 @@
             // 
             this.cmb_CaracteristicasChave.BackColor = System.Drawing.SystemColors.Window;
             this.cmb_CaracteristicasChave.FormattingEnabled = true;
-            this.cmb_CaracteristicasChave.Items.AddRange(new object[] {
-            "Diâmetro",
-            "Dimensão",
-            "Raio",
-            "Batimento"});
             this.cmb_CaracteristicasChave.Location = new System.Drawing.Point(260, 79);
             this.cmb_CaracteristicasChave.Name = "cmb_CaracteristicasChave";
             this.cmb_CaracteristicasChave.Size = new System.Drawing.Size(236, 21);

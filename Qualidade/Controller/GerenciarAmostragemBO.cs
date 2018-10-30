@@ -133,8 +133,9 @@ namespace Qualidade
                 if (item.idmodelo == Idmodelo)
                 {   
                     todasamostras.Add(item);
-                }           
+                }
             }
+            
             return todasamostras;
                       
         }

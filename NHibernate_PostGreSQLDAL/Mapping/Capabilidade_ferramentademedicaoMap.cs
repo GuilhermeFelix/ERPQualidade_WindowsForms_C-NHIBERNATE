@@ -8,13 +8,13 @@ using NHibernate_PostGreSQLDAL.Entities;
 
 namespace NHibernate_PostGreSQLDAL.Mapping
 {
-    public class Capabilidade_configuracoesdiretoriosestudosMap : ClassMap<Capabilidade_configuracoesdiretoriosestudos>
+    public class Capabilidade_ferramentademedicaoMap : ClassMap<Capabilidade_ferramentademedicao>
     {
-        public Capabilidade_configuracoesdiretoriosestudosMap()
+        public Capabilidade_ferramentademedicaoMap()
         {
             Id(f => f.id);
-            Map(f => f.caminho);
-            Table("capabilidade_configuracoesdiretoriosestudos");
+            Map(f => f.ferramentademedicao);
+            Table("capabilidade_ferramentademedicao");
         }
     }
 }

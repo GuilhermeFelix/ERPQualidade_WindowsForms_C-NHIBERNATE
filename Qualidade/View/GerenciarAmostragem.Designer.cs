@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GerenciarAmostragem));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -37,6 +38,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtg_Amostras = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lnk_ExcluirModelo = new System.Windows.Forms.LinkLabel();
             this.btn_Salvar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -80,12 +82,13 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lnk_ExcluirModelo = new System.Windows.Forms.LinkLabel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Amostras)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -151,6 +154,7 @@
             this.dtg_Amostras.Name = "dtg_Amostras";
             this.dtg_Amostras.Size = new System.Drawing.Size(873, 181);
             this.dtg_Amostras.TabIndex = 24;
+            this.dtg_Amostras.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtg_Amostras_RowHeaderMouseClick);
             // 
             // panel3
             // 
@@ -179,6 +183,18 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(336, 254);
             this.panel3.TabIndex = 24;
+            // 
+            // lnk_ExcluirModelo
+            // 
+            this.lnk_ExcluirModelo.AutoSize = true;
+            this.lnk_ExcluirModelo.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lnk_ExcluirModelo.Location = new System.Drawing.Point(5, 234);
+            this.lnk_ExcluirModelo.Name = "lnk_ExcluirModelo";
+            this.lnk_ExcluirModelo.Size = new System.Drawing.Size(138, 13);
+            this.lnk_ExcluirModelo.TabIndex = 31;
+            this.lnk_ExcluirModelo.TabStop = true;
+            this.lnk_ExcluirModelo.Text = "Excluir Modelo Selecionado";
+            this.lnk_ExcluirModelo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_ExcluirModelo_LinkClicked);
             // 
             // btn_Salvar
             // 
@@ -602,17 +618,10 @@
             this.panel4.Size = new System.Drawing.Size(268, 254);
             this.panel4.TabIndex = 27;
             // 
-            // lnk_ExcluirModelo
+            // errorProvider1
             // 
-            this.lnk_ExcluirModelo.AutoSize = true;
-            this.lnk_ExcluirModelo.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lnk_ExcluirModelo.Location = new System.Drawing.Point(5, 234);
-            this.lnk_ExcluirModelo.Name = "lnk_ExcluirModelo";
-            this.lnk_ExcluirModelo.Size = new System.Drawing.Size(138, 13);
-            this.lnk_ExcluirModelo.TabIndex = 31;
-            this.lnk_ExcluirModelo.TabStop = true;
-            this.lnk_ExcluirModelo.Text = "Excluir Modelo Selecionado";
-            this.lnk_ExcluirModelo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_ExcluirModelo_LinkClicked);
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.RightToLeft = true;
             // 
             // GerenciarAmostragem
             // 
@@ -642,6 +651,7 @@
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -701,5 +711,6 @@
         private System.Windows.Forms.Button btn_Salvar;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.LinkLabel lnk_ExcluirModelo;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

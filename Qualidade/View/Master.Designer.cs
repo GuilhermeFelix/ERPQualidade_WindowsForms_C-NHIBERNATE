@@ -33,10 +33,6 @@
             this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configestudosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configcapabilidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.configdiretoriorelatorioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.caracteristicaChaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.maquinaFabricaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ferramentaDeMediçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.capabilidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modelosDeAmostragemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,7 +54,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(999, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // configuraçõesToolStripMenuItem
             // 
@@ -73,45 +68,15 @@
             this.configestudosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.configcapabilidadeToolStripMenuItem});
             this.configestudosToolStripMenuItem.Name = "configestudosToolStripMenuItem";
-            this.configestudosToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.configestudosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.configestudosToolStripMenuItem.Text = "Estudos";
-            this.configestudosToolStripMenuItem.Click += new System.EventHandler(this.diretóriosToolStripMenuItem_Click);
             // 
             // configcapabilidadeToolStripMenuItem
             // 
-            this.configcapabilidadeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.configdiretoriorelatorioToolStripMenuItem1,
-            this.caracteristicaChaveToolStripMenuItem,
-            this.maquinaFabricaçãoToolStripMenuItem,
-            this.ferramentaDeMediçãoToolStripMenuItem});
             this.configcapabilidadeToolStripMenuItem.Name = "configcapabilidadeToolStripMenuItem";
-            this.configcapabilidadeToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.configcapabilidadeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.configcapabilidadeToolStripMenuItem.Text = "Capabilidade";
-            // 
-            // configdiretoriorelatorioToolStripMenuItem1
-            // 
-            this.configdiretoriorelatorioToolStripMenuItem1.Name = "configdiretoriorelatorioToolStripMenuItem1";
-            this.configdiretoriorelatorioToolStripMenuItem1.Size = new System.Drawing.Size(199, 22);
-            this.configdiretoriorelatorioToolStripMenuItem1.Text = "Diretorio dos Relatorios";
-            this.configdiretoriorelatorioToolStripMenuItem1.Click += new System.EventHandler(this.capabilidadeToolStripMenuItem1_Click);
-            // 
-            // caracteristicaChaveToolStripMenuItem
-            // 
-            this.caracteristicaChaveToolStripMenuItem.Name = "caracteristicaChaveToolStripMenuItem";
-            this.caracteristicaChaveToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.caracteristicaChaveToolStripMenuItem.Text = "Caracteristica Chave";
-            // 
-            // maquinaFabricaçãoToolStripMenuItem
-            // 
-            this.maquinaFabricaçãoToolStripMenuItem.Name = "maquinaFabricaçãoToolStripMenuItem";
-            this.maquinaFabricaçãoToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.maquinaFabricaçãoToolStripMenuItem.Text = "Maquina Fabricação";
-            // 
-            // ferramentaDeMediçãoToolStripMenuItem
-            // 
-            this.ferramentaDeMediçãoToolStripMenuItem.Name = "ferramentaDeMediçãoToolStripMenuItem";
-            this.ferramentaDeMediçãoToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.ferramentaDeMediçãoToolStripMenuItem.Text = "Ferramenta de Medição";
+            this.configcapabilidadeToolStripMenuItem.Click += new System.EventHandler(this.configcapabilidadeToolStripMenuItem_Click);
             // 
             // cadastroToolStripMenuItem
             // 
@@ -129,7 +94,7 @@
             this.gerarEstudoToolStripMenuItem,
             this.relatoriosToolStripMenuItem});
             this.capabilidadeToolStripMenuItem.Name = "capabilidadeToolStripMenuItem";
-            this.capabilidadeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.capabilidadeToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.capabilidadeToolStripMenuItem.Text = "Capabilidade";
             // 
             // modelosDeAmostragemToolStripMenuItem
@@ -164,7 +129,7 @@
             // relatorio1ToolStripMenuItem
             // 
             this.relatorio1ToolStripMenuItem.Name = "relatorio1ToolStripMenuItem";
-            this.relatorio1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.relatorio1ToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.relatorio1ToolStripMenuItem.Text = "Novo Relatório";
             this.relatorio1ToolStripMenuItem.Click += new System.EventHandler(this.relatorio1ToolStripMenuItem_Click);
             // 
@@ -203,10 +168,6 @@
         private System.Windows.Forms.ToolStripMenuItem gerarEstudoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configestudosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configcapabilidadeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem configdiretoriorelatorioToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem caracteristicaChaveToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem maquinaFabricaçãoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ferramentaDeMediçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatoriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatorio1ToolStripMenuItem;
     }

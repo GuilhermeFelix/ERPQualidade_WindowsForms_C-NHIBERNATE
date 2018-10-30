@@ -27,7 +27,7 @@ namespace Qualidade.ReportViewr
             //Buscar amostras do respectivo modelo
             RepositoryCapabilidade_amostras dao = new RepositoryCapabilidade_amostras();
            
-            foreach (var item in dao.Consultar().OrderBy(x => x.idamostra).ToList())
+            foreach (var item in dao.Consultar().OrderBy(x => x.id).ToList())
             {
                 if (Idmodelo == item.idmodelo)
                 {

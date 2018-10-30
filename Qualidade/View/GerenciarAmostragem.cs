@@ -32,14 +32,17 @@ namespace Qualidade
 
         private void carregargrid()
         {
-
             GerenciarAmostragemBO carregarnogridview = new GerenciarAmostragemBO(cmb_IdModelo.SelectedItem.ToString());
-            dtg_Amostras.DataSource = carregarnogridview.todasamostras;
+            dtg_Amostras.DataSource = carregarnogridview.todasamostras.OrderBy(x => x.id).ToList();
             dtg_Amostras.Columns.Remove("id");
+            dtg_Amostras.Columns.Remove("idmodelo");
         }
 
         private void cmb_IdModelo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+            errorProvider1.Clear();
+
             ModelodeAmostragemBO carregarmodeloamostra = new ModelodeAmostragemBO(cmb_IdModelo.SelectedItem.ToString());
             lbl_IdModelo.Text = carregarmodeloamostra.Idmodelo.ToString();
             lbl_Inicio.Text = carregarmodeloamostra.Inicio.ToString();
@@ -82,28 +85,40 @@ namespace Qualidade
 
 
             carregargrid();
+            MessageBox.Show("BASE ATUALIZADA!");
 
         }
 
 
         private void cmb_IdAmostra_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            GerenciarAmostragemBO carregarnogridview = new GerenciarAmostragemBO(cmb_IdModelo.SelectedItem.ToString(), cmb_IdAmostra.SelectedItem.ToString());
             
-            txt_Caracteristica1.Text = carregarnogridview.Caracteristica1;
-            txt_Caracteristica2.Text = carregarnogridview.Caracteristica2;
-            txt_Caracteristica3.Text = carregarnogridview.Caracteristica3;
-            txt_Caracteristica4.Text = carregarnogridview.Caracteristica4;
-            txt_Caracteristica5.Text = carregarnogridview.Caracteristica5;
-        
-            if (carregarnogridview == null || cmb_IdAmostra.SelectedItem.ToString()=="-")
+
+            try
             {
-                txt_Caracteristica1.Clear();
-                txt_Caracteristica2.Clear();
-                txt_Caracteristica3.Clear();
-                txt_Caracteristica4.Clear();
-                txt_Caracteristica5.Clear();
+                GerenciarAmostragemBO carregarnogridview = new GerenciarAmostragemBO(cmb_IdModelo.SelectedItem.ToString(), cmb_IdAmostra.SelectedItem.ToString());
+
+                txt_Caracteristica1.Text = carregarnogridview.Caracteristica1;
+                txt_Caracteristica2.Text = carregarnogridview.Caracteristica2;
+                txt_Caracteristica3.Text = carregarnogridview.Caracteristica3;
+                txt_Caracteristica4.Text = carregarnogridview.Caracteristica4;
+                txt_Caracteristica5.Text = carregarnogridview.Caracteristica5;
+
+                if (carregarnogridview == null || cmb_IdAmostra.SelectedItem.ToString() == "-")
+                {
+                    txt_Caracteristica1.Clear();
+                    txt_Caracteristica2.Clear();
+                    txt_Caracteristica3.Clear();
+                    txt_Caracteristica4.Clear();
+                    txt_Caracteristica5.Clear();
+                }
+            }
+            catch
+            {
+                if (cmb_IdModelo.SelectedText == "")
+                {
+                    errorProvider1.SetError(cmb_IdModelo, "Selecione um Modelo já Existente");
+                }
             }
         }
 
@@ -112,6 +127,17 @@ namespace Qualidade
             GerenciarAmostragemBO excluiramostra = new GerenciarAmostragemBO(cmb_IdModelo.SelectedItem.ToString(), cmb_IdAmostra.SelectedItem.ToString(),true);
             MessageBox.Show("MODIFICAÇÂO CONCLUIDA", "Item Excluido");
             carregargrid();
+
+
+        }
+
+
+        private void dtg_Amostras_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+
+            cmb_IdAmostra.SelectedItem = dtg_Amostras.CurrentCell.Value.ToString();
+          
 
 
         }

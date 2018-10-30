@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Qualidade.ReportViewr;
+using Qualidade.View;
 
 namespace Qualidade
 {
@@ -42,26 +43,16 @@ namespace Qualidade
             gerarnovoestudo.Show();
         }
 
-        private void capabilidadeToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            ConfiguracaoDiretorioEstudoCapabilidade configdircapabilidade = new ConfiguracaoDiretorioEstudoCapabilidade();
-            configdircapabilidade.Show();
-        }
-
-        private void diretóriosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void relatorio1ToolStripMenuItem_Click(object sender, EventArgs e)
+            private void relatorio1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             GerarRelatorios gerarRelatorios = new GerarRelatorios();
             gerarRelatorios.Show();
+        }
+
+        private void configcapabilidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConfiguracoesCapabilidade configuracoesCapabilidade = new ConfiguracoesCapabilidade();
+            configuracoesCapabilidade.Show();
         }
     }
 }

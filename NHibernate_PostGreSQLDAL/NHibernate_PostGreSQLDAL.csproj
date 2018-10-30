@@ -78,24 +78,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Capabilidade_amostras_SessionFactory .cs" />
-    <Compile Include="Capabilidade_configuracoesdiretoriosestudos_SessionFactory.cs" />
+    <Compile Include="Capabilidade_ferramentademedicao_SessionFactory.cs" />
+    <Compile Include="Capabilidade_maquinafabricacao_SessionFactory.cs" />
     <Compile Include="Capabilidade_limitesecapacidades_SessionFactory.cs" />
     <Compile Include="Capabilidade_desvios_SessionFactory.cs" />
+    <Compile Include="Capabilidade_caracteristicachave_SessionFactory.cs" />
     <Compile Include="Capabilidade_ramplitudedecadaamostra_SessionFactory.cs" />
     <Compile Include="Capabilidade_performance_SessionFactory.cs" />
     <Compile Include="Capabilidade_xmediadecadaamostra_SessionFactory.cs" />
     <Compile Include="Entities\Capabilidade_amostras.cs" />
+    <Compile Include="Entities\Capabilidade_maquinafabricacao.cs" />
+    <Compile Include="Entities\Capabilidade_ferramentademedicacao.cs" />
+    <Compile Include="Entities\Capabilidade_caracteristicachave.cs" />
     <Compile Include="Entities\Capabilidade_desvios.cs" />
     <Compile Include="Entities\Capabilidade_limitesecapacidades.cs" />
     <Compile Include="Entities\Capabilidade_ramplitudedecadaamostra.cs" />
     <Compile Include="Entities\Capabilidade_performance.cs" />
-    <Compile Include="Entities\Capabilidade_configuracoesdiretoriosestudos .cs" />
     <Compile Include="Entities\Capabilidade_xmediadecadaamostra.cs" />
     <Compile Include="Entities\Capabilidade_modeloamostras.cs" />
     <Compile Include="Capabilidade_modeloamostras_SessionFactory.cs" />
     <Compile Include="IConnectDAO.cs" />
     <Compile Include="Mapping\Capabilidade_amostrasMap.cs" />
-    <Compile Include="Mapping\Capabilidade_configuracoesdiretoriosestudosMap.cs" />
+    <Compile Include="Mapping\Capabilidade_ferramentademedicaoMap.cs" />
+    <Compile Include="Mapping\Capabilidade_maquinafabricacaoMap.cs" />
+    <Compile Include="Mapping\Capabilidade_caracteristicachaveMap.cs" />
     <Compile Include="Mapping\Capabilidade_limitesecapacidadesMap.cs" />
     <Compile Include="Mapping\Capabilidade_desviosMap.cs" />
     <Compile Include="Mapping\Capabilidade_ramplitudedecadaamostraMap.cs" />
@@ -104,7 +110,9 @@
     <Compile Include="Mapping\Capabilidade_modeloamostrasMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryCapabilidade_amostras.cs" />
-    <Compile Include="RepositoryCapabilidade_configuracoesdiretoriosestudos.cs" />
+    <Compile Include="RepositoryCapabilidade_ferramentademedicao.cs" />
+    <Compile Include="RepositoryCapabilidade_maquinafabricacao.cs" />
+    <Compile Include="RepositoryCapabilidade_caracteristicachave.cs" />
     <Compile Include="RepositoryCapabilidade_limitesecapacidades.cs" />
     <Compile Include="RepositoryCapabilidade_desvios.cs" />
     <Compile Include="RepositoryCapabilidade_ramplitudedecadaamostra.cs" />
@@ -112,7 +120,9 @@
     <Compile Include="RepositoryCapabilidade_xmediadecadaamostra.cs" />
     <Compile Include="RepositoryCapabilidade_modeloamostras.cs" />
     <Compile Include="RepositoryConnectDAOCapabilidade_amostras.cs" />
-    <Compile Include="RepositoryConnectDAOCapabilidade_configuracoesdiretoriosestudos.cs" />
+    <Compile Include="RepositoryConnectDAOCapabilidade_maquinafabricacao.cs" />
+    <Compile Include="RepositoryConnectDAOCapabilidade_ferramentademedicao.cs" />
+    <Compile Include="RepositoryConnectDAOCapabilidade_caracteristicachave.cs" />
     <Compile Include="RepositoryConnectDAOCapabilidade_limitesecapacidades.cs" />
     <Compile Include="RepositoryConnectDAOCapabilidade_desvios.cs" />
     <Compile Include="RepositoryConnectDAOCapabilidade_ramplitudedecadaamostra.cs" />

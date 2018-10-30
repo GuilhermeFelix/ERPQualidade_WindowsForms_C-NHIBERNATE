@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace NHibernate_PostGreSQLDAL.Entities
 {
-    public class Capabilidade_configuracoesdiretoriosestudos
+    public class Capabilidade_maquinafabricacao
     {
         public virtual int id {get;set;}
-        public virtual string caminho { get; set; }
+        public virtual string maquinafabricacao { get; set; }
         
     }
 }
