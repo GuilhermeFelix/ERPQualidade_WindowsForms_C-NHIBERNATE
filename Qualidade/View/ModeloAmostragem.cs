@@ -112,6 +112,25 @@ namespace Qualidade
         //metodo para Carregar Lista com os nomes dos modelos
         private int i;
 
+        private void carregarmaquinafabricacao()
+        {
+            i = 0;
+            ConfiguracaoMaquinaFabricacaoCapabilidadeBO carregarmaquina = new ConfiguracaoMaquinaFabricacaoCapabilidadeBO();
+            foreach (var item in carregarmaquina.CarregarNomesCaracteristicas())
+            {
+                if (i == 0)
+                {
+                    cmb_MaquinaFabricacao.Items.Clear();
+                }
+
+                cmb_MaquinaFabricacao.Items.Add(item.maquinafabricacao);
+
+                i++;
+            }
+        }
+
+
+
         private void carregarcaracteristicachave()
         {
             i = 0;
@@ -159,6 +178,7 @@ namespace Qualidade
         {
             carregarlista();
             carregarcaracteristicachave();
+            carregarmaquinafabricacao();
             
         }
 

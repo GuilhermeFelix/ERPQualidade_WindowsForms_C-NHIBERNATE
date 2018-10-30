@@ -26,7 +26,7 @@ namespace Qualidade.View
         {
             lst_CaracteristicaChave.Items.Clear();
             carregarlistaCaracteristicaChave();
-
+            carregarlistaMaquinaFabricacao();
 
 
         }
@@ -55,6 +55,36 @@ namespace Qualidade.View
 
                 lst_CaracteristicaChave.SelectedIndex.Equals(0);
                 lst_CaracteristicaChave.Items.Add(item.caracteristica.ToString());
+
+                i++;
+            }
+        }
+
+
+
+        private void carregarlistaMaquinaFabricacao()
+        {
+
+            //carregar nomes na lista
+            int i = 0;
+            ConfiguracaoMaquinaFabricacaoCapabilidadeBO carregarmaquina = new ConfiguracaoMaquinaFabricacaoCapabilidadeBO();
+            if (carregarmaquina.capabilidade_maquinafabricacao.Count() == 0)
+            {
+                lst_MaquinaFabricacao.Items.Clear();
+                lst_MaquinaFabricacao.Items.Add("Nova Maquina");
+            }
+
+
+            foreach (var item in carregarmaquina.capabilidade_maquinafabricacao)
+            {
+                if (i == 0)
+                {
+                    lst_MaquinaFabricacao.Items.Clear();
+                    lst_MaquinaFabricacao.Items.Add("Nova Maquina");
+                }
+
+                lst_MaquinaFabricacao.SelectedIndex.Equals(0);
+                lst_MaquinaFabricacao.Items.Add(item.maquinafabricacao.ToString());
 
                 i++;
             }
@@ -105,6 +135,64 @@ namespace Qualidade.View
                 lst_CaracteristicaChave.Items.Clear();
                 carregarlistaCaracteristicaChave();
             }
+        }
+
+        private void btn_RemoverMaquina_Click(object sender, EventArgs e)
+        {
+            
+            if (lst_MaquinaFabricacao.SelectedItem.ToString() == "Nova Maquina")
+            {
+                errorProvider1.SetError(lst_MaquinaFabricacao, "Selecione um item para remover");
+            }
+            else
+            {
+                ConfiguracaoMaquinaFabricacaoCapabilidadeBO remover = new ConfiguracaoMaquinaFabricacaoCapabilidadeBO(lst_MaquinaFabricacao.SelectedItem.ToString(), true);
+                MessageBox.Show("Remoção Concluida!");
+               
+                lst_MaquinaFabricacao.Items.Clear();
+                carregarlistaMaquinaFabricacao();
+            }
+        }
+
+        private void btn_SalvarMaquina_Click(object sender, EventArgs e)
+        {
+            if (lst_MaquinaFabricacao.SelectedItem == null)
+            {
+                errorProvider1.SetError(lst_MaquinaFabricacao, "Selecione uma opção!");
+            }
+            else
+            {
+                if (lst_MaquinaFabricacao.SelectedItem.ToString() == "Nova Maquina")
+                {
+                    //Salvar
+                    ConfiguracaoMaquinaFabricacaoCapabilidadeBO salvarmaquina = new ConfiguracaoMaquinaFabricacaoCapabilidadeBO(txt_Maquina.Text.ToString());
+
+                }
+                else
+                {
+                    //Alterar
+                    ConfiguracaoMaquinaFabricacaoCapabilidadeBO alterarmaquina = new ConfiguracaoMaquinaFabricacaoCapabilidadeBO(txt_Maquina.Text.ToString(), lst_MaquinaFabricacao.SelectedItem.ToString());
+                }
+            }
+
+            lst_MaquinaFabricacao.Items.Clear();
+            txt_Maquina.Text = "";
+            carregarlistaMaquinaFabricacao();
+        }
+
+        private void lst_MaquinaFabricacao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void txt_Maquina_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void txt_CaracteristicaChave_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
         }
     }
 }

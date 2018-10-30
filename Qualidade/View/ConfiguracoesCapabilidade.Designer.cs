@@ -30,22 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_RemoverCaracteristica = new System.Windows.Forms.Button();
             this.btn_SalvarCaracteristicaChave = new System.Windows.Forms.Button();
             this.txt_CaracteristicaChave = new System.Windows.Forms.TextBox();
             this.lst_CaracteristicaChave = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.btn_SalvarMaquina = new System.Windows.Forms.Button();
+            this.btn_RemoverMaquina = new System.Windows.Forms.Button();
+            this.txt_Maquina = new System.Windows.Forms.TextBox();
+            this.lst_MaquinaFabricacao = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btn_RemoverCaracteristica = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -64,6 +64,16 @@
             this.panel1.Size = new System.Drawing.Size(406, 125);
             this.panel1.TabIndex = 0;
             // 
+            // btn_RemoverCaracteristica
+            // 
+            this.btn_RemoverCaracteristica.Location = new System.Drawing.Point(91, 54);
+            this.btn_RemoverCaracteristica.Name = "btn_RemoverCaracteristica";
+            this.btn_RemoverCaracteristica.Size = new System.Drawing.Size(61, 25);
+            this.btn_RemoverCaracteristica.TabIndex = 4;
+            this.btn_RemoverCaracteristica.Text = "Remover";
+            this.btn_RemoverCaracteristica.UseVisualStyleBackColor = true;
+            this.btn_RemoverCaracteristica.Click += new System.EventHandler(this.btn_RemoverCaracteristica_Click);
+            // 
             // btn_SalvarCaracteristicaChave
             // 
             this.btn_SalvarCaracteristicaChave.Location = new System.Drawing.Point(91, 85);
@@ -80,6 +90,7 @@
             this.txt_CaracteristicaChave.Name = "txt_CaracteristicaChave";
             this.txt_CaracteristicaChave.Size = new System.Drawing.Size(137, 20);
             this.txt_CaracteristicaChave.TabIndex = 2;
+            this.txt_CaracteristicaChave.TextChanged += new System.EventHandler(this.txt_CaracteristicaChave_TextChanged);
             // 
             // lst_CaracteristicaChave
             // 
@@ -101,9 +112,10 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.listBox2);
+            this.panel2.Controls.Add(this.btn_SalvarMaquina);
+            this.panel2.Controls.Add(this.btn_RemoverMaquina);
+            this.panel2.Controls.Add(this.txt_Maquina);
+            this.panel2.Controls.Add(this.lst_MaquinaFabricacao);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(35, 143);
             this.panel2.Name = "panel2";
@@ -111,29 +123,42 @@
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // button2
+            // btn_SalvarMaquina
             // 
-            this.button2.Location = new System.Drawing.Point(74, 48);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 42);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_SalvarMaquina.Location = new System.Drawing.Point(91, 79);
+            this.btn_SalvarMaquina.Name = "btn_SalvarMaquina";
+            this.btn_SalvarMaquina.Size = new System.Drawing.Size(61, 25);
+            this.btn_SalvarMaquina.TabIndex = 5;
+            this.btn_SalvarMaquina.Text = "Salvar";
+            this.btn_SalvarMaquina.UseVisualStyleBackColor = true;
+            this.btn_SalvarMaquina.Click += new System.EventHandler(this.btn_SalvarMaquina_Click);
             // 
-            // textBox2
+            // btn_RemoverMaquina
             // 
-            this.textBox2.Location = new System.Drawing.Point(15, 22);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(137, 20);
-            this.textBox2.TabIndex = 3;
+            this.btn_RemoverMaquina.Location = new System.Drawing.Point(91, 48);
+            this.btn_RemoverMaquina.Name = "btn_RemoverMaquina";
+            this.btn_RemoverMaquina.Size = new System.Drawing.Size(61, 25);
+            this.btn_RemoverMaquina.TabIndex = 5;
+            this.btn_RemoverMaquina.Text = "Remover";
+            this.btn_RemoverMaquina.UseVisualStyleBackColor = true;
+            this.btn_RemoverMaquina.Click += new System.EventHandler(this.btn_RemoverMaquina_Click);
             // 
-            // listBox2
+            // txt_Maquina
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(158, 19);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(178, 95);
-            this.listBox2.TabIndex = 2;
+            this.txt_Maquina.Location = new System.Drawing.Point(15, 22);
+            this.txt_Maquina.Name = "txt_Maquina";
+            this.txt_Maquina.Size = new System.Drawing.Size(137, 20);
+            this.txt_Maquina.TabIndex = 3;
+            this.txt_Maquina.TextChanged += new System.EventHandler(this.txt_Maquina_TextChanged);
+            // 
+            // lst_MaquinaFabricacao
+            // 
+            this.lst_MaquinaFabricacao.FormattingEnabled = true;
+            this.lst_MaquinaFabricacao.Location = new System.Drawing.Point(158, 19);
+            this.lst_MaquinaFabricacao.Name = "lst_MaquinaFabricacao";
+            this.lst_MaquinaFabricacao.Size = new System.Drawing.Size(178, 95);
+            this.lst_MaquinaFabricacao.TabIndex = 2;
+            this.lst_MaquinaFabricacao.SelectedIndexChanged += new System.EventHandler(this.lst_MaquinaFabricacao_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -146,7 +171,6 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.textBox3);
             this.panel3.Controls.Add(this.listBox3);
             this.panel3.Controls.Add(this.label3);
@@ -154,15 +178,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(406, 119);
             this.panel3.TabIndex = 1;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(74, 48);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(78, 42);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // textBox3
             // 
@@ -192,22 +207,12 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // btn_RemoverCaracteristica
-            // 
-            this.btn_RemoverCaracteristica.Location = new System.Drawing.Point(91, 54);
-            this.btn_RemoverCaracteristica.Name = "btn_RemoverCaracteristica";
-            this.btn_RemoverCaracteristica.Size = new System.Drawing.Size(61, 25);
-            this.btn_RemoverCaracteristica.TabIndex = 4;
-            this.btn_RemoverCaracteristica.Text = "Remover";
-            this.btn_RemoverCaracteristica.UseVisualStyleBackColor = true;
-            this.btn_RemoverCaracteristica.Click += new System.EventHandler(this.btn_RemoverCaracteristica_Click);
-            // 
             // ConfiguracoesCapabilidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Qualidade.Properties.Resources.backgroundsystem;
-            this.ClientSize = new System.Drawing.Size(492, 395);
+            this.ClientSize = new System.Drawing.Size(479, 395);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -231,18 +236,18 @@
         private System.Windows.Forms.ListBox lst_CaracteristicaChave;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox lst_MaquinaFabricacao;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_SalvarCaracteristicaChave;
         private System.Windows.Forms.TextBox txt_CaracteristicaChave;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txt_Maquina;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button btn_RemoverCaracteristica;
+        private System.Windows.Forms.Button btn_SalvarMaquina;
+        private System.Windows.Forms.Button btn_RemoverMaquina;
     }
 }

@@ -89,6 +89,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ConfiguracaoMaquinaFabricacaoCapabilidadeBO.cs" />
     <Compile Include="Controller\ConfiguracaoCaracteristicaChaveCapabilidadeBO.cs" />
     <Compile Include="ReportViewr\DadosRelatorioCapabilidade6e7.cs" />
     <Compile Include="ReportViewr\DadosRelatorioCapabilidade5.cs" />

@@ -164,8 +164,6 @@
             // cmb_MaquinaFabricacao
             // 
             this.cmb_MaquinaFabricacao.FormattingEnabled = true;
-            this.cmb_MaquinaFabricacao.Items.AddRange(new object[] {
-            "Furadeira"});
             this.cmb_MaquinaFabricacao.Location = new System.Drawing.Point(510, 79);
             this.cmb_MaquinaFabricacao.Name = "cmb_MaquinaFabricacao";
             this.cmb_MaquinaFabricacao.Size = new System.Drawing.Size(236, 21);
