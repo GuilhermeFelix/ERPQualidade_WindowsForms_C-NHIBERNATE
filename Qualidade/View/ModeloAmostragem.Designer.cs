@@ -45,15 +45,10 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
-            this.txt_FerramentaCaracteristica5 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.txt_FerramentaCaracteristica4 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.txt_FerramentaCaracteristica3 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.txt_FerramentaCaracteristica2 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.txt_FerramentaCaracteristica1 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.btn_Confirmar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -72,6 +67,11 @@
             this.txt_IdModelo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.errorProvider_Confirmar = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cmb_FerramentaCaracteristica1 = new System.Windows.Forms.ComboBox();
+            this.cmb_FerramentaCaracteristica2 = new System.Windows.Forms.ComboBox();
+            this.cmb_FerramentaCaracteristica3 = new System.Windows.Forms.ComboBox();
+            this.cmb_FerramentaCaracteristica4 = new System.Windows.Forms.ComboBox();
+            this.cmb_FerramentaCaracteristica5 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -194,6 +194,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(757, 517);
             this.panel1.TabIndex = 11;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lnk_ExcluirModelo
             // 
@@ -210,16 +211,16 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel3.Controls.Add(this.cmb_FerramentaCaracteristica5);
+            this.panel3.Controls.Add(this.cmb_FerramentaCaracteristica4);
+            this.panel3.Controls.Add(this.cmb_FerramentaCaracteristica3);
+            this.panel3.Controls.Add(this.cmb_FerramentaCaracteristica2);
+            this.panel3.Controls.Add(this.cmb_FerramentaCaracteristica1);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.txt_FerramentaCaracteristica5);
             this.panel3.Controls.Add(this.label17);
-            this.panel3.Controls.Add(this.txt_FerramentaCaracteristica4);
             this.panel3.Controls.Add(this.label16);
-            this.panel3.Controls.Add(this.txt_FerramentaCaracteristica3);
             this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.txt_FerramentaCaracteristica2);
             this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.txt_FerramentaCaracteristica1);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Location = new System.Drawing.Point(486, 278);
             this.panel3.Name = "panel3";
@@ -244,13 +245,6 @@
             this.label18.TabIndex = 22;
             this.label18.Text = "Ferramenta de Medição";
             // 
-            // txt_FerramentaCaracteristica5
-            // 
-            this.txt_FerramentaCaracteristica5.Location = new System.Drawing.Point(107, 155);
-            this.txt_FerramentaCaracteristica5.Name = "txt_FerramentaCaracteristica5";
-            this.txt_FerramentaCaracteristica5.Size = new System.Drawing.Size(100, 20);
-            this.txt_FerramentaCaracteristica5.TabIndex = 21;
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -259,13 +253,6 @@
             this.label17.Size = new System.Drawing.Size(83, 13);
             this.label17.TabIndex = 12;
             this.label17.Text = "Caracteristica 1:";
-            // 
-            // txt_FerramentaCaracteristica4
-            // 
-            this.txt_FerramentaCaracteristica4.Location = new System.Drawing.Point(107, 127);
-            this.txt_FerramentaCaracteristica4.Name = "txt_FerramentaCaracteristica4";
-            this.txt_FerramentaCaracteristica4.Size = new System.Drawing.Size(100, 20);
-            this.txt_FerramentaCaracteristica4.TabIndex = 20;
             // 
             // label16
             // 
@@ -276,13 +263,6 @@
             this.label16.TabIndex = 13;
             this.label16.Text = "Caracteristica 2:";
             // 
-            // txt_FerramentaCaracteristica3
-            // 
-            this.txt_FerramentaCaracteristica3.Location = new System.Drawing.Point(107, 98);
-            this.txt_FerramentaCaracteristica3.Name = "txt_FerramentaCaracteristica3";
-            this.txt_FerramentaCaracteristica3.Size = new System.Drawing.Size(100, 20);
-            this.txt_FerramentaCaracteristica3.TabIndex = 19;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -292,13 +272,6 @@
             this.label15.TabIndex = 14;
             this.label15.Text = "Caracteristica 3:";
             // 
-            // txt_FerramentaCaracteristica2
-            // 
-            this.txt_FerramentaCaracteristica2.Location = new System.Drawing.Point(107, 67);
-            this.txt_FerramentaCaracteristica2.Name = "txt_FerramentaCaracteristica2";
-            this.txt_FerramentaCaracteristica2.Size = new System.Drawing.Size(100, 20);
-            this.txt_FerramentaCaracteristica2.TabIndex = 18;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -307,13 +280,6 @@
             this.label14.Size = new System.Drawing.Size(83, 13);
             this.label14.TabIndex = 15;
             this.label14.Text = "Caracteristica 4:";
-            // 
-            // txt_FerramentaCaracteristica1
-            // 
-            this.txt_FerramentaCaracteristica1.Location = new System.Drawing.Point(107, 36);
-            this.txt_FerramentaCaracteristica1.Name = "txt_FerramentaCaracteristica1";
-            this.txt_FerramentaCaracteristica1.Size = new System.Drawing.Size(100, 20);
-            this.txt_FerramentaCaracteristica1.TabIndex = 17;
             // 
             // label13
             // 
@@ -471,6 +437,61 @@
             this.errorProvider_Confirmar.ContainerControl = this;
             this.errorProvider_Confirmar.RightToLeft = true;
             // 
+            // cmb_FerramentaCaracteristica1
+            // 
+            this.cmb_FerramentaCaracteristica1.BackColor = System.Drawing.SystemColors.Window;
+            this.cmb_FerramentaCaracteristica1.FormattingEnabled = true;
+            this.cmb_FerramentaCaracteristica1.Location = new System.Drawing.Point(106, 36);
+            this.cmb_FerramentaCaracteristica1.Name = "cmb_FerramentaCaracteristica1";
+            this.cmb_FerramentaCaracteristica1.Size = new System.Drawing.Size(100, 21);
+            this.cmb_FerramentaCaracteristica1.TabIndex = 27;
+            this.cmb_FerramentaCaracteristica1.Tag = "Usuário deve escolher qual é o tipo de caracteristica chave que predomina na peça" +
+    " de estudo.";
+            // 
+            // cmb_FerramentaCaracteristica2
+            // 
+            this.cmb_FerramentaCaracteristica2.BackColor = System.Drawing.SystemColors.Window;
+            this.cmb_FerramentaCaracteristica2.FormattingEnabled = true;
+            this.cmb_FerramentaCaracteristica2.Location = new System.Drawing.Point(106, 66);
+            this.cmb_FerramentaCaracteristica2.Name = "cmb_FerramentaCaracteristica2";
+            this.cmb_FerramentaCaracteristica2.Size = new System.Drawing.Size(100, 21);
+            this.cmb_FerramentaCaracteristica2.TabIndex = 28;
+            this.cmb_FerramentaCaracteristica2.Tag = "Usuário deve escolher qual é o tipo de caracteristica chave que predomina na peça" +
+    " de estudo.";
+            // 
+            // cmb_FerramentaCaracteristica3
+            // 
+            this.cmb_FerramentaCaracteristica3.BackColor = System.Drawing.SystemColors.Window;
+            this.cmb_FerramentaCaracteristica3.FormattingEnabled = true;
+            this.cmb_FerramentaCaracteristica3.Location = new System.Drawing.Point(105, 97);
+            this.cmb_FerramentaCaracteristica3.Name = "cmb_FerramentaCaracteristica3";
+            this.cmb_FerramentaCaracteristica3.Size = new System.Drawing.Size(100, 21);
+            this.cmb_FerramentaCaracteristica3.TabIndex = 29;
+            this.cmb_FerramentaCaracteristica3.Tag = "Usuário deve escolher qual é o tipo de caracteristica chave que predomina na peça" +
+    " de estudo.";
+            // 
+            // cmb_FerramentaCaracteristica4
+            // 
+            this.cmb_FerramentaCaracteristica4.BackColor = System.Drawing.SystemColors.Window;
+            this.cmb_FerramentaCaracteristica4.FormattingEnabled = true;
+            this.cmb_FerramentaCaracteristica4.Location = new System.Drawing.Point(104, 126);
+            this.cmb_FerramentaCaracteristica4.Name = "cmb_FerramentaCaracteristica4";
+            this.cmb_FerramentaCaracteristica4.Size = new System.Drawing.Size(100, 21);
+            this.cmb_FerramentaCaracteristica4.TabIndex = 30;
+            this.cmb_FerramentaCaracteristica4.Tag = "Usuário deve escolher qual é o tipo de caracteristica chave que predomina na peça" +
+    " de estudo.";
+            // 
+            // cmb_FerramentaCaracteristica5
+            // 
+            this.cmb_FerramentaCaracteristica5.BackColor = System.Drawing.SystemColors.Window;
+            this.cmb_FerramentaCaracteristica5.FormattingEnabled = true;
+            this.cmb_FerramentaCaracteristica5.Location = new System.Drawing.Point(104, 153);
+            this.cmb_FerramentaCaracteristica5.Name = "cmb_FerramentaCaracteristica5";
+            this.cmb_FerramentaCaracteristica5.Size = new System.Drawing.Size(100, 21);
+            this.cmb_FerramentaCaracteristica5.TabIndex = 31;
+            this.cmb_FerramentaCaracteristica5.Tag = "Usuário deve escolher qual é o tipo de caracteristica chave que predomina na peça" +
+    " de estudo.";
+            // 
             // ModeloAmostragem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -533,17 +554,17 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox txt_FerramentaCaracteristica5;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox txt_FerramentaCaracteristica4;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txt_FerramentaCaracteristica3;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txt_FerramentaCaracteristica2;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txt_FerramentaCaracteristica1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.LinkLabel lnk_ExcluirModelo;
         private System.Windows.Forms.ErrorProvider errorProvider_Confirmar;
+        private System.Windows.Forms.ComboBox cmb_FerramentaCaracteristica5;
+        private System.Windows.Forms.ComboBox cmb_FerramentaCaracteristica4;
+        private System.Windows.Forms.ComboBox cmb_FerramentaCaracteristica3;
+        private System.Windows.Forms.ComboBox cmb_FerramentaCaracteristica2;
+        private System.Windows.Forms.ComboBox cmb_FerramentaCaracteristica1;
     }
 }

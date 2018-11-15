@@ -28,9 +28,9 @@ namespace Qualidade
                     ModelodeAmostragemBO novomodelodeamostra = new ModelodeAmostragemBO(txt_IdModelo.Text, dtt_Inicio.Value, dtt_Fim.Value,
                                                                                 cmb_CaracteristicasChave.Text, cmb_MaquinaFabricacao.Text,
                                                                                 txt_EspecificacaoNominal.Text, txt_Licx.Text, txt_Lie.Text,
-                                                                                txt_Lscx.Text, txt_Lse.Text, txt_Lscr.Text, txt_FerramentaCaracteristica1.Text,
-                                                                                txt_FerramentaCaracteristica2.Text, txt_FerramentaCaracteristica3.Text, txt_FerramentaCaracteristica4.Text,
-                                                                                txt_FerramentaCaracteristica5.Text, true);
+                                                                                txt_Lscx.Text, txt_Lse.Text, txt_Lscr.Text, cmb_FerramentaCaracteristica1.Text,
+                                                                                cmb_FerramentaCaracteristica2.Text, cmb_FerramentaCaracteristica3.Text, cmb_FerramentaCaracteristica4.Text,
+                                                                                cmb_FerramentaCaracteristica5.Text, true);
                 }
 
                 if (lst_Modelos.SelectedItem.ToString() != "Novo Modelo")
@@ -43,9 +43,9 @@ namespace Qualidade
                     ModelodeAmostragemBO novomodelodeamostra = new ModelodeAmostragemBO(txt_IdModelo.Text, dtt_Inicio.Value, dtt_Fim.Value,
                                                                                 cmb_CaracteristicasChave.Text, cmb_MaquinaFabricacao.Text,
                                                                                 txt_EspecificacaoNominal.Text, txt_Licx.Text, txt_Lie.Text,
-                                                                                txt_Lscx.Text, txt_Lse.Text, txt_Lscr.Text, txt_FerramentaCaracteristica1.Text,
-                                                                                txt_FerramentaCaracteristica2.Text, txt_FerramentaCaracteristica3.Text, txt_FerramentaCaracteristica4.Text,
-                                                                                txt_FerramentaCaracteristica5.Text);
+                                                                                txt_Lscx.Text, txt_Lse.Text, txt_Lscr.Text, cmb_FerramentaCaracteristica1.Text,
+                                                                                cmb_FerramentaCaracteristica2.Text, cmb_FerramentaCaracteristica3.Text, cmb_FerramentaCaracteristica4.Text,
+                                                                                cmb_FerramentaCaracteristica5.Text);
                 }
             }
             catch
@@ -76,11 +76,11 @@ namespace Qualidade
                 txt_Lscx.Text = carregarmodeloamostra.Praticadolscx;
                 txt_Lse.Text = carregarmodeloamostra.Lse;
                 txt_Lscr.Text = carregarmodeloamostra.Praticadolscr;
-                txt_FerramentaCaracteristica1.Text = carregarmodeloamostra.Ferramentacaracteristica1;
-                txt_FerramentaCaracteristica2.Text = carregarmodeloamostra.Ferramentacaracteristica2;
-                txt_FerramentaCaracteristica3.Text = carregarmodeloamostra.Ferramentacaracteristica3;
-                txt_FerramentaCaracteristica4.Text = carregarmodeloamostra.Ferramentacaracteristica4;
-                txt_FerramentaCaracteristica5.Text = carregarmodeloamostra.Ferramentacaracteristica5;
+                cmb_FerramentaCaracteristica1.Text = carregarmodeloamostra.Ferramentacaracteristica1;
+                cmb_FerramentaCaracteristica2.Text = carregarmodeloamostra.Ferramentacaracteristica2;
+                cmb_FerramentaCaracteristica3.Text = carregarmodeloamostra.Ferramentacaracteristica3;
+                cmb_FerramentaCaracteristica4.Text = carregarmodeloamostra.Ferramentacaracteristica4;
+                cmb_FerramentaCaracteristica5.Text = carregarmodeloamostra.Ferramentacaracteristica5;
 
             }
 
@@ -98,11 +98,11 @@ namespace Qualidade
                 txt_Lscx.Text = "";
                 txt_Lse.Text = "";
                 txt_Lscr.Text = "";
-                txt_FerramentaCaracteristica1.Text = "";
-                txt_FerramentaCaracteristica2.Text = "";
-                txt_FerramentaCaracteristica3.Text = "";
-                txt_FerramentaCaracteristica4.Text = "";
-                txt_FerramentaCaracteristica5.Text = "";
+                cmb_FerramentaCaracteristica1.Text = "";
+                cmb_FerramentaCaracteristica2.Text = "";
+                cmb_FerramentaCaracteristica3.Text = "";
+                cmb_FerramentaCaracteristica4.Text = "";
+                cmb_FerramentaCaracteristica5.Text = "";
 
                 lst_Modelos.SelectedItem.Equals(0);
             }
@@ -129,7 +129,33 @@ namespace Qualidade
             }
         }
 
+        private void carregarferramentademedicao()
+        {
+            i = 0;
+            ConfiguracaoFerramentadeMedicaoCapabilidadeBO carregarferramenta = new ConfiguracaoFerramentadeMedicaoCapabilidadeBO();
+            foreach (var item in carregarferramenta.CarregarNomesCaracteristicas())
+            {
+                if (i == 0)
+                {
+                    cmb_FerramentaCaracteristica1.Items.Clear();
+                    cmb_FerramentaCaracteristica2.Items.Clear();
+                    cmb_FerramentaCaracteristica3.Items.Clear();
+                    cmb_FerramentaCaracteristica4.Items.Clear();
+                    cmb_FerramentaCaracteristica5.Items.Clear();
+                }
 
+                cmb_FerramentaCaracteristica1.Items.Add(item.ferramentademedicao);
+                cmb_FerramentaCaracteristica2.Items.Add(item.ferramentademedicao);
+                cmb_FerramentaCaracteristica3.Items.Add(item.ferramentademedicao);
+                cmb_FerramentaCaracteristica4.Items.Add(item.ferramentademedicao);
+                cmb_FerramentaCaracteristica5.Items.Add(item.ferramentademedicao);
+
+                i++;
+            }
+
+
+
+        }
 
         private void carregarcaracteristicachave()
         {
@@ -179,6 +205,8 @@ namespace Qualidade
             carregarlista();
             carregarcaracteristicachave();
             carregarmaquinafabricacao();
+            carregarferramentademedicao();
+            
             
         }
 
@@ -189,9 +217,9 @@ namespace Qualidade
                 ModelodeAmostragemBO excluirmodelodeamostra = new ModelodeAmostragemBO(0, txt_IdModelo.Text, dtt_Inicio.Value, dtt_Fim.Value,
                                                                              cmb_CaracteristicasChave.Text, cmb_MaquinaFabricacao.Text,
                                                                              txt_EspecificacaoNominal.Text, txt_Licx.Text, txt_Lie.Text,
-                                                                             txt_Lscx.Text, txt_Lse.Text, txt_Lscr.Text, txt_FerramentaCaracteristica1.Text,
-                                                                             txt_FerramentaCaracteristica2.Text, txt_FerramentaCaracteristica3.Text, txt_FerramentaCaracteristica4.Text,
-                                                                             txt_FerramentaCaracteristica5.Text, true);
+                                                                             txt_Lscx.Text, txt_Lse.Text, txt_Lscr.Text, cmb_FerramentaCaracteristica1.Text,
+                                                                             cmb_FerramentaCaracteristica2.Text, cmb_FerramentaCaracteristica3.Text, cmb_FerramentaCaracteristica4.Text,
+                                                                             cmb_FerramentaCaracteristica5.Text, true);
             }
             
             txt_IdModelo.Clear();
@@ -203,13 +231,18 @@ namespace Qualidade
             txt_Lscx.Text = "";
             txt_Lse.Text = "";
             txt_Lscr.Text = "";
-            txt_FerramentaCaracteristica1.Text = "";
-            txt_FerramentaCaracteristica2.Text = "";
-            txt_FerramentaCaracteristica3.Text = "";
-            txt_FerramentaCaracteristica4.Text = "";
-            txt_FerramentaCaracteristica5.Text = "";
+            cmb_FerramentaCaracteristica1.Text = "";
+            cmb_FerramentaCaracteristica2.Text = "";
+            cmb_FerramentaCaracteristica3.Text = "";
+            cmb_FerramentaCaracteristica4.Text = "";
+            cmb_FerramentaCaracteristica5.Text = "";
 
             carregarlista();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

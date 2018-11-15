@@ -42,10 +42,12 @@
             this.lst_MaquinaFabricacao = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.txt_Ferramenta = new System.Windows.Forms.TextBox();
+            this.lst_FerramentadeMedicao = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btn_SalvarFerramenta = new System.Windows.Forms.Button();
+            this.btn_RemoverFerramenta = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -171,28 +173,31 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.listBox3);
+            this.panel3.Controls.Add(this.btn_RemoverFerramenta);
+            this.panel3.Controls.Add(this.btn_SalvarFerramenta);
+            this.panel3.Controls.Add(this.txt_Ferramenta);
+            this.panel3.Controls.Add(this.lst_FerramentadeMedicao);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(35, 270);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(406, 119);
             this.panel3.TabIndex = 1;
             // 
-            // textBox3
+            // txt_Ferramenta
             // 
-            this.textBox3.Location = new System.Drawing.Point(15, 22);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(137, 20);
-            this.textBox3.TabIndex = 4;
+            this.txt_Ferramenta.Location = new System.Drawing.Point(15, 22);
+            this.txt_Ferramenta.Name = "txt_Ferramenta";
+            this.txt_Ferramenta.Size = new System.Drawing.Size(137, 20);
+            this.txt_Ferramenta.TabIndex = 4;
             // 
-            // listBox3
+            // lst_FerramentadeMedicao
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(158, 19);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(178, 95);
-            this.listBox3.TabIndex = 3;
+            this.lst_FerramentadeMedicao.FormattingEnabled = true;
+            this.lst_FerramentadeMedicao.Location = new System.Drawing.Point(158, 19);
+            this.lst_FerramentadeMedicao.Name = "lst_FerramentadeMedicao";
+            this.lst_FerramentadeMedicao.Size = new System.Drawing.Size(178, 95);
+            this.lst_FerramentadeMedicao.TabIndex = 3;
+            this.lst_FerramentadeMedicao.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -206,6 +211,26 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // btn_SalvarFerramenta
+            // 
+            this.btn_SalvarFerramenta.Location = new System.Drawing.Point(91, 88);
+            this.btn_SalvarFerramenta.Name = "btn_SalvarFerramenta";
+            this.btn_SalvarFerramenta.Size = new System.Drawing.Size(61, 25);
+            this.btn_SalvarFerramenta.TabIndex = 6;
+            this.btn_SalvarFerramenta.Text = "Salvar";
+            this.btn_SalvarFerramenta.UseVisualStyleBackColor = true;
+            this.btn_SalvarFerramenta.Click += new System.EventHandler(this.btn_SalvarFerramenta_Click);
+            // 
+            // btn_RemoverFerramenta
+            // 
+            this.btn_RemoverFerramenta.Location = new System.Drawing.Point(91, 57);
+            this.btn_RemoverFerramenta.Name = "btn_RemoverFerramenta";
+            this.btn_RemoverFerramenta.Size = new System.Drawing.Size(61, 25);
+            this.btn_RemoverFerramenta.TabIndex = 7;
+            this.btn_RemoverFerramenta.Text = "Remover";
+            this.btn_RemoverFerramenta.UseVisualStyleBackColor = true;
+            this.btn_RemoverFerramenta.Click += new System.EventHandler(this.btn_RemoverFerramenta_Click);
             // 
             // ConfiguracoesCapabilidade
             // 
@@ -239,15 +264,17 @@
         private System.Windows.Forms.ListBox lst_MaquinaFabricacao;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ListBox lst_FerramentadeMedicao;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_SalvarCaracteristicaChave;
         private System.Windows.Forms.TextBox txt_CaracteristicaChave;
         private System.Windows.Forms.TextBox txt_Maquina;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_Ferramenta;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button btn_RemoverCaracteristica;
         private System.Windows.Forms.Button btn_SalvarMaquina;
         private System.Windows.Forms.Button btn_RemoverMaquina;
+        private System.Windows.Forms.Button btn_SalvarFerramenta;
+        private System.Windows.Forms.Button btn_RemoverFerramenta;
     }
 }
