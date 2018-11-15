@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NHibernate_PostGreSQLDAL
+namespace Qualidade_NHibernate_PostGreSQLDAL
 {
     public class RepositoryConnectDAOCapabilidade_ferramentademedicao<T> : IConnectDAO<T> where T : class
     {

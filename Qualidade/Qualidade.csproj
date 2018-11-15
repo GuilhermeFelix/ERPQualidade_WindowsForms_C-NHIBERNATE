@@ -263,9 +263,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NHibernate_PostGreSQLDAL\NHibernate_PostGreSQLDAL.csproj">
+    <ProjectReference Include="..\NHibernate_PostGreSQLDAL\Qualidade_NHibernate_PostGreSQLDAL.csproj">
       <Project>{76e232c7-843f-4a80-b445-f9c7a3b18495}</Project>
-      <Name>NHibernate_PostGreSQLDAL</Name>
+      <Name>Qualidade_NHibernate_PostGreSQLDAL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

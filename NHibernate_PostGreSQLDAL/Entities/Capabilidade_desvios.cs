@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NHibernate_PostGreSQLDAL.Entities
+namespace Qualidade_NHibernate_PostGreSQLDAL.Entities
 {
     public class Capabilidade_desvios
     {

@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qualidade", "Qualidade\Qualidade.csproj", "{29376B7A-81B5-449E-A532-9FE4896E4292}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate_PostGreSQLDAL", "NHibernate_PostGreSQLDAL\NHibernate_PostGreSQLDAL.csproj", "{76E232C7-843F-4A80-B445-F9C7A3B18495}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qualidade_NHibernate_PostGreSQLDAL", "NHibernate_PostGreSQLDAL\Qualidade_NHibernate_PostGreSQLDAL.csproj", "{76E232C7-843F-4A80-B445-F9C7A3B18495}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

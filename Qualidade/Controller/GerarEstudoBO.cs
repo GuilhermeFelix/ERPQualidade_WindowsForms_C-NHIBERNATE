@@ -1,5 +1,5 @@
-﻿using NHibernate_PostGreSQLDAL;
-using NHibernate_PostGreSQLDAL.Entities;
+﻿using Qualidade_NHibernate_PostGreSQLDAL;
+using Qualidade_NHibernate_PostGreSQLDAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

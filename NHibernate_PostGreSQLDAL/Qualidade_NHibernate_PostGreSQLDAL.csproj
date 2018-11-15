@@ -7,8 +7,8 @@
     <ProjectGuid>{76E232C7-843F-4A80-B445-F9C7A3B18495}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NHibernate_PostGreSQLDAL</RootNamespace>
-    <AssemblyName>NHibernate_PostGreSQLDAL</AssemblyName>
+    <RootNamespace>Qualidade_NHibernate_PostGreSQLDAL</RootNamespace>
+    <AssemblyName>Qualidade_NHibernate_PostGreSQLDAL</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
