@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NHibernate_PostGreSQLDAL.Entities
+namespace Qualidade_NHibernate_PostGreSQLDAL.Entities
 {
     public class Capabilidade_limitesecapacidades
     {
@@ -20,6 +20,7 @@ namespace NHibernate_PostGreSQLDAL.Entities
         public virtual string cpu { get; set; }
         public virtual string cpl { get; set; }
         public virtual string cpk { get; set; }
+        public virtual string datadegeracao { get; set; }
        
     }
 }

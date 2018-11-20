@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NHibernate_PostGreSQLDAL;
-using NHibernate_PostGreSQLDAL.Entities;
+using Qualidade_NHibernate_PostGreSQLDAL;
+using Qualidade_NHibernate_PostGreSQLDAL.Entities;
 
 
 namespace Qualidade.ReportViewr
@@ -26,13 +26,12 @@ namespace Qualidade.ReportViewr
         {
             //Buscar indicadores do respectivo modelo
             RepositoryCapabilidade_performance dao = new RepositoryCapabilidade_performance();
-            DadosRelatorioCapabilidade3e4 dadosRelatorio = new DadosRelatorioCapabilidade3e4();
 
             foreach (var item in dao.Consultar().OrderBy(x => x.id).ToList())
             {
                 if (Idmodelo == item.idmodelo)
                 {
-                    //DadosRelatorioCapabilidade3e4 dadosRelatorio = new DadosRelatorioCapabilidade3e4();
+                    DadosRelatorioCapabilidade3e4 dadosRelatorio = new DadosRelatorioCapabilidade3e4();
                     dadosRelatorio.Modelo = item.idmodelo;
                     dadosRelatorio.DesvioPadrao = item.desviopadrao;
                     dadosRelatorio.Variacao6Sigma = item.variacaosixsigma;
@@ -43,6 +42,7 @@ namespace Qualidade.ReportViewr
                     dadosRelatorio.PPU = item.ppu;
                     dadosRelatorio.PPL = item.ppl;
                     dadosRelatorio.PPK = item.ppk;
+                    dadosRelatorio.DatadeGeracao = item.datadegeracao;
                     listadeindicadores.Add(dadosRelatorio);
                 }
                

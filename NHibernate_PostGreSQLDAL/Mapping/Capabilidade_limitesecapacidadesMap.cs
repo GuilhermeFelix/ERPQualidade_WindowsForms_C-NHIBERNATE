@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FluentNHibernate.Mapping;
-using NHibernate_PostGreSQLDAL.Entities;
+using Qualidade_NHibernate_PostGreSQLDAL.Entities;
 
-namespace NHibernate_PostGreSQLDAL.Mapping
+namespace Qualidade_NHibernate_PostGreSQLDAL.Mapping
 {
     public class Capabilidade_limitesecapacidadesMap : ClassMap<Capabilidade_limitesecapacidades>
     {
@@ -23,6 +23,7 @@ namespace NHibernate_PostGreSQLDAL.Mapping
             Map(f => f.cpu);
             Map(f => f.cpl);
             Map(f => f.cpk);
+            Map(f => f.datadegeracao);
             Table("capabilidade_limitesecapacidades");
         }
     }

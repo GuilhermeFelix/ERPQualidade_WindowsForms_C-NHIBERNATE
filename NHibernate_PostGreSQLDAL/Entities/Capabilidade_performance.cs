@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NHibernate_PostGreSQLDAL.Entities
+namespace Qualidade_NHibernate_PostGreSQLDAL.Entities
 {
     public class Capabilidade_performance
     {
@@ -27,6 +27,7 @@ namespace NHibernate_PostGreSQLDAL.Entities
         public virtual string ppl { get; set; }
         public virtual string ppk { get; set; }
         public virtual string amplitudemaxima { get; set; }
+        public virtual string datadegeracao { get; set; }
 
     }
 }

@@ -89,44 +89,76 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConfiguracaoDiretorioEstudoCapabilidade.cs">
+    <Compile Include="Controller\ConfiguracaoFerramentadeMedicaoCapabilidadeBO.cs" />
+    <Compile Include="Controller\ConfiguracaoMaquinaFabricacaoCapabilidadeBO.cs" />
+    <Compile Include="Controller\ConfiguracaoCaracteristicaChaveCapabilidadeBO.cs" />
+    <Compile Include="Controller\ListarDadosparaGraficosBO.cs" />
+    <Compile Include="ReportViewr\DadosRelatorioCapabilidade6e7.cs" />
+    <Compile Include="ReportViewr\DadosRelatorioCapabilidade5.cs" />
+    <Compile Include="ReportViewr\GetDadosRelatorios7.cs" />
+    <Compile Include="ReportViewr\GetDadosRelatorios6.cs" />
+    <Compile Include="ReportViewr\GetDadosRelatorios5.cs" />
+    <Compile Include="ReportViewr\RelatorioCapabilidade5.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConfiguracaoDiretorioEstudoCapabilidade.Designer.cs">
-      <DependentUpon>ConfiguracaoDiretorioEstudoCapabilidade.cs</DependentUpon>
+    <Compile Include="ReportViewr\RelatorioCapabilidade5.Designer.cs">
+      <DependentUpon>RelatorioCapabilidade5.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConfiguracaoDiretorioEstudoCapabilidadeBO.cs" />
-    <Compile Include="GerarEstudoBO.cs" />
-    <Compile Include="GerarRelatorios.cs">
+    <Compile Include="ReportViewr\RelatorioCapabilidade6.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GerarRelatorios.Designer.cs">
+    <Compile Include="ReportViewr\RelatorioCapabilidade6.Designer.cs">
+      <DependentUpon>RelatorioCapabilidade6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewr\RelatorioCapabilidade7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewr\RelatorioCapabilidade7.Designer.cs">
+      <DependentUpon>RelatorioCapabilidade7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\GerarEstudoBO.cs" />
+    <Compile Include="ReportViewr\RelatorioCapabilidade8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewr\RelatorioCapabilidade8.Designer.cs">
+      <DependentUpon>RelatorioCapabilidade8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConfiguracoesCapabilidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ConfiguracoesCapabilidade.Designer.cs">
+      <DependentUpon>ConfiguracoesCapabilidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\GerarRelatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\GerarRelatorios.Designer.cs">
       <DependentUpon>GerarRelatorios.cs</DependentUpon>
     </Compile>
-    <Compile Include="GerenciarAmostragem.cs">
+    <Compile Include="View\GerenciarAmostragem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GerenciarAmostragem.Designer.cs">
+    <Compile Include="View\GerenciarAmostragem.Designer.cs">
       <DependentUpon>GerenciarAmostragem.cs</DependentUpon>
     </Compile>
-    <Compile Include="GerenciarAmostragemBO.cs" />
-    <Compile Include="Master.cs">
+    <Compile Include="Controller\GerenciarAmostragemBO.cs" />
+    <Compile Include="View\Master.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Master.Designer.cs">
+    <Compile Include="View\Master.Designer.cs">
       <DependentUpon>Master.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModeloAmostragem.cs">
+    <Compile Include="View\ModeloAmostragem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModeloAmostragem.Designer.cs">
+    <Compile Include="View\ModeloAmostragem.Designer.cs">
       <DependentUpon>ModeloAmostragem.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModelodeAmostragemBO.cs" />
-    <Compile Include="NovoEstudo.cs">
+    <Compile Include="Controller\ModelodeAmostragemBO.cs" />
+    <Compile Include="View\NovoEstudo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NovoEstudo.Designer.cs">
+    <Compile Include="View\NovoEstudo.Designer.cs">
       <DependentUpon>NovoEstudo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -162,22 +194,38 @@
     <Compile Include="ReportViewr\RelatorioCapabilidade4.Designer.cs">
       <DependentUpon>RelatorioCapabilidade4.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ConfiguracaoDiretorioEstudoCapabilidade.resx">
-      <DependentUpon>ConfiguracaoDiretorioEstudoCapabilidade.cs</DependentUpon>
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade5.rdlc" />
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade5.resx">
+      <DependentUpon>RelatorioCapabilidade5.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GerarRelatorios.resx">
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade6.rdlc" />
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade6.resx">
+      <DependentUpon>RelatorioCapabilidade6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade7.rdlc" />
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade7.resx">
+      <DependentUpon>RelatorioCapabilidade7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade8.rdlc" />
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade8.resx">
+      <DependentUpon>RelatorioCapabilidade8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ConfiguracoesCapabilidade.resx">
+      <DependentUpon>ConfiguracoesCapabilidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\GerarRelatorios.resx">
       <DependentUpon>GerarRelatorios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GerenciarAmostragem.resx">
+    <EmbeddedResource Include="View\GerenciarAmostragem.resx">
       <DependentUpon>GerenciarAmostragem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Master.resx">
+    <EmbeddedResource Include="View\Master.resx">
       <DependentUpon>Master.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModeloAmostragem.resx">
+    <EmbeddedResource Include="View\ModeloAmostragem.resx">
       <DependentUpon>ModeloAmostragem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NovoEstudo.resx">
+    <EmbeddedResource Include="View\NovoEstudo.resx">
       <DependentUpon>NovoEstudo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -210,6 +258,22 @@
     <None Include="Properties\DataSources\Qualidade.ReportViewr.DadosRelatorioCapabilidade1.datasource" />
     <None Include="Properties\DataSources\Qualidade.ReportViewr.DadosRelatorioCapabilidade2.datasource" />
     <None Include="Properties\DataSources\Qualidade.ReportViewr.DadosRelatorioCapabilidade3e4.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.DadosRelatorioCapabilidade5.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.DadosRelatorioCapabilidade6e7.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.GetDadosRelatorios1.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.GetDadosRelatorios2.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.GetDadosRelatorios3.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.GetDadosRelatorios4.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.GetDadosRelatorios5.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.GetDadosRelatorios6.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.GetDadosRelatorios7.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.RelatorioCapabilidade1.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.RelatorioCapabilidade2.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.RelatorioCapabilidade3.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.RelatorioCapabilidade4.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.RelatorioCapabilidade5.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.RelatorioCapabilidade6.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.RelatorioCapabilidade7.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -224,13 +288,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NHibernate_PostGreSQLDAL\NHibernate_PostGreSQLDAL.csproj">
+    <ProjectReference Include="..\NHibernate_PostGreSQLDAL\Qualidade_NHibernate_PostGreSQLDAL.csproj">
       <Project>{76e232c7-843f-4a80-b445-f9c7a3b18495}</Project>
-      <Name>NHibernate_PostGreSQLDAL</Name>
+      <Name>Qualidade_NHibernate_PostGreSQLDAL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\backgroundsystem.jpg" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

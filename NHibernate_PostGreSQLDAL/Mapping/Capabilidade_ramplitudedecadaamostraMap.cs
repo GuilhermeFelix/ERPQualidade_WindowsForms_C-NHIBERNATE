@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FluentNHibernate.Mapping;
-using NHibernate_PostGreSQLDAL.Entities;
+using Qualidade_NHibernate_PostGreSQLDAL.Entities;
 
-namespace NHibernate_PostGreSQLDAL.Mapping
+namespace Qualidade_NHibernate_PostGreSQLDAL.Mapping
 {
     public class Capabilidade_ramplitudedecadaamostraMap : ClassMap<Capabilidade_ramplitudedecadaamostra>
     {
@@ -39,6 +39,7 @@ namespace NHibernate_PostGreSQLDAL.Mapping
             Map(f => f.r23);
             Map(f => f.r24);
             Map(f => f.r25);
+            Map(f => f.datadegeracao);
             Table("capabilidade_ramplitudedecadaamostra");
         }
     }

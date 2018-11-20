@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NHibernate_PostGreSQLDAL;
-using NHibernate_PostGreSQLDAL.Entities;
+using Qualidade_NHibernate_PostGreSQLDAL;
+using Qualidade_NHibernate_PostGreSQLDAL.Entities;
 
 
 namespace Qualidade.ReportViewr
@@ -27,7 +27,7 @@ namespace Qualidade.ReportViewr
             //Buscar amostras do respectivo modelo
             RepositoryCapabilidade_amostras dao = new RepositoryCapabilidade_amostras();
            
-            foreach (var item in dao.Consultar().OrderBy(x => x.idamostra).ToList())
+            foreach (var item in dao.Consultar().OrderBy(x => x.id).ToList())
             {
                 if (Idmodelo == item.idmodelo)
                 {

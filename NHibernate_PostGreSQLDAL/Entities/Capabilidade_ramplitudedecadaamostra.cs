@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NHibernate_PostGreSQLDAL.Entities
+namespace Qualidade_NHibernate_PostGreSQLDAL.Entities
 {
     public class Capabilidade_ramplitudedecadaamostra
     {
@@ -35,6 +35,7 @@ namespace NHibernate_PostGreSQLDAL.Entities
         public virtual string r23 { get; set; }
         public virtual string r24 { get; set; }
         public virtual string r25 { get; set; }
+        public virtual string datadegeracao { get; set; }
 
     }
 }
