@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfiguracoesCapabilidade));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_RemoverCaracteristica = new System.Windows.Forms.Button();
             this.btn_SalvarCaracteristicaChave = new System.Windows.Forms.Button();
@@ -42,12 +43,12 @@
             this.lst_MaquinaFabricacao = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_RemoverFerramenta = new System.Windows.Forms.Button();
+            this.btn_SalvarFerramenta = new System.Windows.Forms.Button();
             this.txt_Ferramenta = new System.Windows.Forms.TextBox();
             this.lst_FerramentadeMedicao = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btn_SalvarFerramenta = new System.Windows.Forms.Button();
-            this.btn_RemoverFerramenta = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -56,6 +57,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.btn_RemoverCaracteristica);
             this.panel1.Controls.Add(this.btn_SalvarCaracteristicaChave);
             this.panel1.Controls.Add(this.txt_CaracteristicaChave);
@@ -114,6 +116,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.btn_SalvarMaquina);
             this.panel2.Controls.Add(this.btn_RemoverMaquina);
             this.panel2.Controls.Add(this.txt_Maquina);
@@ -173,6 +176,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.btn_RemoverFerramenta);
             this.panel3.Controls.Add(this.btn_SalvarFerramenta);
             this.panel3.Controls.Add(this.txt_Ferramenta);
@@ -182,6 +186,26 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(406, 119);
             this.panel3.TabIndex = 1;
+            // 
+            // btn_RemoverFerramenta
+            // 
+            this.btn_RemoverFerramenta.Location = new System.Drawing.Point(91, 57);
+            this.btn_RemoverFerramenta.Name = "btn_RemoverFerramenta";
+            this.btn_RemoverFerramenta.Size = new System.Drawing.Size(61, 25);
+            this.btn_RemoverFerramenta.TabIndex = 7;
+            this.btn_RemoverFerramenta.Text = "Remover";
+            this.btn_RemoverFerramenta.UseVisualStyleBackColor = true;
+            this.btn_RemoverFerramenta.Click += new System.EventHandler(this.btn_RemoverFerramenta_Click);
+            // 
+            // btn_SalvarFerramenta
+            // 
+            this.btn_SalvarFerramenta.Location = new System.Drawing.Point(91, 88);
+            this.btn_SalvarFerramenta.Name = "btn_SalvarFerramenta";
+            this.btn_SalvarFerramenta.Size = new System.Drawing.Size(61, 25);
+            this.btn_SalvarFerramenta.TabIndex = 6;
+            this.btn_SalvarFerramenta.Text = "Salvar";
+            this.btn_SalvarFerramenta.UseVisualStyleBackColor = true;
+            this.btn_SalvarFerramenta.Click += new System.EventHandler(this.btn_SalvarFerramenta_Click);
             // 
             // txt_Ferramenta
             // 
@@ -212,35 +236,16 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // btn_SalvarFerramenta
-            // 
-            this.btn_SalvarFerramenta.Location = new System.Drawing.Point(91, 88);
-            this.btn_SalvarFerramenta.Name = "btn_SalvarFerramenta";
-            this.btn_SalvarFerramenta.Size = new System.Drawing.Size(61, 25);
-            this.btn_SalvarFerramenta.TabIndex = 6;
-            this.btn_SalvarFerramenta.Text = "Salvar";
-            this.btn_SalvarFerramenta.UseVisualStyleBackColor = true;
-            this.btn_SalvarFerramenta.Click += new System.EventHandler(this.btn_SalvarFerramenta_Click);
-            // 
-            // btn_RemoverFerramenta
-            // 
-            this.btn_RemoverFerramenta.Location = new System.Drawing.Point(91, 57);
-            this.btn_RemoverFerramenta.Name = "btn_RemoverFerramenta";
-            this.btn_RemoverFerramenta.Size = new System.Drawing.Size(61, 25);
-            this.btn_RemoverFerramenta.TabIndex = 7;
-            this.btn_RemoverFerramenta.Text = "Remover";
-            this.btn_RemoverFerramenta.UseVisualStyleBackColor = true;
-            this.btn_RemoverFerramenta.Click += new System.EventHandler(this.btn_RemoverFerramenta_Click);
-            // 
             // ConfiguracoesCapabilidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Qualidade.Properties.Resources.backgroundsystem;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(479, 395);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ConfiguracoesCapabilidade";
             this.Text = "ConfiguracoesCapabilidade";
             this.Load += new System.EventHandler(this.ConfiguracoesCapabilidade_Load);

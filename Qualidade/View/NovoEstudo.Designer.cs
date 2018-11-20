@@ -81,6 +81,7 @@
             this.ClientSize = new System.Drawing.Size(236, 197);
             this.Controls.Add(this.btn_GerarEstudo);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NovoEstudo";
             this.Text = "NovoEstudo";
             this.Load += new System.EventHandler(this.NovoEstudo_Load);

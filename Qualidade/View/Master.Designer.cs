@@ -68,13 +68,13 @@
             this.configestudosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.configcapabilidadeToolStripMenuItem});
             this.configestudosToolStripMenuItem.Name = "configestudosToolStripMenuItem";
-            this.configestudosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.configestudosToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.configestudosToolStripMenuItem.Text = "Estudos";
             // 
             // configcapabilidadeToolStripMenuItem
             // 
             this.configcapabilidadeToolStripMenuItem.Name = "configcapabilidadeToolStripMenuItem";
-            this.configcapabilidadeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.configcapabilidadeToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.configcapabilidadeToolStripMenuItem.Text = "Capabilidade";
             this.configcapabilidadeToolStripMenuItem.Click += new System.EventHandler(this.configcapabilidadeToolStripMenuItem_Click);
             // 
@@ -142,8 +142,10 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(999, 666);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximumSize = new System.Drawing.Size(1015, 705);
             this.Name = "Master";

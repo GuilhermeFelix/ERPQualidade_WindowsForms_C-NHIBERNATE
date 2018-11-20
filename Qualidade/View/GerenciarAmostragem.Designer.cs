@@ -638,6 +638,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1015, 705);
             this.Name = "GerenciarAmostragem";
             this.Text = "GerenciarAmostragem";

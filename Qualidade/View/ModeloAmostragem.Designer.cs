@@ -43,6 +43,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lnk_ExcluirModelo = new System.Windows.Forms.LinkLabel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cmb_FerramentaCaracteristica5 = new System.Windows.Forms.ComboBox();
+            this.cmb_FerramentaCaracteristica4 = new System.Windows.Forms.ComboBox();
+            this.cmb_FerramentaCaracteristica3 = new System.Windows.Forms.ComboBox();
+            this.cmb_FerramentaCaracteristica2 = new System.Windows.Forms.ComboBox();
+            this.cmb_FerramentaCaracteristica1 = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -67,11 +72,6 @@
             this.txt_IdModelo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.errorProvider_Confirmar = new System.Windows.Forms.ErrorProvider(this.components);
-            this.cmb_FerramentaCaracteristica1 = new System.Windows.Forms.ComboBox();
-            this.cmb_FerramentaCaracteristica2 = new System.Windows.Forms.ComboBox();
-            this.cmb_FerramentaCaracteristica3 = new System.Windows.Forms.ComboBox();
-            this.cmb_FerramentaCaracteristica4 = new System.Windows.Forms.ComboBox();
-            this.cmb_FerramentaCaracteristica5 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -173,7 +173,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel1.Controls.Add(this.lnk_ExcluirModelo);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.lst_Modelos);
@@ -226,6 +226,61 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(225, 181);
             this.panel3.TabIndex = 25;
+            // 
+            // cmb_FerramentaCaracteristica5
+            // 
+            this.cmb_FerramentaCaracteristica5.BackColor = System.Drawing.SystemColors.Window;
+            this.cmb_FerramentaCaracteristica5.FormattingEnabled = true;
+            this.cmb_FerramentaCaracteristica5.Location = new System.Drawing.Point(104, 153);
+            this.cmb_FerramentaCaracteristica5.Name = "cmb_FerramentaCaracteristica5";
+            this.cmb_FerramentaCaracteristica5.Size = new System.Drawing.Size(100, 21);
+            this.cmb_FerramentaCaracteristica5.TabIndex = 31;
+            this.cmb_FerramentaCaracteristica5.Tag = "Usuário deve escolher qual é o tipo de caracteristica chave que predomina na peça" +
+    " de estudo.";
+            // 
+            // cmb_FerramentaCaracteristica4
+            // 
+            this.cmb_FerramentaCaracteristica4.BackColor = System.Drawing.SystemColors.Window;
+            this.cmb_FerramentaCaracteristica4.FormattingEnabled = true;
+            this.cmb_FerramentaCaracteristica4.Location = new System.Drawing.Point(104, 126);
+            this.cmb_FerramentaCaracteristica4.Name = "cmb_FerramentaCaracteristica4";
+            this.cmb_FerramentaCaracteristica4.Size = new System.Drawing.Size(100, 21);
+            this.cmb_FerramentaCaracteristica4.TabIndex = 30;
+            this.cmb_FerramentaCaracteristica4.Tag = "Usuário deve escolher qual é o tipo de caracteristica chave que predomina na peça" +
+    " de estudo.";
+            // 
+            // cmb_FerramentaCaracteristica3
+            // 
+            this.cmb_FerramentaCaracteristica3.BackColor = System.Drawing.SystemColors.Window;
+            this.cmb_FerramentaCaracteristica3.FormattingEnabled = true;
+            this.cmb_FerramentaCaracteristica3.Location = new System.Drawing.Point(105, 97);
+            this.cmb_FerramentaCaracteristica3.Name = "cmb_FerramentaCaracteristica3";
+            this.cmb_FerramentaCaracteristica3.Size = new System.Drawing.Size(100, 21);
+            this.cmb_FerramentaCaracteristica3.TabIndex = 29;
+            this.cmb_FerramentaCaracteristica3.Tag = "Usuário deve escolher qual é o tipo de caracteristica chave que predomina na peça" +
+    " de estudo.";
+            // 
+            // cmb_FerramentaCaracteristica2
+            // 
+            this.cmb_FerramentaCaracteristica2.BackColor = System.Drawing.SystemColors.Window;
+            this.cmb_FerramentaCaracteristica2.FormattingEnabled = true;
+            this.cmb_FerramentaCaracteristica2.Location = new System.Drawing.Point(106, 66);
+            this.cmb_FerramentaCaracteristica2.Name = "cmb_FerramentaCaracteristica2";
+            this.cmb_FerramentaCaracteristica2.Size = new System.Drawing.Size(100, 21);
+            this.cmb_FerramentaCaracteristica2.TabIndex = 28;
+            this.cmb_FerramentaCaracteristica2.Tag = "Usuário deve escolher qual é o tipo de caracteristica chave que predomina na peça" +
+    " de estudo.";
+            // 
+            // cmb_FerramentaCaracteristica1
+            // 
+            this.cmb_FerramentaCaracteristica1.BackColor = System.Drawing.SystemColors.Window;
+            this.cmb_FerramentaCaracteristica1.FormattingEnabled = true;
+            this.cmb_FerramentaCaracteristica1.Location = new System.Drawing.Point(106, 36);
+            this.cmb_FerramentaCaracteristica1.Name = "cmb_FerramentaCaracteristica1";
+            this.cmb_FerramentaCaracteristica1.Size = new System.Drawing.Size(100, 21);
+            this.cmb_FerramentaCaracteristica1.TabIndex = 27;
+            this.cmb_FerramentaCaracteristica1.Tag = "Usuário deve escolher qual é o tipo de caracteristica chave que predomina na peça" +
+    " de estudo.";
             // 
             // panel4
             // 
@@ -437,61 +492,6 @@
             this.errorProvider_Confirmar.ContainerControl = this;
             this.errorProvider_Confirmar.RightToLeft = true;
             // 
-            // cmb_FerramentaCaracteristica1
-            // 
-            this.cmb_FerramentaCaracteristica1.BackColor = System.Drawing.SystemColors.Window;
-            this.cmb_FerramentaCaracteristica1.FormattingEnabled = true;
-            this.cmb_FerramentaCaracteristica1.Location = new System.Drawing.Point(106, 36);
-            this.cmb_FerramentaCaracteristica1.Name = "cmb_FerramentaCaracteristica1";
-            this.cmb_FerramentaCaracteristica1.Size = new System.Drawing.Size(100, 21);
-            this.cmb_FerramentaCaracteristica1.TabIndex = 27;
-            this.cmb_FerramentaCaracteristica1.Tag = "Usuário deve escolher qual é o tipo de caracteristica chave que predomina na peça" +
-    " de estudo.";
-            // 
-            // cmb_FerramentaCaracteristica2
-            // 
-            this.cmb_FerramentaCaracteristica2.BackColor = System.Drawing.SystemColors.Window;
-            this.cmb_FerramentaCaracteristica2.FormattingEnabled = true;
-            this.cmb_FerramentaCaracteristica2.Location = new System.Drawing.Point(106, 66);
-            this.cmb_FerramentaCaracteristica2.Name = "cmb_FerramentaCaracteristica2";
-            this.cmb_FerramentaCaracteristica2.Size = new System.Drawing.Size(100, 21);
-            this.cmb_FerramentaCaracteristica2.TabIndex = 28;
-            this.cmb_FerramentaCaracteristica2.Tag = "Usuário deve escolher qual é o tipo de caracteristica chave que predomina na peça" +
-    " de estudo.";
-            // 
-            // cmb_FerramentaCaracteristica3
-            // 
-            this.cmb_FerramentaCaracteristica3.BackColor = System.Drawing.SystemColors.Window;
-            this.cmb_FerramentaCaracteristica3.FormattingEnabled = true;
-            this.cmb_FerramentaCaracteristica3.Location = new System.Drawing.Point(105, 97);
-            this.cmb_FerramentaCaracteristica3.Name = "cmb_FerramentaCaracteristica3";
-            this.cmb_FerramentaCaracteristica3.Size = new System.Drawing.Size(100, 21);
-            this.cmb_FerramentaCaracteristica3.TabIndex = 29;
-            this.cmb_FerramentaCaracteristica3.Tag = "Usuário deve escolher qual é o tipo de caracteristica chave que predomina na peça" +
-    " de estudo.";
-            // 
-            // cmb_FerramentaCaracteristica4
-            // 
-            this.cmb_FerramentaCaracteristica4.BackColor = System.Drawing.SystemColors.Window;
-            this.cmb_FerramentaCaracteristica4.FormattingEnabled = true;
-            this.cmb_FerramentaCaracteristica4.Location = new System.Drawing.Point(104, 126);
-            this.cmb_FerramentaCaracteristica4.Name = "cmb_FerramentaCaracteristica4";
-            this.cmb_FerramentaCaracteristica4.Size = new System.Drawing.Size(100, 21);
-            this.cmb_FerramentaCaracteristica4.TabIndex = 30;
-            this.cmb_FerramentaCaracteristica4.Tag = "Usuário deve escolher qual é o tipo de caracteristica chave que predomina na peça" +
-    " de estudo.";
-            // 
-            // cmb_FerramentaCaracteristica5
-            // 
-            this.cmb_FerramentaCaracteristica5.BackColor = System.Drawing.SystemColors.Window;
-            this.cmb_FerramentaCaracteristica5.FormattingEnabled = true;
-            this.cmb_FerramentaCaracteristica5.Location = new System.Drawing.Point(104, 153);
-            this.cmb_FerramentaCaracteristica5.Name = "cmb_FerramentaCaracteristica5";
-            this.cmb_FerramentaCaracteristica5.Size = new System.Drawing.Size(100, 21);
-            this.cmb_FerramentaCaracteristica5.TabIndex = 31;
-            this.cmb_FerramentaCaracteristica5.Tag = "Usuário deve escolher qual é o tipo de caracteristica chave que predomina na peça" +
-    " de estudo.";
-            // 
             // ModeloAmostragem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -503,6 +503,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(999, 666);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1015, 705);
             this.Name = "ModeloAmostragem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
