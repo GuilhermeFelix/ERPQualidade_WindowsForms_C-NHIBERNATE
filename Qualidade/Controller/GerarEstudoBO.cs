@@ -363,6 +363,7 @@ namespace Qualidade
             novaxmedia.x23 = x[22].ToString("#,0.00");
             novaxmedia.x24 = x[23].ToString("#,0.00");
             novaxmedia.x25 = x[24].ToString("#,0.00");
+            novaxmedia.datadegeracao = DateTime.Now.ToString();
             dao.Inserir(novaxmedia);
 
 
@@ -396,6 +397,7 @@ namespace Qualidade
             novaramplitude.r23 = r[22].ToString("#,0.00");
             novaramplitude.r24 = r[23].ToString("#,0.00");
             novaramplitude.r25 = r[24].ToString("#,0.00");
+            novaramplitude.datadegeracao = DateTime.Now.ToString();
             dao2.Inserir(novaramplitude);
 
 
@@ -420,6 +422,7 @@ namespace Qualidade
             novosindicadoresdeperformance.ppl = ppl.ToString("#,0.00");
             novosindicadoresdeperformance.ppk = ppk.ToString("#,0.00");
             novosindicadoresdeperformance.amplitudemaxima = amplitudemaxima.ToString("#,0.00");
+            novosindicadoresdeperformance.datadegeracao = DateTime.Now.ToString();
             dao3.Inserir(novosindicadoresdeperformance);
 
         
@@ -436,6 +439,7 @@ namespace Qualidade
         novosindicadoresdedesvios.desvioamostragemrbd2 = desvioamostragemrbd2.ToString("#,0.00");
         novosindicadoresdedesvios.desvioamostragema2rb = desvioamostragema2rb.ToString("#,0.00");
         novosindicadoresdedesvios.desvioamostragemvariacao = desvioamostragemvariacao.ToString("#,0.00");
+        novosindicadoresdedesvios.datadegeracao = DateTime.Now.ToString();
         dao4.Inserir(novosindicadoresdedesvios);
 
        //salvar indicadores de limites e capacidade
@@ -452,6 +456,7 @@ namespace Qualidade
        novosindicadoreslimitesecapacidades.cpu = cpu.ToString("#,0.00");
        novosindicadoreslimitesecapacidades.cpl = cpl.ToString("#,0.00");
        novosindicadoreslimitesecapacidades.cpk = cpk.ToString("#,0.00");
+       novosindicadoreslimitesecapacidades.datadegeracao = DateTime.Now.ToString();
        dao5.Inserir(novosindicadoreslimitesecapacidades);
             
         }

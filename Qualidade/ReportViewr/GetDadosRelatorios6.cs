@@ -38,6 +38,7 @@ namespace Qualidade.ReportViewr
                     dadosRelatorio.Cpu = item.cpu;
                     dadosRelatorio.Cpl = item.cpl;
                     dadosRelatorio.Cpk = item.cpk;
+                    dadosRelatorio.DatadeGeracao = item.datadegeracao;
                     listadeindicadores.Add(dadosRelatorio); 
                     
                 }

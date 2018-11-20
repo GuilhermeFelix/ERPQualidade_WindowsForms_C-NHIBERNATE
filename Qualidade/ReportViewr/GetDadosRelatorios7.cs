@@ -39,6 +39,7 @@ namespace Qualidade.ReportViewr
                     dadosRelatorio.LimiteMediaLicx = item.limitemedialicx;
                     dadosRelatorio.LimiteLscr = item.limitelscr;
                     dadosRelatorio.LimiteAmplitude = item.limiteamplitude;
+                    dadosRelatorio.DatadeGeracao = item.datadegeracao;
                     listadeindicadores.Add(dadosRelatorio); 
                     
                 }

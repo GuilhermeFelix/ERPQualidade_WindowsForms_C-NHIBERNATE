@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Qualidade.Controller;
 using Qualidade.ReportViewr;
 
 namespace Qualidade
@@ -78,5 +79,32 @@ namespace Qualidade
 
             }
         }
+
+        private void txt_Subtransacao_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_Subtransacao.Text == "RGR1")
+            {
+                cmb_Datadeestudo.Visible = true;
+                cmb_Datadeestudo.Text = null;
+                lbl_Datadeestudo.Visible = true;
+                carregardatasdegeracao();
+                Point pt = new Point(159, 159);
+                this.btn_Gerar.Location = pt;
+                                                                                                }
+        }
+        private void carregardatasdegeracao()
+        {
+
+            ListarDadosparaGraficosBO carregardatasdegeracao = new ListarDadosparaGraficosBO();
+
+            foreach (var item in carregardatasdegeracao.CarregarDatasdeGeracao())
+            {
+                cmb_Datadeestudo.Items.Add(item.datadegeracao.ToString());
+
+            }
+
+
+        }
+
     }
 }

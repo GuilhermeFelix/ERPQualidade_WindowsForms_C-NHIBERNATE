@@ -17,6 +17,7 @@ namespace Qualidade_NHibernate_PostGreSQLDAL.Entities
         public virtual string desvioamostragemrbd2 { get; set; }
         public virtual string desvioamostragema2rb { get; set; }
         public virtual string desvioamostragemvariacao { get; set; }
+        public virtual string datadegeracao { get; set; }
                 
     }
 }

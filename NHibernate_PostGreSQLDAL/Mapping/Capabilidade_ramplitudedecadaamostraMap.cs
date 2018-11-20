@@ -39,6 +39,7 @@ namespace Qualidade_NHibernate_PostGreSQLDAL.Mapping
             Map(f => f.r23);
             Map(f => f.r24);
             Map(f => f.r25);
+            Map(f => f.datadegeracao);
             Table("capabilidade_ramplitudedecadaamostra");
         }
     }

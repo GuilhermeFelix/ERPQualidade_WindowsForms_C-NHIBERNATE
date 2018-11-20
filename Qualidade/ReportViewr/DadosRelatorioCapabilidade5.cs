@@ -16,6 +16,7 @@ namespace Qualidade.ReportViewr
         public virtual string DesvioAmostragemRbd2 { get; set; }
         public virtual string DesvioAmostragemA2rb { get; set; }
         public virtual string DesvioAmostragemVariacao6Sigma { get; set; }
+        public virtual string DatadeGeracao { get; set; }
         
     }
 }

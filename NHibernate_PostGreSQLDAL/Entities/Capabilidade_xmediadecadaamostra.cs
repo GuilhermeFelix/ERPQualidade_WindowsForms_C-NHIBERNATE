@@ -35,6 +35,7 @@ namespace Qualidade_NHibernate_PostGreSQLDAL.Entities
         public virtual string x23 { get; set; }
         public virtual string x24 { get; set; }
         public virtual string x25 { get; set; }
+        public virtual string datadegeracao { get; set; }
 
     }
 }

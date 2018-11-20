@@ -20,10 +20,13 @@
             <TablixColumn>
               <Width>2.5cm</Width>
             </TablixColumn>
+            <TablixColumn>
+              <Width>2.77104cm</Width>
+            </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>1.20001cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -176,6 +179,39 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox10</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>DarkGreen</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox5">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Datade Geracao</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox5</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -355,12 +391,45 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="DatadeGeracao">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!DatadeGeracao.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>DatadeGeracao</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
               </TablixCells>
             </TablixRow>
           </TablixRows>
         </TablixBody>
         <TablixColumnHierarchy>
           <TablixMembers>
+            <TablixMember />
             <TablixMember />
             <TablixMember />
             <TablixMember />
@@ -378,11 +447,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSetRelatorioCapabilidade6</DataSetName>
+        <DataSetName>DataSet1</DataSetName>
         <Top>0.17639cm</Top>
         <Left>0.61948cm</Left>
-        <Height>1.2cm</Height>
-        <Width>12.5cm</Width>
+        <Height>1.80001cm</Height>
+        <Width>15.27104cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -390,7 +459,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>0.54189in</Height>
+    <Height>0.77811in</Height>
     <Style />
   </Body>
   <Width>6.25611in</Width>
@@ -459,7 +528,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSetRelatorioCapabilidade6">
+    <DataSet Name="DataSet1">
       <Query>
         <DataSourceName>QualidadeReportViewr</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -479,6 +548,10 @@
         </Field>
         <Field Name="Cpu">
           <DataField>Cpu</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DatadeGeracao">
+          <DataField>DatadeGeracao</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="LimiteAmplitude">

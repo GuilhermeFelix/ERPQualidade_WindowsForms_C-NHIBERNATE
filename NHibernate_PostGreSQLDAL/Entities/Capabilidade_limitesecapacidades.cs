@@ -20,6 +20,7 @@ namespace Qualidade_NHibernate_PostGreSQLDAL.Entities
         public virtual string cpu { get; set; }
         public virtual string cpl { get; set; }
         public virtual string cpk { get; set; }
+        public virtual string datadegeracao { get; set; }
        
     }
 }

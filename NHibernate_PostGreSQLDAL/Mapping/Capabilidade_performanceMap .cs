@@ -30,6 +30,7 @@ namespace Qualidade_NHibernate_PostGreSQLDAL.Mapping
             Map(f => f.ppl);
             Map(f => f.ppk);
             Map(f => f.amplitudemaxima);
+            Map(f => f.datadegeracao);
             Table("capabilidade_performance");
         }
     }

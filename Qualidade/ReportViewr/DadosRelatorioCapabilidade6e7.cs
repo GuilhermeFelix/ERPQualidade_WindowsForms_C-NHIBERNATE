@@ -18,5 +18,6 @@ namespace Qualidade.ReportViewr
         public virtual string LimiteMediaLicx { get; set; }
         public virtual string LimiteLscr { get; set; }
         public virtual string LimiteAmplitude { get; set; }
+        public virtual string DatadeGeracao { get; set; }
     }
 }

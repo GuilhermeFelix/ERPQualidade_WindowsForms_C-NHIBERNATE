@@ -22,7 +22,7 @@ namespace Qualidade.ReportViewr
         {
             GetDadosRelatorios7 getdados = new GetDadosRelatorios7(idmodelo);
 
-            var datasource = new Microsoft.Reporting.WinForms.ReportDataSource("DataSetRelatorioCapabilidade7", getdados.listadeindicadores);
+            var datasource = new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", getdados.listadeindicadores);
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.DataSources.Add(datasource);
             this.reportViewer1.RefreshReport();

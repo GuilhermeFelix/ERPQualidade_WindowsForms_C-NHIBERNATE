@@ -42,6 +42,7 @@ namespace Qualidade.ReportViewr
                     dadosRelatorio.PPU = item.ppu;
                     dadosRelatorio.PPL = item.ppl;
                     dadosRelatorio.PPK = item.ppk;
+                    dadosRelatorio.DatadeGeracao = item.datadegeracao;
                     listadeindicadores.Add(dadosRelatorio);
                 }
                

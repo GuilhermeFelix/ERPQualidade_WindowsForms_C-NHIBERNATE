@@ -36,6 +36,8 @@
             this.txt_Subtransacao = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.lbl_Datadeestudo = new System.Windows.Forms.Label();
+            this.cmb_Datadeestudo = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,10 +83,13 @@
             this.txt_Subtransacao.Name = "txt_Subtransacao";
             this.txt_Subtransacao.Size = new System.Drawing.Size(202, 20);
             this.txt_Subtransacao.TabIndex = 4;
+            this.txt_Subtransacao.TextChanged += new System.EventHandler(this.txt_Subtransacao_TextChanged);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.cmb_Datadeestudo);
+            this.panel1.Controls.Add(this.lbl_Datadeestudo);
             this.panel1.Controls.Add(this.cmb_Modelos);
             this.panel1.Controls.Add(this.btn_Gerar);
             this.panel1.Controls.Add(this.txt_Subtransacao);
@@ -92,7 +97,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(15, 17);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 158);
+            this.panel1.Size = new System.Drawing.Size(250, 219);
             this.panel1.TabIndex = 5;
             // 
             // richTextBox1
@@ -100,15 +105,35 @@
             this.richTextBox1.Location = new System.Drawing.Point(280, 17);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(452, 262);
+            this.richTextBox1.Size = new System.Drawing.Size(452, 273);
             this.richTextBox1.TabIndex = 6;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            // 
+            // lbl_Datadeestudo
+            // 
+            this.lbl_Datadeestudo.AutoSize = true;
+            this.lbl_Datadeestudo.Location = new System.Drawing.Point(14, 111);
+            this.lbl_Datadeestudo.Name = "lbl_Datadeestudo";
+            this.lbl_Datadeestudo.Size = new System.Drawing.Size(84, 13);
+            this.lbl_Datadeestudo.TabIndex = 5;
+            this.lbl_Datadeestudo.Text = "Data de Estudo:";
+            this.lbl_Datadeestudo.Visible = false;
+            // 
+            // cmb_Datadeestudo
+            // 
+            this.cmb_Datadeestudo.FormattingEnabled = true;
+            this.cmb_Datadeestudo.ItemHeight = 13;
+            this.cmb_Datadeestudo.Location = new System.Drawing.Point(32, 127);
+            this.cmb_Datadeestudo.Name = "cmb_Datadeestudo";
+            this.cmb_Datadeestudo.Size = new System.Drawing.Size(202, 21);
+            this.cmb_Datadeestudo.TabIndex = 6;
+            this.cmb_Datadeestudo.Visible = false;
             // 
             // GerarRelatorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(739, 284);
+            this.ClientSize = new System.Drawing.Size(739, 294);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.panel1);
             this.Name = "GerarRelatorios";
@@ -129,5 +154,7 @@
         private System.Windows.Forms.TextBox txt_Subtransacao;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label lbl_Datadeestudo;
+        private System.Windows.Forms.ComboBox cmb_Datadeestudo;
     }
 }

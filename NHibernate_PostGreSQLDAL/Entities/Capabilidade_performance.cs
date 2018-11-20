@@ -27,6 +27,7 @@ namespace Qualidade_NHibernate_PostGreSQLDAL.Entities
         public virtual string ppl { get; set; }
         public virtual string ppk { get; set; }
         public virtual string amplitudemaxima { get; set; }
+        public virtual string datadegeracao { get; set; }
 
     }
 }

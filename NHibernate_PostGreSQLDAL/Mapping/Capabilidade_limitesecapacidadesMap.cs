@@ -23,6 +23,7 @@ namespace Qualidade_NHibernate_PostGreSQLDAL.Mapping
             Map(f => f.cpu);
             Map(f => f.cpl);
             Map(f => f.cpk);
+            Map(f => f.datadegeracao);
             Table("capabilidade_limitesecapacidades");
         }
     }

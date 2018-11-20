@@ -41,6 +41,7 @@ namespace Qualidade.ReportViewr
                     dadosRelatorio.DesvioAmostragemRbd2 = item.desvioamostragemrbd2;
                     dadosRelatorio.DesvioAmostragemA2rb = item.desvioamostragema2rb;
                     dadosRelatorio.DesvioAmostragemVariacao6Sigma = item.desvioamostragemvariacao;
+                    dadosRelatorio.DatadeGeracao = item.datadegeracao;
                     listadeindicadores.Add(dadosRelatorio); 
                     
                 }

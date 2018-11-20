@@ -25,6 +25,7 @@ namespace Qualidade.ReportViewr
         public virtual string MediaMaxima { get; set; }
         public virtual string Mediar { get; set; }
         public virtual string AmplitudeMaxima { get; set; } 
+        public virtual string DatadeGeracao { get; set; }
         
     }
 }

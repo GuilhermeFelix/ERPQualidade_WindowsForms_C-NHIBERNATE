@@ -21,6 +21,7 @@ namespace Qualidade_NHibernate_PostGreSQLDAL.Mapping
             Map(f => f.desvioamostragemrbd2);
             Map(f => f.desvioamostragema2rb);
             Map(f => f.desvioamostragemvariacao);
+            Map(f => f.datadegeracao);
             Table("capabilidade_desvios");
         }
     }

@@ -40,6 +40,7 @@ namespace Qualidade.ReportViewr
                     dadosRelatorio.MediaMaxima = item.mediamaxima;
                     dadosRelatorio.Mediar = item.mediar;
                     dadosRelatorio.AmplitudeMaxima = item.amplitudemaxima;
+                    dadosRelatorio.DatadeGeracao = item.datadegeracao;
                     listadeindicadores.Add(dadosRelatorio);
                 }
                

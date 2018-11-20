@@ -92,6 +92,7 @@
     <Compile Include="Controller\ConfiguracaoFerramentadeMedicaoCapabilidadeBO.cs" />
     <Compile Include="Controller\ConfiguracaoMaquinaFabricacaoCapabilidadeBO.cs" />
     <Compile Include="Controller\ConfiguracaoCaracteristicaChaveCapabilidadeBO.cs" />
+    <Compile Include="Controller\ListarDadosparaGraficosBO.cs" />
     <Compile Include="ReportViewr\DadosRelatorioCapabilidade6e7.cs" />
     <Compile Include="ReportViewr\DadosRelatorioCapabilidade5.cs" />
     <Compile Include="ReportViewr\GetDadosRelatorios7.cs" />
@@ -116,6 +117,12 @@
       <DependentUpon>RelatorioCapabilidade7.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller\GerarEstudoBO.cs" />
+    <Compile Include="ReportViewr\RelatorioCapabilidade8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewr\RelatorioCapabilidade8.Designer.cs">
+      <DependentUpon>RelatorioCapabilidade8.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ConfiguracoesCapabilidade.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +206,10 @@
     <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade7.resx">
       <DependentUpon>RelatorioCapabilidade7.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade8.rdlc" />
+    <EmbeddedResource Include="ReportViewr\RelatorioCapabilidade8.resx">
+      <DependentUpon>RelatorioCapabilidade8.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ConfiguracoesCapabilidade.resx">
       <DependentUpon>ConfiguracoesCapabilidade.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +260,20 @@
     <None Include="Properties\DataSources\Qualidade.ReportViewr.DadosRelatorioCapabilidade3e4.datasource" />
     <None Include="Properties\DataSources\Qualidade.ReportViewr.DadosRelatorioCapabilidade5.datasource" />
     <None Include="Properties\DataSources\Qualidade.ReportViewr.DadosRelatorioCapabilidade6e7.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.GetDadosRelatorios1.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.GetDadosRelatorios2.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.GetDadosRelatorios3.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.GetDadosRelatorios4.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.GetDadosRelatorios5.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.GetDadosRelatorios6.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.GetDadosRelatorios7.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.RelatorioCapabilidade1.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.RelatorioCapabilidade2.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.RelatorioCapabilidade3.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.RelatorioCapabilidade4.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.RelatorioCapabilidade5.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.RelatorioCapabilidade6.datasource" />
+    <None Include="Properties\DataSources\Qualidade.ReportViewr.RelatorioCapabilidade7.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
